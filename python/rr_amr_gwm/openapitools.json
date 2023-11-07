@@ -1,0 +1,22 @@
+{
+  "$schema": "./node_modules/@openapitools/openapi-generator-cli/config.schema.json",
+  "spaces": 2,
+  "generator-cli": {
+    "version": "7.0.1",
+    "useDocker": true,
+    "generators": {
+      "python-client": {
+        "packageName": "gwm_openapi_client",
+        "generatorName": "python",
+        "output": "./clients/python-client",
+        "inputSpec": "../gwm_core/openapi.yaml",
+        "globalProperty": "apiTests=false,modelTests=false",
+        "additionalProperties": {
+          "floatStrictType": false
+        },
+        "skipValidateSpec": true,
+        "minimalUpdate": true
+      }
+    }
+  }
+}

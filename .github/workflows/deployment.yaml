@@ -1,0 +1,11 @@
+name: API Clients Deployment
+on:
+  push:
+    tags:
+      - '*'
+    branches:
+      - devel
+      - 'release/**'
+jobs:
+  rr_amr_gwm:
+    runs-on: ubuntu-latest
