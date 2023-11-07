@@ -10,3 +10,7 @@ inputs:
     description: Version number
     required: false
     default: '2.14.1'
+
+runs:
+  using: composite
+  

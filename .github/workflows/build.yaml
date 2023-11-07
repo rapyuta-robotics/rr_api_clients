@@ -1,0 +1,21 @@
+name: API Clients Building
+on:
+  push:
+    tags:
+      - '*'
+    branches:
+      - devel
+      - 'release/**'
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Build Python Client
+        uses: ./.github/actions/build-python-client
+        with:
+          quay-username: ${{ secrets.QUAY_USER }}
+          quay-password: ${{ secrets.QUAY_PASS }}
