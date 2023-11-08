@@ -66,7 +66,7 @@ jobs:
           author_name: Generator Bot
           author_email: tharindu.bathigama@rapyuta-robotics.com
           message: 'Generated Python Client for ${{env.SERVICE_NAME}} tag ${{env.TAG_NAME}}'
-          tag: '${{env.SERVICE_NAME}}:${{env.TAG_NAME}}'
+          tag: '${{env.SERVICE_NAME}}-${{env.TAG_NAME}}'
           tag_push: '--force'
           
 
