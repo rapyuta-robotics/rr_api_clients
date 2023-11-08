@@ -14,7 +14,7 @@
 """  # noqa: E501
 
 
-__version__ = "api-client-testing"
+__version__ = "v1.0"
 
 # import apis into sdk package
 from gwm.api.containers_app_asset_location_api import ContainersAppAssetLocationApi
