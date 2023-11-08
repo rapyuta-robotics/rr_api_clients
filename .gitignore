@@ -2,3 +2,5 @@ act-secret
 .my.secrets
 .env
 node_modules
+.sample.event
+python/client

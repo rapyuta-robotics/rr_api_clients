@@ -3,13 +3,13 @@
   "spaces": 2,
   "generator-cli": {
     "version": "7.0.1",
-    "useDocker": true,
+    "useDocker": false,
     "generators": {
       "python-client": {
         "packageName": "gwm_openapi_client",
         "generatorName": "python",
-        "output": "./clients/python-client",
-        "inputSpec": "../gwm_core/openapi.yaml",
+        "output": "client",
+        "inputSpec": "http://localhost:8000/api/schema/",
         "globalProperty": "apiTests=false,modelTests=false",
         "additionalProperties": {
           "floatStrictType": false
