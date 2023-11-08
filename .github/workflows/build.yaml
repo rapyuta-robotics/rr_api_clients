@@ -1,4 +1,6 @@
 name: Build API Clients
+concurrency:
+  group: ${{ github.workflow }}
 on:
   workflow_dispatch:
     inputs:
