@@ -11,17 +11,17 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     steps:
-      - name: Trigger Workflow
-        uses: convictional/trigger-workflow-and-wait@v1.6.1
-        with:
-          owner: rapyuta-robotics
-          repo: rr_api_clients
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          github_user: tharindurr
-          workflow_file_name: build.yaml
-          ref: devel
-          wait_interval: 10
-          client_payload: '{ "docker-image": "quay.io/rapyuta/io_amr_gwm:api-client-testing" }'
-          propagate_failure: false
-          trigger_workflow: true
-          wait_workflow: true
+      # - name: Trigger Workflow
+      #   uses: convictional/trigger-workflow-and-wait@v1.6.1
+      #   with:
+      #     owner: rapyuta-robotics
+      #     repo: rr_api_clients
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     github_user: tharindurr
+      #     workflow_file_name: build.yaml
+      #     ref: devel
+      #     wait_interval: 10
+      #     client_payload: '{ "docker-image": "quay.io/rapyuta/io_amr_gwm:api-client-testing" }'
+      #     propagate_failure: false
+      #     trigger_workflow: true
+      #     wait_workflow: true
