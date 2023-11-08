@@ -24,6 +24,10 @@ on:
         description: 'Backend service openapi schema path'
         type: string
         default: 'openapi.json'
+      docker-command:
+        description: 'Docker start command'
+        type: string
+        default: ''
 jobs:
   setup:
     runs-on: ubuntu-latest
@@ -50,7 +54,7 @@ jobs:
       - name: Start Backend Service
         run: |
           docker pull "${{ github.event.inputs.docker-image-name }}:${{ github.event.inputs.version }}"
-          docker run -d --name backend_service_container -p 8000:${{ github.event.inputs.service-port }} "${{ github.event.inputs.docker-image-name }}:${{ github.event.inputs.version }}" poetry run gunicorn
+          docker run -d --name backend_service_container -p 8000:${{ github.event.inputs.service-port }} "${{ github.event.inputs.docker-image-name }}:${{ github.event.inputs.version }}"
 
 
       - name: Wait for service to start
