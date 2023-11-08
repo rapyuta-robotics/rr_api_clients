@@ -56,16 +56,8 @@ jobs:
         run: |
           npm install
           rm -rf clients/$SERVICE_NAME
-          npx openapi-generator-cli generate -o "clients/$SERVICE_NAME" -i "http://localhost:8000/api/schema/" -g python --skip-validate-spec --minimal-update --additional-properties=floatStrictType=false --global-property="apiTests=false,modelTests=false"
+          npx openapi-generator-cli generate -o "clients/$SERVICE_NAME" -i "http://localhost:8000/api/schema/" --package-name=$SERVICE_NAME -g python --skip-validate-spec --minimal-update --additional-properties=floatStrictType=false --global-property="apiTests=false,modelTests=false"
           ls -l clients/$SERVICE_NAME
-
-      - name: Add and Commit
-        run: |
-          echo $SERVICE_NAME
-          echo $TAG_NAME
-          ls -l
-          ls -l python
-          ls -l python/clients
 
       - name: Add and Commit
         uses: EndBug/add-and-commit@v9
@@ -73,8 +65,8 @@ jobs:
           add: 'python/clients/'
           author_name: Generator Bot
           author_email: tharindu.bathigama@rapyuta-robotics.com
-          message: 'Generated Python Client for $SERVICE_NAME tag $TAG_NAME'
-          tag: '$SERVICE_NAME:$TAG_NAME'
+          message: 'Generated Python Client for ${{env.SERVICE_NAME}} tag ${{env.TAG_NAME}}'
+          tag: '${{env.SERVICE_NAME}}:${{env.TAG_NAME}}'
           tag_push: '--force'
           
 
