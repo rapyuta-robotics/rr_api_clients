@@ -2,16 +2,16 @@ name: Build API Clients
 on:
   workflow_dispatch:
     inputs:
-      docker-image:
-        description: 'Docker image name (service_name:label)'
+      docker-image-name:
+        description: 'Docker image name'
         type: string
         required: true
       client-name:
         description: 'Output client name'
         type: string
         required: true
-      client-version:
-        description: 'Output client version'
+      version:
+        description: 'version'
         type: string
         required: true
 jobs:
@@ -39,8 +39,8 @@ jobs:
 
       - name: Start Backend Service
         run: |
-          docker pull ${{ github.event.inputs.docker-image }}
-          docker run -d --name backend_service_container --network host ${{ github.event.inputs.docker-image }} poetry run gunicorn
+          docker pull "${{ github.event.inputs.docker-image-name }}:${{ github.event.inputs.version }}"
+          docker run -d --name backend_service_container --network host "${{ github.event.inputs.docker-image-name }}:${{ github.event.inputs.version }}" poetry run gunicorn
 
 
       - name: Wait for service to start
@@ -59,7 +59,7 @@ jobs:
           npx openapi-generator-cli generate -o "clients/${{ github.event.inputs.client-name }}" \
             -i "http://localhost:8000/api/schema/" --package-name=${{ github.event.inputs.client-name }} \
             -g python --skip-validate-spec --minimal-update \
-            --additional-properties="floatStrictType=false,packageVersion=${{ github.event.inputs.client-version }}" \
+            --additional-properties="floatStrictType=false,packageVersion=${{ github.event.inputs.version }}" \
             --global-property="apiTests=false,modelTests=false"
           
       - name: Add and Commit
@@ -68,8 +68,8 @@ jobs:
           add: 'python/clients/'
           author_name: Generator Bot
           author_email: tharindu.bathigama@rapyuta-robotics.com
-          message: 'Generated Python Client for ${{ github.event.inputs.client-name }} with tag ${{ github.event.inputs.client-version }}'
-          tag: '${{ github.event.inputs.client-name }}-${{ github.event.inputs.client-version }}'
+          message: 'Generated Python Client for ${{ github.event.inputs.client-name }} with tag ${{ github.event.inputs.version }}'
+          tag: '${{ github.event.inputs.client-name }}-${{ github.event.inputs.version }}'
           tag_push: '--force'
           
 
