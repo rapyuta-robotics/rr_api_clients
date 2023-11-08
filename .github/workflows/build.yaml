@@ -79,8 +79,7 @@ jobs:
           author_name: Generator Bot
           author_email: tharindu.bathigama@rapyuta-robotics.com
           message: 'Generated Python Client for ${{ github.event.inputs.client-name }} with tag ${{ github.event.inputs.version }}'
-          tag: '${{ github.event.inputs.client-name }}-${{ github.event.inputs.version }}'
-          tag_push: '-fa'
+          tag: '${{ github.event.inputs.client-name }}-${{ github.event.inputs.version }} -fa'
           
 
       - name: Stop Backend Service
