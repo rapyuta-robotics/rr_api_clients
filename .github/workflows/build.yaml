@@ -1,11 +1,17 @@
 name: API Clients Building
+# on:
+#   push:
+#     tags:
+#       - '*'
+#     branches:
+#       - devel
+#       - 'release/**'
 on:
   push:
-    tags:
-      - '*'
-    branches:
-      - devel
-      - 'release/**'
+  workflow_dispatch:
+    inputs:
+      image:
+        required: true
 jobs:
   setup:
     runs-on: ubuntu-latest
@@ -14,8 +20,12 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Build Python Client
-        uses: ./.github/actions/build-python-client
-        with:
-          quay-username: ${{ secrets.QUAY_USER }}
-          quay-password: ${{ secrets.QUAY_PASS }}
+      - name: TEST COMMAND
+        run: |
+          echo "Image Name: ${{ github.event.inputs.image }}"
+
+      # - name: Build Python Client
+      #   uses: ./.github/actions/build-python-client
+      #   with:
+      #     quay-username: ${{ secrets.QUAY_USER }}
+      #     quay-password: ${{ secrets.QUAY_PASS }}

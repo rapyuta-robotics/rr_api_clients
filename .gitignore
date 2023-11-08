@@ -1,3 +1,4 @@
 act-secret
 .my.secrets
+.env
 node_modules
