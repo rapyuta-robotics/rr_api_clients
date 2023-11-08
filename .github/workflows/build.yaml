@@ -6,6 +6,14 @@ on:
         description: 'Docker image name (service_name:label)'
         type: string
         required: true
+      client-name:
+        description: 'Output client name'
+        type: string
+        required: true
+      client-version:
+        description: 'Output client version'
+        type: string
+        required: true
 jobs:
   setup:
     runs-on: ubuntu-latest
@@ -43,30 +51,25 @@ jobs:
           done;
           sleep 5
 
-      - name: Extract Service Name and Version
-        run: |
-          string="${{ github.event.inputs.docker-image }}"
-          service_name=$(echo "$string" | awk -F'/' '{print $NF}' | awk -F':' '{print $1}')
-          tag_name=$(echo "$string" | awk -F':' '{print $NF}')
-          echo "SERVICE_NAME=$service_name" >> $GITHUB_ENV
-          echo "TAG_NAME=$tag_name" >> $GITHUB_ENV
-
       - name: Build Python Client
         working-directory: ./python
         run: |
           npm install
-          rm -rf clients/$SERVICE_NAME
-          npx openapi-generator-cli generate -o "clients/$SERVICE_NAME" -i "http://localhost:8000/api/schema/" --package-name=$SERVICE_NAME -g python --skip-validate-spec --minimal-update --additional-properties=floatStrictType=false --global-property="apiTests=false,modelTests=false"
-          ls -l clients/$SERVICE_NAME
-
+          rm -rf "clients/${{ github.event.inputs.client-name }}"
+          npx openapi-generator-cli generate -o "clients/${{ github.event.inputs.client-name }}" \
+            -i "http://localhost:8000/api/schema/" --package-name=${{ github.event.inputs.client-name }} \
+            -g python --skip-validate-spec --minimal-update \
+            --additional-properties="floatStrictType=false,packageVersion=${{ github.event.inputs.client-version }}" \
+            --global-property="apiTests=false,modelTests=false"
+          
       - name: Add and Commit
         uses: EndBug/add-and-commit@v9
         with:
           add: 'python/clients/'
           author_name: Generator Bot
           author_email: tharindu.bathigama@rapyuta-robotics.com
-          message: 'Generated Python Client for ${{env.SERVICE_NAME}} tag ${{env.TAG_NAME}}'
-          tag: '${{env.SERVICE_NAME}}-${{env.TAG_NAME}}'
+          message: 'Generated Python Client for ${{ github.event.inputs.client-name }} with tag ${{ github.event.inputs.client-version }}'
+          tag: '${{ github.event.inputs.client-name }}-${{ github.event.inputs.client-version }}'
           tag_push: '--force'
           
 
