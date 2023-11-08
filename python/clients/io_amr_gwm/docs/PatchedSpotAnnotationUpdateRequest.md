@@ -21,7 +21,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.patched_spot_annotation_update_request import PatchedSpotAnnotationUpdateRequest
+from io_amr_gwm.models.patched_spot_annotation_update_request import PatchedSpotAnnotationUpdateRequest
 
 # TODO update the JSON string below
 json = "{}"

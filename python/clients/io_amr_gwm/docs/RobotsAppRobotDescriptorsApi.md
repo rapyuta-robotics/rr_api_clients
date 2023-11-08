@@ -1,4 +1,4 @@
-# openapi_client.RobotsAppRobotDescriptorsApi
+# io_amr_gwm.RobotsAppRobotDescriptorsApi
 
 All URIs are relative to *http://localhost*
 
@@ -25,15 +25,15 @@ Manage RobotDescriptors
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.robot_descriptor import RobotDescriptor
-from openapi_client.models.robot_descriptor_request import RobotDescriptorRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.robot_descriptor import RobotDescriptor
+from io_amr_gwm.models.robot_descriptor_request import RobotDescriptorRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -43,15 +43,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RobotsAppRobotDescriptorsApi(api_client)
-    robot_descriptor_request = openapi_client.RobotDescriptorRequest() # RobotDescriptorRequest | 
+    api_instance = io_amr_gwm.RobotsAppRobotDescriptorsApi(api_client)
+    robot_descriptor_request = io_amr_gwm.RobotDescriptorRequest() # RobotDescriptorRequest | 
 
     try:
         api_response = api_instance.v1_robot_descriptor_create(robot_descriptor_request)
@@ -102,13 +102,13 @@ Manage RobotDescriptors
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -118,14 +118,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RobotsAppRobotDescriptorsApi(api_client)
+    api_instance = io_amr_gwm.RobotsAppRobotDescriptorsApi(api_client)
     id = 56 # int | 
 
     try:
@@ -175,14 +175,14 @@ Manage RobotDescriptors
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.robot_descriptor import RobotDescriptor
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.robot_descriptor import RobotDescriptor
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -192,14 +192,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RobotsAppRobotDescriptorsApi(api_client)
+    api_instance = io_amr_gwm.RobotsAppRobotDescriptorsApi(api_client)
     agent_id = 'agent_id_example' # str |  (optional)
     model = 'model_example' # str |  (optional)
     name = 'name_example' # str |  (optional)
@@ -259,15 +259,15 @@ Manage RobotDescriptors
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.patched_robot_descriptor_request import PatchedRobotDescriptorRequest
-from openapi_client.models.robot_descriptor import RobotDescriptor
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.patched_robot_descriptor_request import PatchedRobotDescriptorRequest
+from io_amr_gwm.models.robot_descriptor import RobotDescriptor
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -277,16 +277,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RobotsAppRobotDescriptorsApi(api_client)
+    api_instance = io_amr_gwm.RobotsAppRobotDescriptorsApi(api_client)
     id = 56 # int | 
-    patched_robot_descriptor_request = openapi_client.PatchedRobotDescriptorRequest() # PatchedRobotDescriptorRequest |  (optional)
+    patched_robot_descriptor_request = io_amr_gwm.PatchedRobotDescriptorRequest() # PatchedRobotDescriptorRequest |  (optional)
 
     try:
         api_response = api_instance.v1_robot_descriptor_partial_update(id, patched_robot_descriptor_request=patched_robot_descriptor_request)
@@ -338,14 +338,14 @@ Manage RobotDescriptors
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.robot_descriptor import RobotDescriptor
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.robot_descriptor import RobotDescriptor
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -355,14 +355,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RobotsAppRobotDescriptorsApi(api_client)
+    api_instance = io_amr_gwm.RobotsAppRobotDescriptorsApi(api_client)
     id = 56 # int | 
 
     try:
@@ -414,15 +414,15 @@ Manage RobotDescriptors
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.robot_descriptor import RobotDescriptor
-from openapi_client.models.robot_descriptor_request import RobotDescriptorRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.robot_descriptor import RobotDescriptor
+from io_amr_gwm.models.robot_descriptor_request import RobotDescriptorRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -432,16 +432,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.RobotsAppRobotDescriptorsApi(api_client)
+    api_instance = io_amr_gwm.RobotsAppRobotDescriptorsApi(api_client)
     id = 56 # int | 
-    robot_descriptor_request = openapi_client.RobotDescriptorRequest() # RobotDescriptorRequest | 
+    robot_descriptor_request = io_amr_gwm.RobotDescriptorRequest() # RobotDescriptorRequest | 
 
     try:
         api_response = api_instance.v1_robot_descriptor_update(id, robot_descriptor_request)

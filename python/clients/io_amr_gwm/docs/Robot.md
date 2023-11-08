@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.robot import Robot
+from io_amr_gwm.models.robot import Robot
 
 # TODO update the JSON string below
 json = "{}"

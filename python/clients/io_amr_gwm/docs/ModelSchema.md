@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.model_schema import ModelSchema
+from io_amr_gwm.models.model_schema import ModelSchema
 
 # TODO update the JSON string below
 json = "{}"

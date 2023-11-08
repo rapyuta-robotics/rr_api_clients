@@ -1,4 +1,4 @@
-# openapi_client.GraphGeneratorRegionsApi
+# io_amr_gwm.GraphGeneratorRegionsApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,14 +22,14 @@ Download the Aisle Regions of a Map
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.region_db_json import RegionDbJson
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.region_db_json import RegionDbJson
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -39,14 +39,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.GraphGeneratorRegionsApi(api_client)
+    api_instance = io_amr_gwm.GraphGeneratorRegionsApi(api_client)
     map_name = 'map_name_example' # str | Map to download the regions from
 
     try:
@@ -96,14 +96,14 @@ Name | Type | Description  | Notes
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.region import Region
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.region import Region
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -113,14 +113,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.GraphGeneratorRegionsApi(api_client)
+    api_instance = io_amr_gwm.GraphGeneratorRegionsApi(api_client)
     map_name = 'map_name_example' # str | 
     map_layer_name = 'map_layer_name_example' # str | 
     origin_x = 3.4 # float | 
@@ -186,13 +186,13 @@ Name | Type | Description  | Notes
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -202,14 +202,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.GraphGeneratorRegionsApi(api_client)
+    api_instance = io_amr_gwm.GraphGeneratorRegionsApi(api_client)
     map_name = 'map_name_example' # str | Map to upload the regions to
     aisle_regions = None # bytearray | 
 

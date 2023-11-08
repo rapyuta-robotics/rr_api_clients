@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.patched_agent_task_request import PatchedAgentTaskRequest
+from io_amr_gwm.models.patched_agent_task_request import PatchedAgentTaskRequest
 
 # TODO update the JSON string below
 json = "{}"

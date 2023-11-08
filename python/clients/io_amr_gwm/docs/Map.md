@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.map import Map
+from io_amr_gwm.models.map import Map
 
 # TODO update the JSON string below
 json = "{}"

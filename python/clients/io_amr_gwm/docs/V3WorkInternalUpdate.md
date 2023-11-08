@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.v3_work_internal_update import V3WorkInternalUpdate
+from io_amr_gwm.models.v3_work_internal_update import V3WorkInternalUpdate
 
 # TODO update the JSON string below
 json = "{}"

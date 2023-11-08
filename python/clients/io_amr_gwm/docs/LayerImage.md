@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.layer_image import LayerImage
+from io_amr_gwm.models.layer_image import LayerImage
 
 # TODO update the JSON string below
 json = "{}"

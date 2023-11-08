@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.paginated_v3_work_list import PaginatedV3WorkList
+from io_amr_gwm.models.paginated_v3_work_list import PaginatedV3WorkList
 
 # TODO update the JSON string below
 json = "{}"

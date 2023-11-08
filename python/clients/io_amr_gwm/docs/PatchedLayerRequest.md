@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.patched_layer_request import PatchedLayerRequest
+from io_amr_gwm.models.patched_layer_request import PatchedLayerRequest
 
 # TODO update the JSON string below
 json = "{}"

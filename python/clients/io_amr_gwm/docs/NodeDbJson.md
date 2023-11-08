@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.node_db_json import NodeDbJson
+from io_amr_gwm.models.node_db_json import NodeDbJson
 
 # TODO update the JSON string below
 json = "{}"

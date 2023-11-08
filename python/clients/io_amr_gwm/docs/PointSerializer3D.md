@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.point_serializer3_d import PointSerializer3D
+from io_amr_gwm.models.point_serializer3_d import PointSerializer3D
 
 # TODO update the JSON string below
 json = "{}"

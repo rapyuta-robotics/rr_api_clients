@@ -1,4 +1,4 @@
-# openapi_client.MapsAppLayersApi
+# io_amr_gwm.MapsAppLayersApi
 
 All URIs are relative to *http://localhost*
 
@@ -30,15 +30,15 @@ Manage Map Layers
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.layer import Layer
-from openapi_client.models.layer_request import LayerRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.layer import Layer
+from io_amr_gwm.models.layer_request import LayerRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -48,16 +48,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppLayersApi(api_client)
+    api_instance = io_amr_gwm.MapsAppLayersApi(api_client)
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
-    layer_request = openapi_client.LayerRequest() # LayerRequest | 
+    layer_request = io_amr_gwm.LayerRequest() # LayerRequest | 
 
     try:
         api_response = api_instance.v1_map_layer_create(map_id_or_name, layer_request)
@@ -109,13 +109,13 @@ Manage Map Layers
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -125,14 +125,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppLayersApi(api_client)
+    api_instance = io_amr_gwm.MapsAppLayersApi(api_client)
     id_or_name = '1' # str | Layer ID or Name.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
 
@@ -184,14 +184,14 @@ Manage Map Layers
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.layer_yaml import LayerYAML
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.layer_yaml import LayerYAML
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -201,14 +201,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppLayersApi(api_client)
+    api_instance = io_amr_gwm.MapsAppLayersApi(api_client)
     id_or_name = '1' # str | Layer ID or Name.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
 
@@ -262,14 +262,14 @@ Manage Map Layers
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.layer import Layer
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.layer import Layer
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -279,14 +279,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppLayersApi(api_client)
+    api_instance = io_amr_gwm.MapsAppLayersApi(api_client)
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
 
     try:
@@ -338,15 +338,15 @@ Manage Map Layers
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.layer import Layer
-from openapi_client.models.patched_layer_request import PatchedLayerRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.layer import Layer
+from io_amr_gwm.models.patched_layer_request import PatchedLayerRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -356,17 +356,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppLayersApi(api_client)
+    api_instance = io_amr_gwm.MapsAppLayersApi(api_client)
     id_or_name = '1' # str | Layer ID or Name.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
-    patched_layer_request = openapi_client.PatchedLayerRequest() # PatchedLayerRequest |  (optional)
+    patched_layer_request = io_amr_gwm.PatchedLayerRequest() # PatchedLayerRequest |  (optional)
 
     try:
         api_response = api_instance.v1_map_layer_partial_update(id_or_name, map_id_or_name, patched_layer_request=patched_layer_request)
@@ -419,14 +419,14 @@ Manage Map Layers
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.layer import Layer
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.layer import Layer
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -436,14 +436,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppLayersApi(api_client)
+    api_instance = io_amr_gwm.MapsAppLayersApi(api_client)
     id_or_name = '1' # str | Layer ID or Name.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
 
@@ -497,14 +497,14 @@ Manage Map Layers
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.layer_data import LayerData
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.layer_data import LayerData
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -514,14 +514,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppLayersApi(api_client)
+    api_instance = io_amr_gwm.MapsAppLayersApi(api_client)
     id_or_name = 56 # int | A unique integer value identifying this layer.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
 
@@ -575,14 +575,14 @@ Manage Map Layers
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.layer_image import LayerImage
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.layer_image import LayerImage
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -592,14 +592,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppLayersApi(api_client)
+    api_instance = io_amr_gwm.MapsAppLayersApi(api_client)
     id_or_name = 56 # int | A unique integer value identifying this layer.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
 
@@ -653,15 +653,15 @@ Manage Map Layers
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.layer import Layer
-from openapi_client.models.layer_request import LayerRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.layer import Layer
+from io_amr_gwm.models.layer_request import LayerRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -671,17 +671,17 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppLayersApi(api_client)
+    api_instance = io_amr_gwm.MapsAppLayersApi(api_client)
     id_or_name = '1' # str | Layer ID or Name.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
-    layer_request = openapi_client.LayerRequest() # LayerRequest | 
+    layer_request = io_amr_gwm.LayerRequest() # LayerRequest | 
 
     try:
         api_response = api_instance.v1_map_layer_update(id_or_name, map_id_or_name, layer_request)
@@ -734,14 +734,14 @@ Manage Map Layers
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.layer_data import LayerData
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.layer_data import LayerData
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -751,14 +751,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppLayersApi(api_client)
+    api_instance = io_amr_gwm.MapsAppLayersApi(api_client)
     id_or_name = '1' # str | Layer ID or Name.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
     data = None # bytearray |  (optional)
@@ -814,14 +814,14 @@ Manage Map Layers
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.layer_image import LayerImage
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.layer_image import LayerImage
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -831,14 +831,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppLayersApi(api_client)
+    api_instance = io_amr_gwm.MapsAppLayersApi(api_client)
     id_or_name = '1' # str | Layer ID or Name.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
     image = None # bytearray | Path to the image file containing the occupancy data; can be absolute, or relative to the location of the YAML file (optional)

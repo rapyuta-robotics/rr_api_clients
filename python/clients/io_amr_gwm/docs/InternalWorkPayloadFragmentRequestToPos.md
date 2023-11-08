@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.internal_work_payload_fragment_request_to_pos import InternalWorkPayloadFragmentRequestToPos
+from io_amr_gwm.models.internal_work_payload_fragment_request_to_pos import InternalWorkPayloadFragmentRequestToPos
 
 # TODO update the JSON string below
 json = "{}"

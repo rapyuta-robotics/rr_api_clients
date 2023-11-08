@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.v3_work_request import V3WorkRequest
+from io_amr_gwm.models.v3_work_request import V3WorkRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.region_export_request import RegionExportRequest
+from io_amr_gwm.models.region_export_request import RegionExportRequest
 
 # TODO update the JSON string below
 json = "{}"

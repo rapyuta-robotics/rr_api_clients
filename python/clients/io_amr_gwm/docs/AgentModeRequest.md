@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.agent_mode_request import AgentModeRequest
+from io_amr_gwm.models.agent_mode_request import AgentModeRequest
 
 # TODO update the JSON string below
 json = "{}"

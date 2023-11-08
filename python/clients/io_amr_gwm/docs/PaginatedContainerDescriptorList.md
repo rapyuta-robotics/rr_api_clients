@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.paginated_container_descriptor_list import PaginatedContainerDescriptorList
+from io_amr_gwm.models.paginated_container_descriptor_list import PaginatedContainerDescriptorList
 
 # TODO update the JSON string below
 json = "{}"

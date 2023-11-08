@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.auto_recovery_action import AutoRecoveryAction
+from io_amr_gwm.models.auto_recovery_action import AutoRecoveryAction
 
 # TODO update the JSON string below
 json = "{}"

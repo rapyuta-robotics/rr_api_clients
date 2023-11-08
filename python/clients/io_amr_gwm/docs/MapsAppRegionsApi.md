@@ -1,4 +1,4 @@
-# openapi_client.MapsAppRegionsApi
+# io_amr_gwm.MapsAppRegionsApi
 
 All URIs are relative to *http://localhost*
 
@@ -26,15 +26,15 @@ Manage Regions
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.region import Region
-from openapi_client.models.region_request import RegionRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.region import Region
+from io_amr_gwm.models.region_request import RegionRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -44,15 +44,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppRegionsApi(api_client)
-    region_request = openapi_client.RegionRequest() # RegionRequest | 
+    api_instance = io_amr_gwm.MapsAppRegionsApi(api_client)
+    region_request = io_amr_gwm.RegionRequest() # RegionRequest | 
 
     try:
         api_response = api_instance.v1_region_create(region_request)
@@ -103,13 +103,13 @@ Manage Regions
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -119,14 +119,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppRegionsApi(api_client)
+    api_instance = io_amr_gwm.MapsAppRegionsApi(api_client)
     map_id = 'map_id_example' # str | 
     force = True # bool | force clear all resources, including preserved ones (optional)
     type = 'type_example' # str | delete resources by type (optional)
@@ -180,13 +180,13 @@ Manage Regions
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -196,14 +196,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppRegionsApi(api_client)
+    api_instance = io_amr_gwm.MapsAppRegionsApi(api_client)
     id_or_name = '1' # str | Region ID or Name.
 
     try:
@@ -253,14 +253,14 @@ List Regions
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.region_db_json import RegionDbJson
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.region_db_json import RegionDbJson
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -270,14 +270,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppRegionsApi(api_client)
+    api_instance = io_amr_gwm.MapsAppRegionsApi(api_client)
     contains_point = 'contains_point_example' # str | find all regions that contain the point in format : `X,Y` (optional)
     external_device = ['external_device_example'] # List[str] | filter regions by associated external devices (optional)
     id = [56] # List[int] | filter regions by id (optional)
@@ -345,15 +345,15 @@ Manage Regions
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.patched_region_request import PatchedRegionRequest
-from openapi_client.models.region import Region
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.patched_region_request import PatchedRegionRequest
+from io_amr_gwm.models.region import Region
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -363,16 +363,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppRegionsApi(api_client)
+    api_instance = io_amr_gwm.MapsAppRegionsApi(api_client)
     id_or_name = '1' # str | Region ID or Name.
-    patched_region_request = openapi_client.PatchedRegionRequest() # PatchedRegionRequest |  (optional)
+    patched_region_request = io_amr_gwm.PatchedRegionRequest() # PatchedRegionRequest |  (optional)
 
     try:
         api_response = api_instance.v1_region_partial_update(id_or_name, patched_region_request=patched_region_request)
@@ -424,14 +424,14 @@ Manage Regions
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.region import Region
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.region import Region
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -441,14 +441,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppRegionsApi(api_client)
+    api_instance = io_amr_gwm.MapsAppRegionsApi(api_client)
     id_or_name = '1' # str | Region ID or Name.
 
     try:
@@ -500,15 +500,15 @@ Manage Regions
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.region import Region
-from openapi_client.models.region_request import RegionRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.region import Region
+from io_amr_gwm.models.region_request import RegionRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -518,16 +518,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppRegionsApi(api_client)
+    api_instance = io_amr_gwm.MapsAppRegionsApi(api_client)
     id_or_name = '1' # str | Region ID or Name.
-    region_request = openapi_client.RegionRequest() # RegionRequest | 
+    region_request = io_amr_gwm.RegionRequest() # RegionRequest | 
 
     try:
         api_response = api_instance.v1_region_update(id_or_name, region_request)

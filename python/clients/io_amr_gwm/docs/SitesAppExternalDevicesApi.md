@@ -1,4 +1,4 @@
-# openapi_client.SitesAppExternalDevicesApi
+# io_amr_gwm.SitesAppExternalDevicesApi
 
 All URIs are relative to *http://localhost*
 
@@ -25,15 +25,15 @@ Manage External Devices
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.external_device import ExternalDevice
-from openapi_client.models.external_device_request import ExternalDeviceRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.external_device import ExternalDevice
+from io_amr_gwm.models.external_device_request import ExternalDeviceRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -43,15 +43,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SitesAppExternalDevicesApi(api_client)
-    external_device_request = openapi_client.ExternalDeviceRequest() # ExternalDeviceRequest | 
+    api_instance = io_amr_gwm.SitesAppExternalDevicesApi(api_client)
+    external_device_request = io_amr_gwm.ExternalDeviceRequest() # ExternalDeviceRequest | 
 
     try:
         api_response = api_instance.v1_external_device_create(external_device_request)
@@ -102,13 +102,13 @@ Manage External Devices
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -118,14 +118,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SitesAppExternalDevicesApi(api_client)
+    api_instance = io_amr_gwm.SitesAppExternalDevicesApi(api_client)
     id_or_name = '1' # str | External Device ID or Name.
 
     try:
@@ -175,14 +175,14 @@ List agents
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.external_device import ExternalDevice
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.external_device import ExternalDevice
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -192,14 +192,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SitesAppExternalDevicesApi(api_client)
+    api_instance = io_amr_gwm.SitesAppExternalDevicesApi(api_client)
     id = 56 # int | filter external devices with external device id (optional)
     type = 'type_example' # str | filter external devices with external device type (optional)
 
@@ -253,15 +253,15 @@ Manage External Devices
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.external_device import ExternalDevice
-from openapi_client.models.patched_external_device_request import PatchedExternalDeviceRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.external_device import ExternalDevice
+from io_amr_gwm.models.patched_external_device_request import PatchedExternalDeviceRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -271,16 +271,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SitesAppExternalDevicesApi(api_client)
+    api_instance = io_amr_gwm.SitesAppExternalDevicesApi(api_client)
     id_or_name = '1' # str | External Device ID or Name.
-    patched_external_device_request = openapi_client.PatchedExternalDeviceRequest() # PatchedExternalDeviceRequest |  (optional)
+    patched_external_device_request = io_amr_gwm.PatchedExternalDeviceRequest() # PatchedExternalDeviceRequest |  (optional)
 
     try:
         api_response = api_instance.v1_external_device_partial_update(id_or_name, patched_external_device_request=patched_external_device_request)
@@ -332,14 +332,14 @@ Manage External Devices
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.external_device import ExternalDevice
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.external_device import ExternalDevice
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -349,14 +349,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SitesAppExternalDevicesApi(api_client)
+    api_instance = io_amr_gwm.SitesAppExternalDevicesApi(api_client)
     id_or_name = '1' # str | External Device ID or Name.
 
     try:
@@ -408,15 +408,15 @@ Manage External Devices
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.external_device import ExternalDevice
-from openapi_client.models.external_device_request import ExternalDeviceRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.external_device import ExternalDevice
+from io_amr_gwm.models.external_device_request import ExternalDeviceRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -426,16 +426,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SitesAppExternalDevicesApi(api_client)
+    api_instance = io_amr_gwm.SitesAppExternalDevicesApi(api_client)
     id_or_name = '1' # str | External Device ID or Name.
-    external_device_request = openapi_client.ExternalDeviceRequest() # ExternalDeviceRequest | 
+    external_device_request = io_amr_gwm.ExternalDeviceRequest() # ExternalDeviceRequest | 
 
     try:
         api_response = api_instance.v1_external_device_update(id_or_name, external_device_request)

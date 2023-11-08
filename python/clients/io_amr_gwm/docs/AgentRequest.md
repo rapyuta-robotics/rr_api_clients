@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.agent_request import AgentRequest
+from io_amr_gwm.models.agent_request import AgentRequest
 
 # TODO update the JSON string below
 json = "{}"
