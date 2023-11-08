@@ -18,6 +18,10 @@ on:
         description: 'Backend service port number'
         type: number
         default: 8000
+      openapi-path:
+        description: 'Backend service openapi schema path'
+        type: string
+        default: 'openapi.json'
 jobs:
   setup:
     runs-on: ubuntu-latest
@@ -61,7 +65,7 @@ jobs:
           npm install
           rm -rf "clients/${{ github.event.inputs.client-name }}"
           npx openapi-generator-cli generate -o "clients/${{ github.event.inputs.client-name }}" \
-            -i "http://localhost:8000/api/schema/" --package-name=${{ github.event.inputs.client-name }} \
+            -i "http://localhost:8000/${{ github.event.inputs.openapi-path }}" --package-name=${{ github.event.inputs.client-name }} \
             -g python --skip-validate-spec --minimal-update \
             --additional-properties="floatStrictType=false,packageVersion=${{ github.event.inputs.version }}" \
             --global-property="apiTests=false,modelTests=false"
@@ -74,7 +78,7 @@ jobs:
           author_email: tharindu.bathigama@rapyuta-robotics.com
           message: 'Generated Python Client for ${{ github.event.inputs.client-name }} with tag ${{ github.event.inputs.version }}'
           tag: '${{ github.event.inputs.client-name }}-${{ github.event.inputs.version }}'
-          tag_push: '--force'
+          tag_push: '-fa'
           
 
       - name: Stop Backend Service
