@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.activate_work_request import ActivateWorkRequest
+from io_amr_gwm.models.activate_work_request import ActivateWorkRequest
 
 # TODO update the JSON string below
 json = "{}"

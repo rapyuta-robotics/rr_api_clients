@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.asset import Asset
+from io_amr_gwm.models.asset import Asset
 
 # TODO update the JSON string below
 json = "{}"

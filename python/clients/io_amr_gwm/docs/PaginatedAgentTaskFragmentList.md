@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.paginated_agent_task_fragment_list import PaginatedAgentTaskFragmentList
+from io_amr_gwm.models.paginated_agent_task_fragment_list import PaginatedAgentTaskFragmentList
 
 # TODO update the JSON string below
 json = "{}"

@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.inline_agent_task_fragment import InlineAgentTaskFragment
+from io_amr_gwm.models.inline_agent_task_fragment import InlineAgentTaskFragment
 
 # TODO update the JSON string below
 json = "{}"

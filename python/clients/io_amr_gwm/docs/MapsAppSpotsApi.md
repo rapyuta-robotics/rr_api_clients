@@ -1,4 +1,4 @@
-# openapi_client.MapsAppSpotsApi
+# io_amr_gwm.MapsAppSpotsApi
 
 All URIs are relative to *http://localhost*
 
@@ -26,14 +26,14 @@ Patch Spots
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.patched_spot_annotation_update_request import PatchedSpotAnnotationUpdateRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.patched_spot_annotation_update_request import PatchedSpotAnnotationUpdateRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -43,15 +43,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppSpotsApi(api_client)
-    patched_spot_annotation_update_request = [openapi_client.PatchedSpotAnnotationUpdateRequest()] # List[PatchedSpotAnnotationUpdateRequest] | 
+    api_instance = io_amr_gwm.MapsAppSpotsApi(api_client)
+    patched_spot_annotation_update_request = [io_amr_gwm.PatchedSpotAnnotationUpdateRequest()] # List[PatchedSpotAnnotationUpdateRequest] | 
 
     try:
         # Patch Spots
@@ -97,16 +97,16 @@ Manage Spots
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.spot_annotation import SpotAnnotation
-from openapi_client.models.spot_annotation_request import SpotAnnotationRequest
-from openapi_client.models.v1_containers_create_descriptor_parameter_inner import V1ContainersCreateDescriptorParameterInner
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.spot_annotation import SpotAnnotation
+from io_amr_gwm.models.spot_annotation_request import SpotAnnotationRequest
+from io_amr_gwm.models.v1_containers_create_descriptor_parameter_inner import V1ContainersCreateDescriptorParameterInner
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -116,22 +116,22 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppSpotsApi(api_client)
-    spot_annotation_request = [openapi_client.SpotAnnotationRequest()] # List[SpotAnnotationRequest] | 
+    api_instance = io_amr_gwm.MapsAppSpotsApi(api_client)
+    spot_annotation_request = [io_amr_gwm.SpotAnnotationRequest()] # List[SpotAnnotationRequest] | 
     allocatable = True # bool |  (optional)
-    external_device = [openapi_client.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
+    external_device = [io_amr_gwm.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
     id = [56] # List[int] | user defined `id` of this object. Must be unique in the site or map (for nodes and edges); Default random 53 bit integer (optional)
     intersects_region = 'intersects_region_example' # str |  (optional)
-    map = [openapi_client.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
+    map = [io_amr_gwm.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
     name = ['name_example'] # List[str] | user defined `name` of this object. Must be unique in the site or map (for nodes and edges) (optional)
-    node = [openapi_client.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
+    node = [io_amr_gwm.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
     position = ['position_example'] # List[str] | format: x,y,floor (optional)
     type = ['type_example'] # List[str] | User defined spot type (optional)
 
@@ -193,13 +193,13 @@ Manage Spots
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -209,14 +209,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppSpotsApi(api_client)
+    api_instance = io_amr_gwm.MapsAppSpotsApi(api_client)
     map_id = 'map_id_example' # str | 
     force = True # bool | force clear all resources, including preserved ones (optional)
     type = 'type_example' # str | delete resources by type (optional)
@@ -270,13 +270,13 @@ List Spots
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -286,14 +286,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppSpotsApi(api_client)
+    api_instance = io_amr_gwm.MapsAppSpotsApi(api_client)
     id_or_name = '1' # str | Spot ID or Name.
 
     try:
@@ -343,14 +343,14 @@ List Spots
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.spot_annotation import SpotAnnotation
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.spot_annotation import SpotAnnotation
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -360,14 +360,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppSpotsApi(api_client)
+    api_instance = io_amr_gwm.MapsAppSpotsApi(api_client)
     allocatable = True # bool | Filter only allocatable spots (optional)
     external_device = ['external_device_example'] # List[str] | filter spots relative to external devices identified by their name (optional)
     id = [56] # List[int] | filter spot with id (optional)
@@ -439,15 +439,15 @@ List Spots
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.patched_spot_annotation_update_request import PatchedSpotAnnotationUpdateRequest
-from openapi_client.models.spot_annotation_update import SpotAnnotationUpdate
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.patched_spot_annotation_update_request import PatchedSpotAnnotationUpdateRequest
+from io_amr_gwm.models.spot_annotation_update import SpotAnnotationUpdate
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -457,16 +457,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppSpotsApi(api_client)
+    api_instance = io_amr_gwm.MapsAppSpotsApi(api_client)
     id_or_name = '1' # str | Spot ID or Name.
-    patched_spot_annotation_update_request = openapi_client.PatchedSpotAnnotationUpdateRequest() # PatchedSpotAnnotationUpdateRequest |  (optional)
+    patched_spot_annotation_update_request = io_amr_gwm.PatchedSpotAnnotationUpdateRequest() # PatchedSpotAnnotationUpdateRequest |  (optional)
 
     try:
         api_response = api_instance.v1_spot_partial_update(id_or_name, patched_spot_annotation_update_request=patched_spot_annotation_update_request)
@@ -518,14 +518,14 @@ List Spots
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.spot_annotation import SpotAnnotation
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.spot_annotation import SpotAnnotation
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -535,14 +535,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppSpotsApi(api_client)
+    api_instance = io_amr_gwm.MapsAppSpotsApi(api_client)
     id_or_name = '1' # str | Spot ID or Name.
 
     try:

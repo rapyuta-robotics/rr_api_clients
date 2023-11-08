@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.layer_request_origin_pos import LayerRequestOriginPos
+from io_amr_gwm.models.layer_request_origin_pos import LayerRequestOriginPos
 
 # TODO update the JSON string below
 json = "{}"

@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.agent_task_fragment_request import AgentTaskFragmentRequest
+from io_amr_gwm.models.agent_task_fragment_request import AgentTaskFragmentRequest
 
 # TODO update the JSON string below
 json = "{}"

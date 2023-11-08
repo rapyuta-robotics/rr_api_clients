@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.container_descriptor import ContainerDescriptor
+from io_amr_gwm.models.container_descriptor import ContainerDescriptor
 
 # TODO update the JSON string below
 json = "{}"

@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.patched_v3_work_fragment_request import PatchedV3WorkFragmentRequest
+from io_amr_gwm.models.patched_v3_work_fragment_request import PatchedV3WorkFragmentRequest
 
 # TODO update the JSON string below
 json = "{}"

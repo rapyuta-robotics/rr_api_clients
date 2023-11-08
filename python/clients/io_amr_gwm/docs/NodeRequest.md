@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.node_request import NodeRequest
+from io_amr_gwm.models.node_request import NodeRequest
 
 # TODO update the JSON string below
 json = "{}"

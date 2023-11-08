@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.external_device_request import ExternalDeviceRequest
+from io_amr_gwm.models.external_device_request import ExternalDeviceRequest
 
 # TODO update the JSON string below
 json = "{}"

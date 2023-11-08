@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.patched_robot_descriptor_request import PatchedRobotDescriptorRequest
+from io_amr_gwm.models.patched_robot_descriptor_request import PatchedRobotDescriptorRequest
 
 # TODO update the JSON string below
 json = "{}"

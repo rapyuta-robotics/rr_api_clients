@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.spot_annotation_db_json import SpotAnnotationDbJson
+from io_amr_gwm.models.spot_annotation_db_json import SpotAnnotationDbJson
 
 # TODO update the JSON string below
 json = "{}"

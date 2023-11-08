@@ -1,4 +1,4 @@
-# openapi_client.GraphGeneratorLocationsApi
+# io_amr_gwm.GraphGeneratorLocationsApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,14 +22,14 @@ Download the Spots of a Map
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.spot_annotation_db_json import SpotAnnotationDbJson
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.spot_annotation_db_json import SpotAnnotationDbJson
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -39,14 +39,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.GraphGeneratorLocationsApi(api_client)
+    api_instance = io_amr_gwm.GraphGeneratorLocationsApi(api_client)
     map_name = 'map_name_example' # str | Map to download the spots from
 
     try:
@@ -96,14 +96,14 @@ Name | Type | Description  | Notes
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.spot_annotation import SpotAnnotation
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.spot_annotation import SpotAnnotation
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -113,14 +113,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.GraphGeneratorLocationsApi(api_client)
+    api_instance = io_amr_gwm.GraphGeneratorLocationsApi(api_client)
     map_name = 'map_name_example' # str | 
     rack_mapping = None # bytearray | 
 
@@ -172,13 +172,13 @@ Name | Type | Description  | Notes
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -188,14 +188,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.GraphGeneratorLocationsApi(api_client)
+    api_instance = io_amr_gwm.GraphGeneratorLocationsApi(api_client)
     map_name = 'map_name_example' # str | Map to upload the spots to
     spots = None # bytearray | 
 

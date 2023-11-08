@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.internal_work_payload_fragment import InternalWorkPayloadFragment
+from io_amr_gwm.models.internal_work_payload_fragment import InternalWorkPayloadFragment
 
 # TODO update the JSON string below
 json = "{}"

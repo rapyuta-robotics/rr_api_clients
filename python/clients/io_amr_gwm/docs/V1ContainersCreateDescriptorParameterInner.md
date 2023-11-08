@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.v1_containers_create_descriptor_parameter_inner import V1ContainersCreateDescriptorParameterInner
+from io_amr_gwm.models.v1_containers_create_descriptor_parameter_inner import V1ContainersCreateDescriptorParameterInner
 
 # TODO update the JSON string below
 json = "{}"

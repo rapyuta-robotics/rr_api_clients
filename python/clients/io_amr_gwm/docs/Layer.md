@@ -24,7 +24,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.layer import Layer
+from io_amr_gwm.models.layer import Layer
 
 # TODO update the JSON string below
 json = "{}"

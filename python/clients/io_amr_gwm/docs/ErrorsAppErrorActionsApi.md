@@ -1,4 +1,4 @@
-# openapi_client.ErrorsAppErrorActionsApi
+# io_amr_gwm.ErrorsAppErrorActionsApi
 
 All URIs are relative to *http://localhost*
 
@@ -25,15 +25,15 @@ Create a new Error Action
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.error_action import ErrorAction
-from openapi_client.models.error_action_request import ErrorActionRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.error_action import ErrorAction
+from io_amr_gwm.models.error_action_request import ErrorActionRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -43,14 +43,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ErrorsAppErrorActionsApi(api_client)
+    api_instance = io_amr_gwm.ErrorsAppErrorActionsApi(api_client)
     error_action_request = {"name":"blow_up_robot","description":"Makes the robot explode to clear the way for other robots","schema":{"type":"object","required":["explosion_radius"],"properties":{"explosion_radius":{"type":"number","title":"explosion_radius","default":10}},"additionalProperties":false}} # ErrorActionRequest | 
 
     try:
@@ -102,13 +102,13 @@ Manage Error Actions
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -118,14 +118,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ErrorsAppErrorActionsApi(api_client)
+    api_instance = io_amr_gwm.ErrorsAppErrorActionsApi(api_client)
     id_or_name = 56 # int | A unique integer value identifying this error action.
 
     try:
@@ -175,14 +175,14 @@ List Error Actions
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.error_action import ErrorAction
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.error_action import ErrorAction
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -192,14 +192,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ErrorsAppErrorActionsApi(api_client)
+    api_instance = io_amr_gwm.ErrorsAppErrorActionsApi(api_client)
 
     try:
         api_response = api_instance.v1_error_action_list()
@@ -247,15 +247,15 @@ Manage Error Actions
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.error_action import ErrorAction
-from openapi_client.models.patched_error_action_request import PatchedErrorActionRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.error_action import ErrorAction
+from io_amr_gwm.models.patched_error_action_request import PatchedErrorActionRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -265,16 +265,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ErrorsAppErrorActionsApi(api_client)
+    api_instance = io_amr_gwm.ErrorsAppErrorActionsApi(api_client)
     id_or_name = 56 # int | A unique integer value identifying this error action.
-    patched_error_action_request = openapi_client.PatchedErrorActionRequest() # PatchedErrorActionRequest |  (optional)
+    patched_error_action_request = io_amr_gwm.PatchedErrorActionRequest() # PatchedErrorActionRequest |  (optional)
 
     try:
         api_response = api_instance.v1_error_action_partial_update(id_or_name, patched_error_action_request=patched_error_action_request)
@@ -326,14 +326,14 @@ Manage Error Actions
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.error_action import ErrorAction
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.error_action import ErrorAction
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -343,14 +343,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ErrorsAppErrorActionsApi(api_client)
+    api_instance = io_amr_gwm.ErrorsAppErrorActionsApi(api_client)
     id_or_name = 56 # int | A unique integer value identifying this error action.
 
     try:
@@ -402,15 +402,15 @@ Manage Error Actions
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.error_action import ErrorAction
-from openapi_client.models.error_action_request import ErrorActionRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.error_action import ErrorAction
+from io_amr_gwm.models.error_action_request import ErrorActionRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -420,16 +420,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.ErrorsAppErrorActionsApi(api_client)
+    api_instance = io_amr_gwm.ErrorsAppErrorActionsApi(api_client)
     id_or_name = 56 # int | A unique integer value identifying this error action.
-    error_action_request = openapi_client.ErrorActionRequest() # ErrorActionRequest | 
+    error_action_request = io_amr_gwm.ErrorActionRequest() # ErrorActionRequest | 
 
     try:
         api_response = api_instance.v1_error_action_update(id_or_name, error_action_request)

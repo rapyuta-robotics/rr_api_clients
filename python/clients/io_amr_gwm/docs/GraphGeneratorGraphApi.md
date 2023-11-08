@@ -1,4 +1,4 @@
-# openapi_client.GraphGeneratorGraphApi
+# io_amr_gwm.GraphGeneratorGraphApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,14 +22,14 @@ Download the Nodes and Edges of a Map
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.download_graph_response import DownloadGraphResponse
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.download_graph_response import DownloadGraphResponse
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -39,14 +39,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.GraphGeneratorGraphApi(api_client)
+    api_instance = io_amr_gwm.GraphGeneratorGraphApi(api_client)
     map_name = 'map_name_example' # str | Map to download the graph from
 
     try:
@@ -96,13 +96,13 @@ Name | Type | Description  | Notes
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -112,14 +112,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.GraphGeneratorGraphApi(api_client)
+    api_instance = io_amr_gwm.GraphGeneratorGraphApi(api_client)
     map_name = 'map_name_example' # str | 
     layer_name = 'layer_name_example' # str | 
     graph_generator = None # bytearray | 
@@ -173,13 +173,13 @@ Name | Type | Description  | Notes
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -189,14 +189,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.GraphGeneratorGraphApi(api_client)
+    api_instance = io_amr_gwm.GraphGeneratorGraphApi(api_client)
     map_name = 'map_name_example' # str | Map to upload the graph to
     graph = None # bytearray | 
 

@@ -1,4 +1,4 @@
-# openapi_client.MapsAppMapsApi
+# io_amr_gwm.MapsAppMapsApi
 
 All URIs are relative to *http://localhost*
 
@@ -29,13 +29,13 @@ Generate Routing Graph for Map
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -45,14 +45,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppMapsApi(api_client)
+    api_instance = io_amr_gwm.MapsAppMapsApi(api_client)
     id_or_name = '1' # str | Map ID or Name.
 
     try:
@@ -102,13 +102,13 @@ Generate Routing Graph for Map
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -118,14 +118,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppMapsApi(api_client)
+    api_instance = io_amr_gwm.MapsAppMapsApi(api_client)
     id_or_name = '1' # str | Map ID or Name.
 
     try:
@@ -175,15 +175,15 @@ Manage Maps
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.map import Map
-from openapi_client.models.map_request import MapRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.map import Map
+from io_amr_gwm.models.map_request import MapRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -193,15 +193,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppMapsApi(api_client)
-    map_request = openapi_client.MapRequest() # MapRequest |  (optional)
+    api_instance = io_amr_gwm.MapsAppMapsApi(api_client)
+    map_request = io_amr_gwm.MapRequest() # MapRequest |  (optional)
 
     try:
         api_response = api_instance.v1_map_create(map_request=map_request)
@@ -252,13 +252,13 @@ Generate Routing Graph for Map
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -268,14 +268,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppMapsApi(api_client)
+    api_instance = io_amr_gwm.MapsAppMapsApi(api_client)
     id_or_name = '1' # str | Map ID or Name.
 
     try:
@@ -325,14 +325,14 @@ Manage Maps
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.map import Map
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.map import Map
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -342,14 +342,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppMapsApi(api_client)
+    api_instance = io_amr_gwm.MapsAppMapsApi(api_client)
 
     try:
         api_response = api_instance.v1_map_list()
@@ -397,15 +397,15 @@ Generate Routing Graph for Map
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.map_graph_update import MapGraphUpdate
-from openapi_client.models.patched_map_graph_update_request import PatchedMapGraphUpdateRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.map_graph_update import MapGraphUpdate
+from io_amr_gwm.models.patched_map_graph_update_request import PatchedMapGraphUpdateRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -415,16 +415,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppMapsApi(api_client)
+    api_instance = io_amr_gwm.MapsAppMapsApi(api_client)
     id_or_name = '1' # str | Map ID or Name.
-    patched_map_graph_update_request = openapi_client.PatchedMapGraphUpdateRequest() # PatchedMapGraphUpdateRequest |  (optional)
+    patched_map_graph_update_request = io_amr_gwm.PatchedMapGraphUpdateRequest() # PatchedMapGraphUpdateRequest |  (optional)
 
     try:
         api_response = api_instance.v1_map_partial_update(id_or_name, patched_map_graph_update_request=patched_map_graph_update_request)
@@ -476,14 +476,14 @@ Generate Routing Graph for Map
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.map import Map
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.map import Map
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -493,14 +493,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppMapsApi(api_client)
+    api_instance = io_amr_gwm.MapsAppMapsApi(api_client)
     id_or_name = '1' # str | Map ID or Name.
 
     try:
@@ -552,14 +552,14 @@ Generate Routing Graph for Map
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.map import Map
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.map import Map
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -569,14 +569,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppMapsApi(api_client)
+    api_instance = io_amr_gwm.MapsAppMapsApi(api_client)
     id_or_name = '1' # str | Map ID or Name.
 
     try:
@@ -628,15 +628,15 @@ Generate Routing Graph for Map
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.map import Map
-from openapi_client.models.map_request import MapRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.map import Map
+from io_amr_gwm.models.map_request import MapRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -646,16 +646,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppMapsApi(api_client)
+    api_instance = io_amr_gwm.MapsAppMapsApi(api_client)
     id_or_name = '1' # str | Map ID or Name.
-    map_request = openapi_client.MapRequest() # MapRequest |  (optional)
+    map_request = io_amr_gwm.MapRequest() # MapRequest |  (optional)
 
     try:
         api_response = api_instance.v1_map_update(id_or_name, map_request=map_request)
@@ -707,14 +707,14 @@ Upload Map
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.map_export_request import MapExportRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.map_export_request import MapExportRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -724,15 +724,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.MapsAppMapsApi(api_client)
-    map_export_request = openapi_client.MapExportRequest() # MapExportRequest |  (optional)
+    api_instance = io_amr_gwm.MapsAppMapsApi(api_client)
+    map_export_request = io_amr_gwm.MapExportRequest() # MapExportRequest |  (optional)
 
     try:
         api_instance.v1_map_upload_update(map_export_request=map_export_request)

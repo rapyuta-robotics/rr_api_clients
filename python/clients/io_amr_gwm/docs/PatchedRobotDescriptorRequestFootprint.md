@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.patched_robot_descriptor_request_footprint import PatchedRobotDescriptorRequestFootprint
+from io_amr_gwm.models.patched_robot_descriptor_request_footprint import PatchedRobotDescriptorRequestFootprint
 
 # TODO update the JSON string below
 json = "{}"

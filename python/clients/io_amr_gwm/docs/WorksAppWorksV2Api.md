@@ -1,4 +1,4 @@
-# openapi_client.WorksAppWorksV2Api
+# io_amr_gwm.WorksAppWorksV2Api
 
 All URIs are relative to *http://localhost*
 
@@ -28,15 +28,15 @@ Activate work
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.activate_work import ActivateWork
-from openapi_client.models.activate_work_request import ActivateWorkRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.activate_work import ActivateWork
+from io_amr_gwm.models.activate_work_request import ActivateWorkRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -46,15 +46,15 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WorksAppWorksV2Api(api_client)
-    activate_work_request = openapi_client.ActivateWorkRequest() # ActivateWorkRequest | 
+    api_instance = io_amr_gwm.WorksAppWorksV2Api(api_client)
+    activate_work_request = io_amr_gwm.ActivateWorkRequest() # ActivateWorkRequest | 
 
     try:
         # Activate work
@@ -106,13 +106,13 @@ Manage Works
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -122,14 +122,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WorksAppWorksV2Api(api_client)
+    api_instance = io_amr_gwm.WorksAppWorksV2Api(api_client)
 
     try:
         # Clear all works
@@ -176,15 +176,15 @@ Create A Work
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.work import Work
-from openapi_client.models.work_request import WorkRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.work import Work
+from io_amr_gwm.models.work_request import WorkRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -194,14 +194,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WorksAppWorksV2Api(api_client)
+    api_instance = io_amr_gwm.WorksAppWorksV2Api(api_client)
     work_request = {"type":"ADHOC_MOVE_POSITION","map":1,"priority":0,"pos":{"coordinates":[2,4],"type":"Point"},"yaw":0,"assigned_agent":1,"meta_data":{"attribute_1":"value_1"},"application_data":{}} # WorkRequest | 
 
     try:
@@ -254,13 +254,13 @@ Cancel or force Delete Work
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -270,14 +270,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WorksAppWorksV2Api(api_client)
+    api_instance = io_amr_gwm.WorksAppWorksV2Api(api_client)
     id = 56 # int | A unique integer value identifying this work base.
     force = False # bool | Force the deletion of the work (optional) (default to False)
 
@@ -330,15 +330,15 @@ Internal Update Work (do not use this, this is for internal updates only)
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.patched_work_internal_update_request import PatchedWorkInternalUpdateRequest
-from openapi_client.models.work_internal_update import WorkInternalUpdate
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.patched_work_internal_update_request import PatchedWorkInternalUpdateRequest
+from io_amr_gwm.models.work_internal_update import WorkInternalUpdate
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -348,16 +348,16 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WorksAppWorksV2Api(api_client)
+    api_instance = io_amr_gwm.WorksAppWorksV2Api(api_client)
     id = 56 # int | A unique integer value identifying this work base.
-    patched_work_internal_update_request = openapi_client.PatchedWorkInternalUpdateRequest() # PatchedWorkInternalUpdateRequest |  (optional)
+    patched_work_internal_update_request = io_amr_gwm.PatchedWorkInternalUpdateRequest() # PatchedWorkInternalUpdateRequest |  (optional)
 
     try:
         # Internal Update Work
@@ -410,14 +410,14 @@ List Works
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.work import Work
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.work import Work
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -427,14 +427,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WorksAppWorksV2Api(api_client)
+    api_instance = io_amr_gwm.WorksAppWorksV2Api(api_client)
     activated_at_after = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
     activated_at_before = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
     application_data = 'application_data_example' # str | filter by application_data query (optional)
@@ -523,15 +523,15 @@ Partially Update Work
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.patched_work_external_update_request import PatchedWorkExternalUpdateRequest
-from openapi_client.models.work_external_update import WorkExternalUpdate
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.patched_work_external_update_request import PatchedWorkExternalUpdateRequest
+from io_amr_gwm.models.work_external_update import WorkExternalUpdate
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -541,14 +541,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WorksAppWorksV2Api(api_client)
+    api_instance = io_amr_gwm.WorksAppWorksV2Api(api_client)
     id = 56 # int | A unique integer value identifying this work base.
     patched_work_external_update_request = {"action":"SET_PRIORITY","priority":10} # PatchedWorkExternalUpdateRequest |  (optional)
 
@@ -603,14 +603,14 @@ Get A Work information
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.work import Work
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.work import Work
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -620,14 +620,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WorksAppWorksV2Api(api_client)
+    api_instance = io_amr_gwm.WorksAppWorksV2Api(api_client)
     id = 56 # int | A unique integer value identifying this work base.
 
     try:
@@ -680,14 +680,14 @@ Get Work Summary
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.work import Work
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.work import Work
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -697,14 +697,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.WorksAppWorksV2Api(api_client)
+    api_instance = io_amr_gwm.WorksAppWorksV2Api(api_client)
     end_date = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
     group_by = 'group_by_example' # str |  (optional)
     interval = 'interval_example' # str | * `daily` - daily * `weekly` - weekly * `monthly` - monthly * `annually` - annually (optional)

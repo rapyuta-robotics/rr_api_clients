@@ -1,4 +1,4 @@
-# openapi_client.SitesAppSitesApi
+# io_amr_gwm.SitesAppSitesApi
 
 All URIs are relative to *http://localhost*
 
@@ -28,15 +28,15 @@ Create new site
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.site import Site
-from openapi_client.models.site_request import SiteRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.site import Site
+from io_amr_gwm.models.site_request import SiteRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -46,14 +46,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SitesAppSitesApi(api_client)
+    api_instance = io_amr_gwm.SitesAppSitesApi(api_client)
     site_request = {"id":"123912","name":"hirano","type":"warehouse","meta_data":{},"endpoint":"https://example.com"} # SiteRequest |  (optional)
 
     try:
@@ -106,13 +106,13 @@ Delete a site
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -122,14 +122,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SitesAppSitesApi(api_client)
+    api_instance = io_amr_gwm.SitesAppSitesApi(api_client)
     id_or_name = None # object | 
 
     try:
@@ -180,14 +180,14 @@ Export a site
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.site_export import SiteExport
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.site_export import SiteExport
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -197,14 +197,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SitesAppSitesApi(api_client)
+    api_instance = io_amr_gwm.SitesAppSitesApi(api_client)
     id_or_name = None # object | 
 
     try:
@@ -257,15 +257,15 @@ Import a site
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.site import Site
-from openapi_client.models.site_request import SiteRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.site import Site
+from io_amr_gwm.models.site_request import SiteRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -275,14 +275,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SitesAppSitesApi(api_client)
+    api_instance = io_amr_gwm.SitesAppSitesApi(api_client)
     site_request = {"id":"123912","name":"hirano","type":"warehouse","meta_data":{},"endpoint":"https://example.com"} # SiteRequest |  (optional)
 
     try:
@@ -335,14 +335,14 @@ Get all sites
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.site import Site
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.site import Site
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -352,14 +352,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SitesAppSitesApi(api_client)
+    api_instance = io_amr_gwm.SitesAppSitesApi(api_client)
     id = 56 # int |  (optional)
     name = 'name_example' # str |  (optional)
     type = 'type_example' # str |  (optional)
@@ -416,15 +416,15 @@ Partially update a site
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.patched_site_request import PatchedSiteRequest
-from openapi_client.models.site import Site
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.patched_site_request import PatchedSiteRequest
+from io_amr_gwm.models.site import Site
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -434,14 +434,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SitesAppSitesApi(api_client)
+    api_instance = io_amr_gwm.SitesAppSitesApi(api_client)
     id_or_name = None # object | 
     patched_site_request = {"id":"123912","name":"hirano","type":"warehouse","meta_data":{},"endpoint":"https://example.com"} # PatchedSiteRequest |  (optional)
 
@@ -496,14 +496,14 @@ Get a site
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.site import Site
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.site import Site
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -513,14 +513,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SitesAppSitesApi(api_client)
+    api_instance = io_amr_gwm.SitesAppSitesApi(api_client)
     id_or_name = None # object | 
 
     try:
@@ -573,14 +573,14 @@ Get site status
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.site_status import SiteStatus
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.site_status import SiteStatus
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -590,14 +590,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SitesAppSitesApi(api_client)
+    api_instance = io_amr_gwm.SitesAppSitesApi(api_client)
     id_or_name = None # object | 
 
     try:
@@ -650,15 +650,15 @@ Update a site
 ```python
 import time
 import os
-import openapi_client
-from openapi_client.models.site import Site
-from openapi_client.models.site_request import SiteRequest
-from openapi_client.rest import ApiException
+import io_amr_gwm
+from io_amr_gwm.models.site import Site
+from io_amr_gwm.models.site_request import SiteRequest
+from io_amr_gwm.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     host = "http://localhost"
 )
 
@@ -668,14 +668,14 @@ configuration = openapi_client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = openapi_client.Configuration(
+configuration = io_amr_gwm.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with openapi_client.ApiClient(configuration) as api_client:
+with io_amr_gwm.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = openapi_client.SitesAppSitesApi(api_client)
+    api_instance = io_amr_gwm.SitesAppSitesApi(api_client)
     id_or_name = None # object | 
     site_request = {"id":"123912","name":"hirano","type":"warehouse","meta_data":{},"endpoint":"https://example.com"} # SiteRequest |  (optional)
 

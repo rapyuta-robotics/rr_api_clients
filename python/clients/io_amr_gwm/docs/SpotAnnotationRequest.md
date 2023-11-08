@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.spot_annotation_request import SpotAnnotationRequest
+from io_amr_gwm.models.spot_annotation_request import SpotAnnotationRequest
 
 # TODO update the JSON string below
 json = "{}"

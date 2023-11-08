@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.error_type_request import ErrorTypeRequest
+from io_amr_gwm.models.error_type_request import ErrorTypeRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.site_status import SiteStatus
+from io_amr_gwm.models.site_status import SiteStatus
 
 # TODO update the JSON string below
 json = "{}"

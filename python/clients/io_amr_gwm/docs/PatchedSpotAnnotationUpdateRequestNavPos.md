@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.patched_spot_annotation_update_request_nav_pos import PatchedSpotAnnotationUpdateRequestNavPos
+from io_amr_gwm.models.patched_spot_annotation_update_request_nav_pos import PatchedSpotAnnotationUpdateRequestNavPos
 
 # TODO update the JSON string below
 json = "{}"
