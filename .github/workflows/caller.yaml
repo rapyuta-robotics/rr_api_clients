@@ -11,10 +11,6 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     steps:
-
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
       - name: Trigger Workflow
         uses: convictional/trigger-workflow-and-wait@v1.6.1
         with:

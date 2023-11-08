@@ -3,4 +3,3 @@ act-secret
 .env
 node_modules
 .sample.event
-python/client

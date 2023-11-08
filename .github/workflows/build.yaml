@@ -1,13 +1,5 @@
 name: Build API Clients
-# on:
-#   push:
-#     tags:
-#       - '*'
-#     branches:
-#       - devel
-#       - 'release/**'
 on:
-  push:
   workflow_dispatch:
     inputs:
       docker-image:
@@ -21,7 +13,7 @@ jobs:
     steps:
 
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
 
       - name: Setup Java
@@ -51,19 +43,33 @@ jobs:
           done;
           sleep 5
 
+      - name: Extract Service Name and Version
+        run: |
+          string="${{ github.event.inputs.docker-image }}"
+          service_name=$(echo "$string" | awk -F'/' '{print $NF}' | awk -F':' '{print $1}')
+          tag_name=$(echo "$string" | awk -F':' '{print $NF}')
+          echo "SERVICE_NAME=$service_name" >> $GITHUB_ENV
+          echo "TAG_NAME=$tag_name" >> $GITHUB_ENV
+
       - name: Build Python Client
         working-directory: ./python
         run: |
+          echo "SERVICE NAME = $SERVICE_NAME"
           npm install
-          npx openapi-generator-cli generate
-          ls -l client
-          echo "OK!"
+          rm -rf clients/$SERVICE_NAME
+          npx openapi-generator-cli generate -o "clients/$SERVICE_NAME" -i "http://localhost:8000/api/schema/" -g python --skip-validate-spec --minimal-update --additional-properties=floatStrictType=false --global-property="apiTests=false,modelTests=false"
+          ls -l clients/$SERVICE_NAME
 
-      - name: Archive Python Client
-        uses: actions/upload-artifact@v3
+      - name: Add and Commit
+        uses: EndBug/add-and-commit@v9
         with:
-          name: python-client
-          path: python/client/
+          add: 'python/clients/$SERVICE_NAME'
+          author_name: Generator Bot
+          author_email: tharindu.bathigama@rapyuta-robotics.com
+          message: 'Generated Python Client for $SERVICE_NAME tag $TAG_NAME'
+          tag: '$SERVICE_NAME:$TAG_NAME'
+          tag_push: '--force'
+          
 
       - name: Stop Backend Service
         run: |
