@@ -54,7 +54,7 @@ jobs:
       - name: Start Backend Service
         run: |
           docker pull "${{ github.event.inputs.docker-image-name }}:${{ github.event.inputs.version }}"
-          docker run -d --name backend_service_container -p 8000:${{ github.event.inputs.service-port }} "${{ github.event.inputs.docker-image-name }}:${{ github.event.inputs.version }}"
+          docker run -d --name backend_service_container -p 8000:${{ github.event.inputs.service-port }} "${{ github.event.inputs.docker-image-name }}:${{ github.event.inputs.version }}" ${{ github.event.inputs.docker-command }}
 
 
       - name: Wait for service to start
