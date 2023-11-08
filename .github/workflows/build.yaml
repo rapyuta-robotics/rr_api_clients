@@ -57,6 +57,7 @@ jobs:
           npm install
           npx openapi-generator-cli generate
           ls -l client
+          echo "OK!"
 
       - name: Archive Python Client
         uses: actions/upload-artifact@v3
