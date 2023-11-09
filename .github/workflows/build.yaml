@@ -71,7 +71,7 @@ jobs:
           npm install
           rm -rf "clients/${{ github.event.inputs.client-name }}"
           npx openapi-generator-cli generate -o "clients/${{ github.event.inputs.client-name }}" \
-            -i "http://localhost:8000/${{ github.event.inputs.openapi-path }}" --package-name=${{ github.event.inputs.client-name }} \
+            -i "http://localhost:8000/${{ github.event.inputs.openapi-path }}" --package-name=${{ github.event.inputs.client-name }}_client \
             -g python --skip-validate-spec --minimal-update \
             --additional-properties="floatStrictType=false,packageVersion=${{ github.event.inputs.version }}" \
             --global-property="apiTests=false,modelTests=false"
