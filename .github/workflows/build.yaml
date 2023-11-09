@@ -69,8 +69,8 @@ jobs:
         working-directory: ./python
         run: |
           npm install
-          rm -rf "clients/${{ github.event.inputs.client-name }}"
-          npx openapi-generator-cli generate -o "clients/${{ github.event.inputs.client-name }}" \
+          rm -rf "../python_${{ github.event.inputs.client-name }}_client"
+          npx openapi-generator-cli generate -o "../python_${{ github.event.inputs.client-name }}_client" \
             -i "http://localhost:8000/${{ github.event.inputs.openapi-path }}" --package-name=${{ github.event.inputs.client-name }}_client \
             -g python --skip-validate-spec --minimal-update \
             --additional-properties="floatStrictType=false,packageVersion=${{ github.event.inputs.version }}" \
@@ -79,7 +79,7 @@ jobs:
       - name: Add and Commit
         uses: EndBug/add-and-commit@v9
         with:
-          add: 'python/clients/'
+          add: '../python_${{ github.event.inputs.client-name }}_client'
           author_name: Generator Bot
           author_email: tharindu.bathigama@rapyuta-robotics.com
           message: 'Generated Python Client for ${{ github.event.inputs.client-name }} ${{ github.event.inputs.version }}'
