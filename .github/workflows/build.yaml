@@ -79,7 +79,7 @@ jobs:
       - name: Add and Commit
         uses: EndBug/add-and-commit@v9
         with:
-          add: '../python_${{ github.event.inputs.client-name }}_client'
+          add: 'python_${{ github.event.inputs.client-name }}_client'
           author_name: Generator Bot
           author_email: tharindu.bathigama@rapyuta-robotics.com
           message: 'Generated Python Client for ${{ github.event.inputs.client-name }} ${{ github.event.inputs.version }}'
