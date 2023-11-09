@@ -1,4 +1,4 @@
-# gwm.GraphGeneratorRegionsApi
+# gwm_client.GraphGeneratorRegionsApi
 
 All URIs are relative to *http://localhost*
 
@@ -22,14 +22,14 @@ Download the Aisle Regions of a Map
 ```python
 import time
 import os
-import gwm
-from gwm.models.region_db_json import RegionDbJson
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.region_db_json import RegionDbJson
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -39,14 +39,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.GraphGeneratorRegionsApi(api_client)
+    api_instance = gwm_client.GraphGeneratorRegionsApi(api_client)
     map_name = 'map_name_example' # str | Map to download the regions from
 
     try:
@@ -96,14 +96,14 @@ Name | Type | Description  | Notes
 ```python
 import time
 import os
-import gwm
-from gwm.models.region import Region
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.region import Region
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -113,14 +113,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.GraphGeneratorRegionsApi(api_client)
+    api_instance = gwm_client.GraphGeneratorRegionsApi(api_client)
     map_name = 'map_name_example' # str | 
     map_layer_name = 'map_layer_name_example' # str | 
     origin_x = 3.4 # float | 
@@ -186,13 +186,13 @@ Name | Type | Description  | Notes
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -202,14 +202,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.GraphGeneratorRegionsApi(api_client)
+    api_instance = gwm_client.GraphGeneratorRegionsApi(api_client)
     map_name = 'map_name_example' # str | Map to upload the regions to
     aisle_regions = None # bytearray | 
 

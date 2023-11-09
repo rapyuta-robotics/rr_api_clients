@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.paginated_container_descriptor_list import PaginatedContainerDescriptorList
+from gwm_client.models.paginated_container_descriptor_list import PaginatedContainerDescriptorList
 
 # TODO update the JSON string below
 json = "{}"

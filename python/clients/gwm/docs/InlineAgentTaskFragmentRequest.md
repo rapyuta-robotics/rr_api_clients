@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.inline_agent_task_fragment_request import InlineAgentTaskFragmentRequest
+from gwm_client.models.inline_agent_task_fragment_request import InlineAgentTaskFragmentRequest
 
 # TODO update the JSON string below
 json = "{}"

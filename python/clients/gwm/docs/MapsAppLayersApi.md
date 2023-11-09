@@ -1,4 +1,4 @@
-# gwm.MapsAppLayersApi
+# gwm_client.MapsAppLayersApi
 
 All URIs are relative to *http://localhost*
 
@@ -30,15 +30,15 @@ Manage Map Layers
 ```python
 import time
 import os
-import gwm
-from gwm.models.layer import Layer
-from gwm.models.layer_request import LayerRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.layer import Layer
+from gwm_client.models.layer_request import LayerRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -48,16 +48,16 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppLayersApi(api_client)
+    api_instance = gwm_client.MapsAppLayersApi(api_client)
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
-    layer_request = gwm.LayerRequest() # LayerRequest | 
+    layer_request = gwm_client.LayerRequest() # LayerRequest | 
 
     try:
         api_response = api_instance.v1_map_layer_create(map_id_or_name, layer_request)
@@ -109,13 +109,13 @@ Manage Map Layers
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -125,14 +125,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppLayersApi(api_client)
+    api_instance = gwm_client.MapsAppLayersApi(api_client)
     id_or_name = '1' # str | Layer ID or Name.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
 
@@ -184,14 +184,14 @@ Manage Map Layers
 ```python
 import time
 import os
-import gwm
-from gwm.models.layer_yaml import LayerYAML
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.layer_yaml import LayerYAML
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -201,14 +201,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppLayersApi(api_client)
+    api_instance = gwm_client.MapsAppLayersApi(api_client)
     id_or_name = '1' # str | Layer ID or Name.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
 
@@ -262,14 +262,14 @@ Manage Map Layers
 ```python
 import time
 import os
-import gwm
-from gwm.models.layer import Layer
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.layer import Layer
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -279,14 +279,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppLayersApi(api_client)
+    api_instance = gwm_client.MapsAppLayersApi(api_client)
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
 
     try:
@@ -338,15 +338,15 @@ Manage Map Layers
 ```python
 import time
 import os
-import gwm
-from gwm.models.layer import Layer
-from gwm.models.patched_layer_request import PatchedLayerRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.layer import Layer
+from gwm_client.models.patched_layer_request import PatchedLayerRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -356,17 +356,17 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppLayersApi(api_client)
+    api_instance = gwm_client.MapsAppLayersApi(api_client)
     id_or_name = '1' # str | Layer ID or Name.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
-    patched_layer_request = gwm.PatchedLayerRequest() # PatchedLayerRequest |  (optional)
+    patched_layer_request = gwm_client.PatchedLayerRequest() # PatchedLayerRequest |  (optional)
 
     try:
         api_response = api_instance.v1_map_layer_partial_update(id_or_name, map_id_or_name, patched_layer_request=patched_layer_request)
@@ -419,14 +419,14 @@ Manage Map Layers
 ```python
 import time
 import os
-import gwm
-from gwm.models.layer import Layer
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.layer import Layer
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -436,14 +436,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppLayersApi(api_client)
+    api_instance = gwm_client.MapsAppLayersApi(api_client)
     id_or_name = '1' # str | Layer ID or Name.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
 
@@ -497,14 +497,14 @@ Manage Map Layers
 ```python
 import time
 import os
-import gwm
-from gwm.models.layer_data import LayerData
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.layer_data import LayerData
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -514,14 +514,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppLayersApi(api_client)
+    api_instance = gwm_client.MapsAppLayersApi(api_client)
     id_or_name = 56 # int | A unique integer value identifying this layer.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
 
@@ -575,14 +575,14 @@ Manage Map Layers
 ```python
 import time
 import os
-import gwm
-from gwm.models.layer_image import LayerImage
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.layer_image import LayerImage
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -592,14 +592,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppLayersApi(api_client)
+    api_instance = gwm_client.MapsAppLayersApi(api_client)
     id_or_name = 56 # int | A unique integer value identifying this layer.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
 
@@ -653,15 +653,15 @@ Manage Map Layers
 ```python
 import time
 import os
-import gwm
-from gwm.models.layer import Layer
-from gwm.models.layer_request import LayerRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.layer import Layer
+from gwm_client.models.layer_request import LayerRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -671,17 +671,17 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppLayersApi(api_client)
+    api_instance = gwm_client.MapsAppLayersApi(api_client)
     id_or_name = '1' # str | Layer ID or Name.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
-    layer_request = gwm.LayerRequest() # LayerRequest | 
+    layer_request = gwm_client.LayerRequest() # LayerRequest | 
 
     try:
         api_response = api_instance.v1_map_layer_update(id_or_name, map_id_or_name, layer_request)
@@ -734,14 +734,14 @@ Manage Map Layers
 ```python
 import time
 import os
-import gwm
-from gwm.models.layer_data import LayerData
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.layer_data import LayerData
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -751,14 +751,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppLayersApi(api_client)
+    api_instance = gwm_client.MapsAppLayersApi(api_client)
     id_or_name = '1' # str | Layer ID or Name.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
     data = None # bytearray |  (optional)
@@ -814,14 +814,14 @@ Manage Map Layers
 ```python
 import time
 import os
-import gwm
-from gwm.models.layer_image import LayerImage
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.layer_image import LayerImage
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -831,14 +831,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppLayersApi(api_client)
+    api_instance = gwm_client.MapsAppLayersApi(api_client)
     id_or_name = '1' # str | Layer ID or Name.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
     image = None # bytearray | Path to the image file containing the occupancy data; can be absolute, or relative to the location of the YAML file (optional)

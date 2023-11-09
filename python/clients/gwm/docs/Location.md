@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.location import Location
+from gwm_client.models.location import Location
 
 # TODO update the JSON string below
 json = "{}"

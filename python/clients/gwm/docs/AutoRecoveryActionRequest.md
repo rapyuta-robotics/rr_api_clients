@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.auto_recovery_action_request import AutoRecoveryActionRequest
+from gwm_client.models.auto_recovery_action_request import AutoRecoveryActionRequest
 
 # TODO update the JSON string below
 json = "{}"

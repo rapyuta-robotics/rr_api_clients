@@ -1,4 +1,4 @@
-# gwm.ContainersAppContainerMasterApi
+# gwm_client.ContainersAppContainerMasterApi
 
 All URIs are relative to *http://localhost*
 
@@ -30,15 +30,15 @@ Manage Containers
 ```python
 import time
 import os
-import gwm
-from gwm.models.container import Container
-from gwm.models.container_request import ContainerRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.container import Container
+from gwm_client.models.container_request import ContainerRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -48,15 +48,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppContainerMasterApi(api_client)
-    container_request = gwm.ContainerRequest() # ContainerRequest | 
+    api_instance = gwm_client.ContainersAppContainerMasterApi(api_client)
+    container_request = gwm_client.ContainerRequest() # ContainerRequest | 
 
     try:
         api_response = api_instance.v1_containers_apply_create(container_request)
@@ -107,15 +107,15 @@ Manage Containers
 ```python
 import time
 import os
-import gwm
-from gwm.models.container import Container
-from gwm.models.container_request import ContainerRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.container import Container
+from gwm_client.models.container_request import ContainerRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -125,15 +125,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppContainerMasterApi(api_client)
-    container_request = gwm.ContainerRequest() # ContainerRequest | 
+    api_instance = gwm_client.ContainersAppContainerMasterApi(api_client)
+    container_request = gwm_client.ContainerRequest() # ContainerRequest | 
 
     try:
         api_response = api_instance.v1_containers_apply_dry_run_create(container_request)
@@ -184,14 +184,14 @@ Patch containers
 ```python
 import time
 import os
-import gwm
-from gwm.models.patched_container_request import PatchedContainerRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.patched_container_request import PatchedContainerRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -201,15 +201,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppContainerMasterApi(api_client)
-    patched_container_request = [gwm.PatchedContainerRequest()] # List[PatchedContainerRequest] | 
+    api_instance = gwm_client.ContainersAppContainerMasterApi(api_client)
+    patched_container_request = [gwm_client.PatchedContainerRequest()] # List[PatchedContainerRequest] | 
 
     try:
         # Patch containers
@@ -255,14 +255,14 @@ Manage Containers
 ```python
 import time
 import os
-import gwm
-from gwm.models.v1_containers_create_descriptor_parameter_inner import V1ContainersCreateDescriptorParameterInner
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.v1_containers_create_descriptor_parameter_inner import V1ContainersCreateDescriptorParameterInner
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -272,15 +272,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppContainerMasterApi(api_client)
-    descriptor = [gwm.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
+    api_instance = gwm_client.ContainersAppContainerMasterApi(api_client)
+    descriptor = [gwm_client.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
     descriptor_group = ['descriptor_group_example'] # List[str] |  (optional)
     id = [56] # List[int] |  (optional)
     name = ['name_example'] # List[str] |  (optional)
@@ -339,16 +339,16 @@ Create containers
 ```python
 import time
 import os
-import gwm
-from gwm.models.container_request import ContainerRequest
-from gwm.models.paginated_container_list import PaginatedContainerList
-from gwm.models.v1_containers_create_descriptor_parameter_inner import V1ContainersCreateDescriptorParameterInner
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.container_request import ContainerRequest
+from gwm_client.models.paginated_container_list import PaginatedContainerList
+from gwm_client.models.v1_containers_create_descriptor_parameter_inner import V1ContainersCreateDescriptorParameterInner
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -358,16 +358,16 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppContainerMasterApi(api_client)
-    container_request = [gwm.ContainerRequest()] # List[ContainerRequest] | 
-    descriptor = [gwm.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
+    api_instance = gwm_client.ContainersAppContainerMasterApi(api_client)
+    container_request = [gwm_client.ContainerRequest()] # List[ContainerRequest] | 
+    descriptor = [gwm_client.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
     descriptor_group = ['descriptor_group_example'] # List[str] |  (optional)
     id = [56] # List[int] |  (optional)
     name = ['name_example'] # List[str] |  (optional)
@@ -432,13 +432,13 @@ Bulk Delete  Containers
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -448,14 +448,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppContainerMasterApi(api_client)
+    api_instance = gwm_client.ContainersAppContainerMasterApi(api_client)
     descriptor = ['descriptor_example'] # List[str] | List of 'Container Descriptor IDs' or 'Container Descriptor names' (optional)
     id = [3.4] # List[float] | List of Container IDs (optional)
     name = ['name_example'] # List[str] | List of Container names (optional)
@@ -510,13 +510,13 @@ List containers
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -526,14 +526,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppContainerMasterApi(api_client)
+    api_instance = gwm_client.ContainersAppContainerMasterApi(api_client)
     id_or_name = '1' # str | Container ID or Name.
 
     try:
@@ -583,14 +583,14 @@ List containers
 ```python
 import time
 import os
-import gwm
-from gwm.models.paginated_container_list import PaginatedContainerList
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.paginated_container_list import PaginatedContainerList
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -600,14 +600,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppContainerMasterApi(api_client)
+    api_instance = gwm_client.ContainersAppContainerMasterApi(api_client)
     descriptor = ['descriptor_example'] # List[str] | List of 'Container Descriptor IDs' or 'Container Descriptor names' (optional)
     descriptor_group = ['descriptor_group_example'] # List[str] |  (optional)
     id = [3.4] # List[float] | List of Container IDs (optional)
@@ -673,15 +673,15 @@ List containers
 ```python
 import time
 import os
-import gwm
-from gwm.models.container import Container
-from gwm.models.patched_container_request import PatchedContainerRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.container import Container
+from gwm_client.models.patched_container_request import PatchedContainerRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -691,16 +691,16 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppContainerMasterApi(api_client)
+    api_instance = gwm_client.ContainersAppContainerMasterApi(api_client)
     id_or_name = '1' # str | Container ID or Name.
-    patched_container_request = gwm.PatchedContainerRequest() # PatchedContainerRequest |  (optional)
+    patched_container_request = gwm_client.PatchedContainerRequest() # PatchedContainerRequest |  (optional)
 
     try:
         api_response = api_instance.v1_containers_partial_update(id_or_name, patched_container_request=patched_container_request)
@@ -752,14 +752,14 @@ List containers
 ```python
 import time
 import os
-import gwm
-from gwm.models.container import Container
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.container import Container
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -769,14 +769,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppContainerMasterApi(api_client)
+    api_instance = gwm_client.ContainersAppContainerMasterApi(api_client)
     id_or_name = '1' # str | Container ID or Name.
 
     try:
@@ -828,15 +828,15 @@ List containers
 ```python
 import time
 import os
-import gwm
-from gwm.models.container import Container
-from gwm.models.container_request import ContainerRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.container import Container
+from gwm_client.models.container_request import ContainerRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -846,16 +846,16 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppContainerMasterApi(api_client)
+    api_instance = gwm_client.ContainersAppContainerMasterApi(api_client)
     id_or_name = '1' # str | Container ID or Name.
-    container_request = gwm.ContainerRequest() # ContainerRequest | 
+    container_request = gwm_client.ContainerRequest() # ContainerRequest | 
 
     try:
         api_response = api_instance.v1_containers_update(id_or_name, container_request)

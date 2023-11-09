@@ -1,4 +1,4 @@
-# gwm.MapsAppNodesApi
+# gwm_client.MapsAppNodesApi
 
 All URIs are relative to *http://localhost*
 
@@ -27,14 +27,14 @@ Patch Map Nodes
 ```python
 import time
 import os
-import gwm
-from gwm.models.patched_node_request import PatchedNodeRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.patched_node_request import PatchedNodeRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -44,16 +44,16 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppNodesApi(api_client)
+    api_instance = gwm_client.MapsAppNodesApi(api_client)
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
-    patched_node_request = [gwm.PatchedNodeRequest()] # List[PatchedNodeRequest] | 
+    patched_node_request = [gwm_client.PatchedNodeRequest()] # List[PatchedNodeRequest] | 
 
     try:
         # Patch Map Nodes
@@ -100,13 +100,13 @@ Manage Routing Graph Nodes
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -116,14 +116,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppNodesApi(api_client)
+    api_instance = gwm_client.MapsAppNodesApi(api_client)
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
     edge = 'edge_example' # str |  (optional)
     intersects_region = 'intersects_region_example' # str |  (optional)
@@ -183,15 +183,15 @@ Manage Routing Graph Nodes
 ```python
 import time
 import os
-import gwm
-from gwm.models.node import Node
-from gwm.models.node_request import NodeRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.node import Node
+from gwm_client.models.node_request import NodeRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -201,16 +201,16 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppNodesApi(api_client)
+    api_instance = gwm_client.MapsAppNodesApi(api_client)
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
-    node_request = [gwm.NodeRequest()] # List[NodeRequest] | 
+    node_request = [gwm_client.NodeRequest()] # List[NodeRequest] | 
     edge = 'edge_example' # str |  (optional)
     intersects_region = 'intersects_region_example' # str |  (optional)
     position = ['position_example'] # List[str] | format: x,y,floor (optional)
@@ -270,13 +270,13 @@ Manage Routing Graph Nodes
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -286,14 +286,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppNodesApi(api_client)
+    api_instance = gwm_client.MapsAppNodesApi(api_client)
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
     force = True # bool | force clear all resources, including preserved ones (optional)
 
@@ -345,13 +345,13 @@ Manage Routing Graph Nodes
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -361,14 +361,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppNodesApi(api_client)
+    api_instance = gwm_client.MapsAppNodesApi(api_client)
     id = 56 # int | A unique integer value identifying this node.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
 
@@ -420,14 +420,14 @@ List Nodes
 ```python
 import time
 import os
-import gwm
-from gwm.models.node_db_json import NodeDbJson
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.node_db_json import NodeDbJson
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -437,14 +437,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppNodesApi(api_client)
+    api_instance = gwm_client.MapsAppNodesApi(api_client)
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
     edge = 56 # int | filter nodes which touch edge with id (optional)
     intersects_region = 'intersects_region_example' # str | filter nodes which are contained within region with name or id (optional)
@@ -506,15 +506,15 @@ Manage Routing Graph Nodes
 ```python
 import time
 import os
-import gwm
-from gwm.models.node import Node
-from gwm.models.patched_node_request import PatchedNodeRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.node import Node
+from gwm_client.models.patched_node_request import PatchedNodeRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -524,17 +524,17 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppNodesApi(api_client)
+    api_instance = gwm_client.MapsAppNodesApi(api_client)
     id = 56 # int | A unique integer value identifying this node.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
-    patched_node_request = gwm.PatchedNodeRequest() # PatchedNodeRequest |  (optional)
+    patched_node_request = gwm_client.PatchedNodeRequest() # PatchedNodeRequest |  (optional)
 
     try:
         api_response = api_instance.v1_map_node_partial_update(id, map_id_or_name, patched_node_request=patched_node_request)
@@ -587,14 +587,14 @@ Manage Routing Graph Nodes
 ```python
 import time
 import os
-import gwm
-from gwm.models.node import Node
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.node import Node
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -604,14 +604,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppNodesApi(api_client)
+    api_instance = gwm_client.MapsAppNodesApi(api_client)
     id = 56 # int | A unique integer value identifying this node.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
 

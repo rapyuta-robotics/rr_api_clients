@@ -1,4 +1,4 @@
-# gwm.RobotsAppAgentsApi
+# gwm_client.RobotsAppAgentsApi
 
 All URIs are relative to *http://localhost*
 
@@ -26,15 +26,15 @@ Manage Agents in the Site
 ```python
 import time
 import os
-import gwm
-from gwm.models.agent import Agent
-from gwm.models.agent_request import AgentRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.agent import Agent
+from gwm_client.models.agent_request import AgentRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -44,15 +44,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.RobotsAppAgentsApi(api_client)
-    agent_request = gwm.AgentRequest() # AgentRequest | 
+    api_instance = gwm_client.RobotsAppAgentsApi(api_client)
+    agent_request = gwm_client.AgentRequest() # AgentRequest | 
 
     try:
         api_response = api_instance.v1_agent_create(agent_request)
@@ -103,13 +103,13 @@ List agents
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -119,14 +119,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.RobotsAppAgentsApi(api_client)
+    api_instance = gwm_client.RobotsAppAgentsApi(api_client)
     id_or_name = '1' # str | Agent ID or Name.
 
     try:
@@ -176,14 +176,14 @@ Set all agents mode
 ```python
 import time
 import os
-import gwm
-from gwm.models.agent_mode_request import AgentModeRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.agent_mode_request import AgentModeRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -193,15 +193,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.RobotsAppAgentsApi(api_client)
-    agent_mode_request = gwm.AgentModeRequest() # AgentModeRequest | 
+    api_instance = gwm_client.RobotsAppAgentsApi(api_client)
+    agent_mode_request = gwm_client.AgentModeRequest() # AgentModeRequest | 
 
     try:
         # Set all agents mode
@@ -251,14 +251,14 @@ List agents
 ```python
 import time
 import os
-import gwm
-from gwm.models.agent import Agent
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.agent import Agent
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -268,14 +268,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.RobotsAppAgentsApi(api_client)
+    api_instance = gwm_client.RobotsAppAgentsApi(api_client)
     map = [3.4] # List[float] | filter agents by maps ids or names (optional)
     robot_descriptor_id = 56 # int | filter agents by robot description ids (optional)
     robot_id = 56 # int | filter agents by robot id (optional)
@@ -331,15 +331,15 @@ List agents
 ```python
 import time
 import os
-import gwm
-from gwm.models.agent import Agent
-from gwm.models.patched_agent_request import PatchedAgentRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.agent import Agent
+from gwm_client.models.patched_agent_request import PatchedAgentRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -349,16 +349,16 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.RobotsAppAgentsApi(api_client)
+    api_instance = gwm_client.RobotsAppAgentsApi(api_client)
     id_or_name = '1' # str | Agent ID or Name.
-    patched_agent_request = gwm.PatchedAgentRequest() # PatchedAgentRequest |  (optional)
+    patched_agent_request = gwm_client.PatchedAgentRequest() # PatchedAgentRequest |  (optional)
 
     try:
         api_response = api_instance.v1_agent_partial_update(id_or_name, patched_agent_request=patched_agent_request)
@@ -410,14 +410,14 @@ List agents
 ```python
 import time
 import os
-import gwm
-from gwm.models.agent import Agent
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.agent import Agent
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -427,14 +427,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.RobotsAppAgentsApi(api_client)
+    api_instance = gwm_client.RobotsAppAgentsApi(api_client)
     id_or_name = '1' # str | Agent ID or Name.
 
     try:
@@ -486,15 +486,15 @@ List agents
 ```python
 import time
 import os
-import gwm
-from gwm.models.agent import Agent
-from gwm.models.agent_request import AgentRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.agent import Agent
+from gwm_client.models.agent_request import AgentRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -504,16 +504,16 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.RobotsAppAgentsApi(api_client)
+    api_instance = gwm_client.RobotsAppAgentsApi(api_client)
     id_or_name = '1' # str | Agent ID or Name.
-    agent_request = gwm.AgentRequest() # AgentRequest | 
+    agent_request = gwm_client.AgentRequest() # AgentRequest | 
 
     try:
         api_response = api_instance.v1_agent_update(id_or_name, agent_request)

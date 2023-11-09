@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.activate_work import ActivateWork
+from gwm_client.models.activate_work import ActivateWork
 
 # TODO update the JSON string below
 json = "{}"

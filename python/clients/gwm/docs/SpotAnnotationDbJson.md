@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.spot_annotation_db_json import SpotAnnotationDbJson
+from gwm_client.models.spot_annotation_db_json import SpotAnnotationDbJson
 
 # TODO update the JSON string below
 json = "{}"

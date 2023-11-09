@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.region_export_request import RegionExportRequest
+from gwm_client.models.region_export_request import RegionExportRequest
 
 # TODO update the JSON string below
 json = "{}"

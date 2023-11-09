@@ -1,4 +1,4 @@
-# gwm.MapsAppEdgesApi
+# gwm_client.MapsAppEdgesApi
 
 All URIs are relative to *http://localhost*
 
@@ -25,15 +25,15 @@ Manage Routing Graph Edges
 ```python
 import time
 import os
-import gwm
-from gwm.models.edge import Edge
-from gwm.models.edge_request import EdgeRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.edge import Edge
+from gwm_client.models.edge_request import EdgeRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -43,16 +43,16 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppEdgesApi(api_client)
+    api_instance = gwm_client.MapsAppEdgesApi(api_client)
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
-    edge_request = [gwm.EdgeRequest()] # List[EdgeRequest] | 
+    edge_request = [gwm_client.EdgeRequest()] # List[EdgeRequest] | 
     intersects_region = 'intersects_region_example' # str |  (optional)
     node = 'node_example' # str |  (optional)
     within_region = 'within_region_example' # str |  (optional)
@@ -110,13 +110,13 @@ Manage Routing Graph Edges
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -126,14 +126,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppEdgesApi(api_client)
+    api_instance = gwm_client.MapsAppEdgesApi(api_client)
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
     force = True # bool | force clear all resources, including preserved ones (optional)
 
@@ -185,13 +185,13 @@ Manage Routing Graph Edges
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -201,14 +201,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppEdgesApi(api_client)
+    api_instance = gwm_client.MapsAppEdgesApi(api_client)
     id = 56 # int | A unique integer value identifying this edge.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
 
@@ -260,14 +260,14 @@ Manage Routing Graph Edges
 ```python
 import time
 import os
-import gwm
-from gwm.models.edge import Edge
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.edge import Edge
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -277,14 +277,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppEdgesApi(api_client)
+    api_instance = gwm_client.MapsAppEdgesApi(api_client)
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
     intersects_region = 'intersects_region_example' # str | filter edges which are crossing a region with id or name (optional)
     node = 56 # int | filter edges connected to the node (optional)
@@ -342,15 +342,15 @@ Manage Routing Graph Edges
 ```python
 import time
 import os
-import gwm
-from gwm.models.edge import Edge
-from gwm.models.patched_edge_request import PatchedEdgeRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.edge import Edge
+from gwm_client.models.patched_edge_request import PatchedEdgeRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -360,17 +360,17 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppEdgesApi(api_client)
+    api_instance = gwm_client.MapsAppEdgesApi(api_client)
     id = 56 # int | A unique integer value identifying this edge.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
-    patched_edge_request = gwm.PatchedEdgeRequest() # PatchedEdgeRequest |  (optional)
+    patched_edge_request = gwm_client.PatchedEdgeRequest() # PatchedEdgeRequest |  (optional)
 
     try:
         api_response = api_instance.v1_map_edge_partial_update(id, map_id_or_name, patched_edge_request=patched_edge_request)
@@ -423,14 +423,14 @@ Manage Routing Graph Edges
 ```python
 import time
 import os
-import gwm
-from gwm.models.edge import Edge
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.edge import Edge
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -440,14 +440,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppEdgesApi(api_client)
+    api_instance = gwm_client.MapsAppEdgesApi(api_client)
     id = 56 # int | A unique integer value identifying this edge.
     map_id_or_name = 'map_id_or_name_example' # str | MAP ID or Name
 

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.site_export import SiteExport
+from gwm_client.models.site_export import SiteExport
 
 # TODO update the JSON string below
 json = "{}"

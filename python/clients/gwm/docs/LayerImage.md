@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.layer_image import LayerImage
+from gwm_client.models.layer_image import LayerImage
 
 # TODO update the JSON string below
 json = "{}"

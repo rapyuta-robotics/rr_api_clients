@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.work import Work
+from gwm_client.models.work import Work
 
 # TODO update the JSON string below
 json = "{}"

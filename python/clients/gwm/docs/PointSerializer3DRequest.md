@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.point_serializer3_d_request import PointSerializer3DRequest
+from gwm_client.models.point_serializer3_d_request import PointSerializer3DRequest
 
 # TODO update the JSON string below
 json = "{}"

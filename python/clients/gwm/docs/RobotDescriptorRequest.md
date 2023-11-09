@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.robot_descriptor_request import RobotDescriptorRequest
+from gwm_client.models.robot_descriptor_request import RobotDescriptorRequest
 
 # TODO update the JSON string below
 json = "{}"

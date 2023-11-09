@@ -20,7 +20,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.agent_task_request import AgentTaskRequest
+from gwm_client.models.agent_task_request import AgentTaskRequest
 
 # TODO update the JSON string below
 json = "{}"

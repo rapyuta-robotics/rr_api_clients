@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.polygon_request import PolygonRequest
+from gwm_client.models.polygon_request import PolygonRequest
 
 # TODO update the JSON string below
 json = "{}"

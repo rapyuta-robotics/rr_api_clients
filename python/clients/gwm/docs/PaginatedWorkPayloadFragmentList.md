@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.paginated_work_payload_fragment_list import PaginatedWorkPayloadFragmentList
+from gwm_client.models.paginated_work_payload_fragment_list import PaginatedWorkPayloadFragmentList
 
 # TODO update the JSON string below
 json = "{}"

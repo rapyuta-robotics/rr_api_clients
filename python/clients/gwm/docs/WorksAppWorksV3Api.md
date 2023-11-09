@@ -1,4 +1,4 @@
-# gwm.WorksAppWorksV3Api
+# gwm_client.WorksAppWorksV3Api
 
 All URIs are relative to *http://localhost*
 
@@ -30,15 +30,15 @@ Activate work
 ```python
 import time
 import os
-import gwm
-from gwm.models.v3_activate_work import V3ActivateWork
-from gwm.models.v3_activate_work_request import V3ActivateWorkRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.v3_activate_work import V3ActivateWork
+from gwm_client.models.v3_activate_work_request import V3ActivateWorkRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -48,15 +48,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppWorksV3Api(api_client)
-    v3_activate_work_request = gwm.V3ActivateWorkRequest() # V3ActivateWorkRequest |  (optional)
+    api_instance = gwm_client.WorksAppWorksV3Api(api_client)
+    v3_activate_work_request = gwm_client.V3ActivateWorkRequest() # V3ActivateWorkRequest |  (optional)
 
     try:
         # Activate work
@@ -108,15 +108,15 @@ Bulk Internal Update Work
 ```python
 import time
 import os
-import gwm
-from gwm.models.v3_work import V3Work
-from gwm.models.v3_work_internal_update_request import V3WorkInternalUpdateRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.v3_work import V3Work
+from gwm_client.models.v3_work_internal_update_request import V3WorkInternalUpdateRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -126,15 +126,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppWorksV3Api(api_client)
-    v3_work_internal_update_request = [gwm.V3WorkInternalUpdateRequest()] # List[V3WorkInternalUpdateRequest] | 
+    api_instance = gwm_client.WorksAppWorksV3Api(api_client)
+    v3_work_internal_update_request = [gwm_client.V3WorkInternalUpdateRequest()] # List[V3WorkInternalUpdateRequest] | 
 
     try:
         # Bulk Internal Update Work
@@ -186,15 +186,15 @@ Delete works by ids
 ```python
 import time
 import os
-import gwm
-from gwm.models.v3_activate_work import V3ActivateWork
-from gwm.models.v3_activate_work_request import V3ActivateWorkRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.v3_activate_work import V3ActivateWork
+from gwm_client.models.v3_activate_work_request import V3ActivateWorkRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -204,14 +204,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppWorksV3Api(api_client)
+    api_instance = gwm_client.WorksAppWorksV3Api(api_client)
     v3_activate_work_request = {"work_ids":[1,2]} # V3ActivateWorkRequest |  (optional)
 
     try:
@@ -264,14 +264,14 @@ Manage Works
 ```python
 import time
 import os
-import gwm
-from gwm.models.v1_containers_create_descriptor_parameter_inner import V1ContainersCreateDescriptorParameterInner
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.v1_containers_create_descriptor_parameter_inner import V1ContainersCreateDescriptorParameterInner
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -281,17 +281,17 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppWorksV3Api(api_client)
+    api_instance = gwm_client.WorksAppWorksV3Api(api_client)
     activated_at_after = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
     activated_at_before = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
-    assigned_agent = [gwm.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
+    assigned_agent = [gwm_client.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
     batch = ['batch_example'] # List[str] |  (optional)
     batch_contains = 'batch_contains_example' # str |  (optional)
     created_at_after = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
@@ -304,7 +304,7 @@ with gwm.ApiClient(configuration) as api_client:
     ordering = 'ordering_example' # str | Which field to use when ordering the results. (optional)
     priority = [56] # List[int] |  (optional)
     status = ['status_example'] # List[str] | Current status of the Work, this is set by the system via internal API  * `ON_HOLD` - On Hold * `NEW` - New * `LIVE` - Live * `IN_PROGRESS` - In Progress * `REJECTED` - Rejected * `CANCELLED` - Cancelled * `COMPLETED` - Completed * `TERMINAL_WITH_EXCEPTION` - Terminal With Exception * `ABORTED` - Aborted * `PARTIALLY_COMPLETED` - Partially Completed (optional)
-    task_agent = [gwm.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
+    task_agent = [gwm_client.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
     type = ['type_example'] # List[str] | Type of the work  * `CHARGE` - Charge * `EXPLORE` - Explore * `PAYLOAD_MOVE` - Payload Move * `ADHOC_MOVE_POSITION` - Adhoc Move Position * `ADHOC_MOVE_REGION` - Adhoc Move Region * `ADHOC_MOVE_SPOT` - Adhoc Move Spot (optional)
     workflow = ['workflow_example'] # List[str] |  (optional)
 
@@ -374,15 +374,15 @@ Create A Work
 ```python
 import time
 import os
-import gwm
-from gwm.models.v3_work import V3Work
-from gwm.models.v3_work_request import V3WorkRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.v3_work import V3Work
+from gwm_client.models.v3_work_request import V3WorkRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -392,14 +392,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppWorksV3Api(api_client)
+    api_instance = gwm_client.WorksAppWorksV3Api(api_client)
     v3_work_request = [{"type":"ADHOC_MOVE_POSITION","map":1,"priority":0,"pos":{"coordinates":[2,4],"type":"Point"},"yaw":0,"assigned_agent":1,"meta_data":{"attribute_1":"value_1"}}] # List[V3WorkRequest] | 
 
     try:
@@ -452,13 +452,13 @@ Delete work in terminal or on_hold state
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -468,14 +468,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppWorksV3Api(api_client)
+    api_instance = gwm_client.WorksAppWorksV3Api(api_client)
     id = 56 # int | A unique integer value identifying this work base.
 
     try:
@@ -526,15 +526,15 @@ Do not use this, this is for internal updates only
 ```python
 import time
 import os
-import gwm
-from gwm.models.patched_v3_work_internal_update_request import PatchedV3WorkInternalUpdateRequest
-from gwm.models.v3_work_internal_update import V3WorkInternalUpdate
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.patched_v3_work_internal_update_request import PatchedV3WorkInternalUpdateRequest
+from gwm_client.models.v3_work_internal_update import V3WorkInternalUpdate
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -544,16 +544,16 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppWorksV3Api(api_client)
+    api_instance = gwm_client.WorksAppWorksV3Api(api_client)
     id = 56 # int | A unique integer value identifying this work base.
-    patched_v3_work_internal_update_request = gwm.PatchedV3WorkInternalUpdateRequest() # PatchedV3WorkInternalUpdateRequest |  (optional)
+    patched_v3_work_internal_update_request = gwm_client.PatchedV3WorkInternalUpdateRequest() # PatchedV3WorkInternalUpdateRequest |  (optional)
 
     try:
         # Internal Update Work
@@ -606,15 +606,15 @@ List Works
 ```python
 import time
 import os
-import gwm
-from gwm.models.paginated_v3_work_list import PaginatedV3WorkList
-from gwm.models.v1_containers_create_descriptor_parameter_inner import V1ContainersCreateDescriptorParameterInner
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.paginated_v3_work_list import PaginatedV3WorkList
+from gwm_client.models.v1_containers_create_descriptor_parameter_inner import V1ContainersCreateDescriptorParameterInner
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -624,14 +624,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppWorksV3Api(api_client)
+    api_instance = gwm_client.WorksAppWorksV3Api(api_client)
     activated_at_after = '2013-10-20T19:20:30+01:00' # datetime | filter works activated after given timestamp (optional)
     activated_at_before = '2013-10-20T19:20:30+01:00' # datetime | filter works activated before given timestamp (optional)
     application_data = 'application_data_example' # str | filter by application_data query (optional)
@@ -651,7 +651,7 @@ with gwm.ApiClient(configuration) as api_client:
     page_size = 56 # int |  (optional)
     priority = [56] # List[int] |  (optional)
     status = ['status_example'] # List[str] | filter by work status (optional)
-    task_agent = [gwm.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
+    task_agent = [gwm_client.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
     type = ['type_example'] # List[str] | filter by work type (optional)
     with_fragment_count = True # bool | Include fragment counts in payload works (optional)
     workflow = ['workflow_example'] # List[str] |  (optional)
@@ -728,15 +728,15 @@ Partially Update Work
 ```python
 import time
 import os
-import gwm
-from gwm.models.patched_v3_work_external_update_request import PatchedV3WorkExternalUpdateRequest
-from gwm.models.v3_work_external_update import V3WorkExternalUpdate
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.patched_v3_work_external_update_request import PatchedV3WorkExternalUpdateRequest
+from gwm_client.models.v3_work_external_update import V3WorkExternalUpdate
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -746,14 +746,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppWorksV3Api(api_client)
+    api_instance = gwm_client.WorksAppWorksV3Api(api_client)
     id = 56 # int | A unique integer value identifying this work base.
     patched_v3_work_external_update_request = {"priority":10} # PatchedV3WorkExternalUpdateRequest |  (optional)
 
@@ -808,14 +808,14 @@ Get A Work information
 ```python
 import time
 import os
-import gwm
-from gwm.models.v3_work import V3Work
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.v3_work import V3Work
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -825,14 +825,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppWorksV3Api(api_client)
+    api_instance = gwm_client.WorksAppWorksV3Api(api_client)
     id = 56 # int | A unique integer value identifying this work base.
 
     try:
@@ -885,14 +885,14 @@ Get Work Summary
 ```python
 import time
 import os
-import gwm
-from gwm.models.v3_work import V3Work
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.v3_work import V3Work
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -902,14 +902,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppWorksV3Api(api_client)
+    api_instance = gwm_client.WorksAppWorksV3Api(api_client)
     end_date = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
     group_by = 'group_by_example' # str |  (optional)
     interval = 'interval_example' # str | * `daily` - daily * `weekly` - weekly * `monthly` - monthly * `annually` - annually (optional)

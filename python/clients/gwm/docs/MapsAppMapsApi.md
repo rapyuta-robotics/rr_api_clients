@@ -1,4 +1,4 @@
-# gwm.MapsAppMapsApi
+# gwm_client.MapsAppMapsApi
 
 All URIs are relative to *http://localhost*
 
@@ -29,13 +29,13 @@ Generate Routing Graph for Map
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -45,14 +45,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppMapsApi(api_client)
+    api_instance = gwm_client.MapsAppMapsApi(api_client)
     id_or_name = '1' # str | Map ID or Name.
 
     try:
@@ -102,13 +102,13 @@ Generate Routing Graph for Map
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -118,14 +118,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppMapsApi(api_client)
+    api_instance = gwm_client.MapsAppMapsApi(api_client)
     id_or_name = '1' # str | Map ID or Name.
 
     try:
@@ -175,15 +175,15 @@ Manage Maps
 ```python
 import time
 import os
-import gwm
-from gwm.models.map import Map
-from gwm.models.map_request import MapRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.map import Map
+from gwm_client.models.map_request import MapRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -193,15 +193,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppMapsApi(api_client)
-    map_request = gwm.MapRequest() # MapRequest |  (optional)
+    api_instance = gwm_client.MapsAppMapsApi(api_client)
+    map_request = gwm_client.MapRequest() # MapRequest |  (optional)
 
     try:
         api_response = api_instance.v1_map_create(map_request=map_request)
@@ -252,13 +252,13 @@ Generate Routing Graph for Map
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -268,14 +268,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppMapsApi(api_client)
+    api_instance = gwm_client.MapsAppMapsApi(api_client)
     id_or_name = '1' # str | Map ID or Name.
 
     try:
@@ -325,14 +325,14 @@ Manage Maps
 ```python
 import time
 import os
-import gwm
-from gwm.models.map import Map
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.map import Map
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -342,14 +342,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppMapsApi(api_client)
+    api_instance = gwm_client.MapsAppMapsApi(api_client)
 
     try:
         api_response = api_instance.v1_map_list()
@@ -397,15 +397,15 @@ Generate Routing Graph for Map
 ```python
 import time
 import os
-import gwm
-from gwm.models.map_graph_update import MapGraphUpdate
-from gwm.models.patched_map_graph_update_request import PatchedMapGraphUpdateRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.map_graph_update import MapGraphUpdate
+from gwm_client.models.patched_map_graph_update_request import PatchedMapGraphUpdateRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -415,16 +415,16 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppMapsApi(api_client)
+    api_instance = gwm_client.MapsAppMapsApi(api_client)
     id_or_name = '1' # str | Map ID or Name.
-    patched_map_graph_update_request = gwm.PatchedMapGraphUpdateRequest() # PatchedMapGraphUpdateRequest |  (optional)
+    patched_map_graph_update_request = gwm_client.PatchedMapGraphUpdateRequest() # PatchedMapGraphUpdateRequest |  (optional)
 
     try:
         api_response = api_instance.v1_map_partial_update(id_or_name, patched_map_graph_update_request=patched_map_graph_update_request)
@@ -476,14 +476,14 @@ Generate Routing Graph for Map
 ```python
 import time
 import os
-import gwm
-from gwm.models.map import Map
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.map import Map
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -493,14 +493,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppMapsApi(api_client)
+    api_instance = gwm_client.MapsAppMapsApi(api_client)
     id_or_name = '1' # str | Map ID or Name.
 
     try:
@@ -552,14 +552,14 @@ Generate Routing Graph for Map
 ```python
 import time
 import os
-import gwm
-from gwm.models.map import Map
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.map import Map
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -569,14 +569,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppMapsApi(api_client)
+    api_instance = gwm_client.MapsAppMapsApi(api_client)
     id_or_name = '1' # str | Map ID or Name.
 
     try:
@@ -628,15 +628,15 @@ Generate Routing Graph for Map
 ```python
 import time
 import os
-import gwm
-from gwm.models.map import Map
-from gwm.models.map_request import MapRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.map import Map
+from gwm_client.models.map_request import MapRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -646,16 +646,16 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppMapsApi(api_client)
+    api_instance = gwm_client.MapsAppMapsApi(api_client)
     id_or_name = '1' # str | Map ID or Name.
-    map_request = gwm.MapRequest() # MapRequest |  (optional)
+    map_request = gwm_client.MapRequest() # MapRequest |  (optional)
 
     try:
         api_response = api_instance.v1_map_update(id_or_name, map_request=map_request)
@@ -707,14 +707,14 @@ Upload Map
 ```python
 import time
 import os
-import gwm
-from gwm.models.map_export_request import MapExportRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.map_export_request import MapExportRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -724,15 +724,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.MapsAppMapsApi(api_client)
-    map_export_request = gwm.MapExportRequest() # MapExportRequest |  (optional)
+    api_instance = gwm_client.MapsAppMapsApi(api_client)
+    map_export_request = gwm_client.MapExportRequest() # MapExportRequest |  (optional)
 
     try:
         api_instance.v1_map_upload_update(map_export_request=map_export_request)

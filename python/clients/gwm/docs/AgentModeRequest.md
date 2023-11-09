@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.agent_mode_request import AgentModeRequest
+from gwm_client.models.agent_mode_request import AgentModeRequest
 
 # TODO update the JSON string below
 json = "{}"

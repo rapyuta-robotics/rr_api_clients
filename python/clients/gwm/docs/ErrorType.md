@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.error_type import ErrorType
+from gwm_client.models.error_type import ErrorType
 
 # TODO update the JSON string below
 json = "{}"

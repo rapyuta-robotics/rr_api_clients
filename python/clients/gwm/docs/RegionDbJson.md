@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.region_db_json import RegionDbJson
+from gwm_client.models.region_db_json import RegionDbJson
 
 # TODO update the JSON string below
 json = "{}"

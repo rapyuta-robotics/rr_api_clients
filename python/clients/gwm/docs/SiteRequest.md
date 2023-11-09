@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.site_request import SiteRequest
+from gwm_client.models.site_request import SiteRequest
 
 # TODO update the JSON string below
 json = "{}"

@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.patched_map_graph_update_request import PatchedMapGraphUpdateRequest
+from gwm_client.models.patched_map_graph_update_request import PatchedMapGraphUpdateRequest
 
 # TODO update the JSON string below
 json = "{}"

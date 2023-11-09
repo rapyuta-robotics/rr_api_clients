@@ -1,4 +1,4 @@
-# gwm.ContainersAppProductApi
+# gwm_client.ContainersAppProductApi
 
 All URIs are relative to *http://localhost*
 
@@ -28,14 +28,14 @@ Patch products
 ```python
 import time
 import os
-import gwm
-from gwm.models.patched_product_request import PatchedProductRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.patched_product_request import PatchedProductRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -45,15 +45,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppProductApi(api_client)
-    patched_product_request = [gwm.PatchedProductRequest()] # List[PatchedProductRequest] | 
+    api_instance = gwm_client.ContainersAppProductApi(api_client)
+    patched_product_request = [gwm_client.PatchedProductRequest()] # List[PatchedProductRequest] | 
 
     try:
         # Patch products
@@ -99,13 +99,13 @@ Manage Products
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -115,14 +115,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppProductApi(api_client)
+    api_instance = gwm_client.ContainersAppProductApi(api_client)
     id = 56 # int |  (optional)
     name = ['name_example'] # List[str] |  (optional)
     product_id = ['product_id_example'] # List[str] |  (optional)
@@ -178,15 +178,15 @@ Create Products
 ```python
 import time
 import os
-import gwm
-from gwm.models.paginated_product_list import PaginatedProductList
-from gwm.models.product_request import ProductRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.paginated_product_list import PaginatedProductList
+from gwm_client.models.product_request import ProductRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -196,15 +196,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppProductApi(api_client)
-    product_request = [gwm.ProductRequest()] # List[ProductRequest] | 
+    api_instance = gwm_client.ContainersAppProductApi(api_client)
+    product_request = [gwm_client.ProductRequest()] # List[ProductRequest] | 
     id = 56 # int |  (optional)
     name = ['name_example'] # List[str] |  (optional)
     page = 56 # int | A page number within the paginated result set. (optional)
@@ -266,13 +266,13 @@ Bulk Delete  products
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -282,14 +282,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppProductApi(api_client)
+    api_instance = gwm_client.ContainersAppProductApi(api_client)
     id = [3.4] # List[float] | List of Container Slot IDs (optional)
     name = ['name_example'] # List[str] | List of product names (optional)
     product_id = [3.4] # List[float] | List of product ids (optional)
@@ -344,13 +344,13 @@ Manage Products
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -360,14 +360,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppProductApi(api_client)
+    api_instance = gwm_client.ContainersAppProductApi(api_client)
     id = 56 # int | A unique integer value identifying this product.
 
     try:
@@ -417,14 +417,14 @@ Manage Products
 ```python
 import time
 import os
-import gwm
-from gwm.models.paginated_product_list import PaginatedProductList
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.paginated_product_list import PaginatedProductList
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -434,14 +434,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppProductApi(api_client)
+    api_instance = gwm_client.ContainersAppProductApi(api_client)
     id = 56 # int |  (optional)
     name = ['name_example'] # List[str] |  (optional)
     page = 56 # int | A page number within the paginated result set. (optional)
@@ -501,15 +501,15 @@ Manage Products
 ```python
 import time
 import os
-import gwm
-from gwm.models.patched_product_request import PatchedProductRequest
-from gwm.models.product import Product
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.patched_product_request import PatchedProductRequest
+from gwm_client.models.product import Product
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -519,16 +519,16 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppProductApi(api_client)
+    api_instance = gwm_client.ContainersAppProductApi(api_client)
     id = 56 # int | A unique integer value identifying this product.
-    patched_product_request = gwm.PatchedProductRequest() # PatchedProductRequest |  (optional)
+    patched_product_request = gwm_client.PatchedProductRequest() # PatchedProductRequest |  (optional)
 
     try:
         api_response = api_instance.v1alpha1_products_partial_update(id, patched_product_request=patched_product_request)
@@ -580,14 +580,14 @@ Manage Products
 ```python
 import time
 import os
-import gwm
-from gwm.models.product import Product
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.product import Product
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -597,14 +597,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppProductApi(api_client)
+    api_instance = gwm_client.ContainersAppProductApi(api_client)
     id = 56 # int | A unique integer value identifying this product.
 
     try:
@@ -656,15 +656,15 @@ Manage Products
 ```python
 import time
 import os
-import gwm
-from gwm.models.product import Product
-from gwm.models.product_request import ProductRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.product import Product
+from gwm_client.models.product_request import ProductRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -674,16 +674,16 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppProductApi(api_client)
+    api_instance = gwm_client.ContainersAppProductApi(api_client)
     id = 56 # int | A unique integer value identifying this product.
-    product_request = gwm.ProductRequest() # ProductRequest | 
+    product_request = gwm_client.ProductRequest() # ProductRequest | 
 
     try:
         api_response = api_instance.v1alpha1_products_update(id, product_request)

@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.patched_asset_location_patch_request import PatchedAssetLocationPatchRequest
+from gwm_client.models.patched_asset_location_patch_request import PatchedAssetLocationPatchRequest
 
 # TODO update the JSON string below
 json = "{}"

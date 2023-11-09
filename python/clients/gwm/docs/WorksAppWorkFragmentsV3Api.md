@@ -1,4 +1,4 @@
-# gwm.WorksAppWorkFragmentsV3Api
+# gwm_client.WorksAppWorkFragmentsV3Api
 
 All URIs are relative to *http://localhost*
 
@@ -26,15 +26,15 @@ Bulk Internal Update Fragnments
 ```python
 import time
 import os
-import gwm
-from gwm.models.v3_work_fragment import V3WorkFragment
-from gwm.models.v3_work_fragment_bulk_update_request import V3WorkFragmentBulkUpdateRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.v3_work_fragment import V3WorkFragment
+from gwm_client.models.v3_work_fragment_bulk_update_request import V3WorkFragmentBulkUpdateRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -44,15 +44,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppWorkFragmentsV3Api(api_client)
-    v3_work_fragment_bulk_update_request = [gwm.V3WorkFragmentBulkUpdateRequest()] # List[V3WorkFragmentBulkUpdateRequest] | 
+    api_instance = gwm_client.WorksAppWorkFragmentsV3Api(api_client)
+    v3_work_fragment_bulk_update_request = [gwm_client.V3WorkFragmentBulkUpdateRequest()] # List[V3WorkFragmentBulkUpdateRequest] | 
 
     try:
         # Bulk Internal Update Fragments
@@ -104,13 +104,13 @@ Get Fragments
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -120,14 +120,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppWorkFragmentsV3Api(api_client)
+    api_instance = gwm_client.WorksAppWorkFragmentsV3Api(api_client)
     end_date = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
     id = [56] # List[int] |  (optional)
     name = 'name_example' # str |  (optional)
@@ -199,15 +199,15 @@ Create Fragment
 ```python
 import time
 import os
-import gwm
-from gwm.models.v3_work_fragment import V3WorkFragment
-from gwm.models.v3_work_fragment_request import V3WorkFragmentRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.v3_work_fragment import V3WorkFragment
+from gwm_client.models.v3_work_fragment_request import V3WorkFragmentRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -217,15 +217,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppWorkFragmentsV3Api(api_client)
-    v3_work_fragment_request = [gwm.V3WorkFragmentRequest()] # List[V3WorkFragmentRequest] | 
+    api_instance = gwm_client.WorksAppWorkFragmentsV3Api(api_client)
+    v3_work_fragment_request = [gwm_client.V3WorkFragmentRequest()] # List[V3WorkFragmentRequest] | 
 
     try:
         # Create  Fragments
@@ -277,15 +277,15 @@ Internal Update Fragment
 ```python
 import time
 import os
-import gwm
-from gwm.models.patched_v3_work_fragment_request import PatchedV3WorkFragmentRequest
-from gwm.models.v3_work_fragment import V3WorkFragment
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.patched_v3_work_fragment_request import PatchedV3WorkFragmentRequest
+from gwm_client.models.v3_work_fragment import V3WorkFragment
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -295,14 +295,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppWorkFragmentsV3Api(api_client)
+    api_instance = gwm_client.WorksAppWorkFragmentsV3Api(api_client)
     id = 56 # int | A unique integer value identifying this work payload fragment.
     patched_v3_work_fragment_request = {"status":"REJECTED","quantity_delivered":5} # PatchedV3WorkFragmentRequest |  (optional)
 
@@ -357,14 +357,14 @@ List Fragments
 ```python
 import time
 import os
-import gwm
-from gwm.models.paginated_v3_work_fragment_list import PaginatedV3WorkFragmentList
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.paginated_v3_work_fragment_list import PaginatedV3WorkFragmentList
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -374,14 +374,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppWorkFragmentsV3Api(api_client)
+    api_instance = gwm_client.WorksAppWorkFragmentsV3Api(api_client)
     application_data = 'application_data_example' # str | filter by application_data query (optional)
     end_date = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
     id = [3.4] # List[float] | filter fragments by id (optional)
@@ -467,14 +467,14 @@ Get Fragment Detail
 ```python
 import time
 import os
-import gwm
-from gwm.models.v3_work_fragment import V3WorkFragment
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.v3_work_fragment import V3WorkFragment
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -484,14 +484,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppWorkFragmentsV3Api(api_client)
+    api_instance = gwm_client.WorksAppWorkFragmentsV3Api(api_client)
     id = 56 # int | A unique integer value identifying this work payload fragment.
 
     try:
@@ -543,14 +543,14 @@ Get Fragment Summary
 ```python
 import time
 import os
-import gwm
-from gwm.models.v3_work_fragment import V3WorkFragment
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.v3_work_fragment import V3WorkFragment
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -560,14 +560,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppWorkFragmentsV3Api(api_client)
+    api_instance = gwm_client.WorksAppWorkFragmentsV3Api(api_client)
     end_date = 'end_date_example' # str | filter by end date (optional)
     group_by = ['group_by_example'] # List[str] | group by (optional)
     interval = 'interval_example' # str | interval (optional)

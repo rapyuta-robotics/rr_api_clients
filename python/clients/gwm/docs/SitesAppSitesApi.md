@@ -1,4 +1,4 @@
-# gwm.SitesAppSitesApi
+# gwm_client.SitesAppSitesApi
 
 All URIs are relative to *http://localhost*
 
@@ -28,15 +28,15 @@ Create new site
 ```python
 import time
 import os
-import gwm
-from gwm.models.site import Site
-from gwm.models.site_request import SiteRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.site import Site
+from gwm_client.models.site_request import SiteRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -46,14 +46,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.SitesAppSitesApi(api_client)
+    api_instance = gwm_client.SitesAppSitesApi(api_client)
     site_request = {"id":"123912","name":"hirano","type":"warehouse","meta_data":{},"endpoint":"https://example.com"} # SiteRequest |  (optional)
 
     try:
@@ -106,13 +106,13 @@ Delete a site
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -122,14 +122,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.SitesAppSitesApi(api_client)
+    api_instance = gwm_client.SitesAppSitesApi(api_client)
     id_or_name = None # object | 
 
     try:
@@ -180,14 +180,14 @@ Export a site
 ```python
 import time
 import os
-import gwm
-from gwm.models.site_export import SiteExport
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.site_export import SiteExport
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -197,14 +197,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.SitesAppSitesApi(api_client)
+    api_instance = gwm_client.SitesAppSitesApi(api_client)
     id_or_name = None # object | 
 
     try:
@@ -257,15 +257,15 @@ Import a site
 ```python
 import time
 import os
-import gwm
-from gwm.models.site import Site
-from gwm.models.site_request import SiteRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.site import Site
+from gwm_client.models.site_request import SiteRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -275,14 +275,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.SitesAppSitesApi(api_client)
+    api_instance = gwm_client.SitesAppSitesApi(api_client)
     site_request = {"id":"123912","name":"hirano","type":"warehouse","meta_data":{},"endpoint":"https://example.com"} # SiteRequest |  (optional)
 
     try:
@@ -335,14 +335,14 @@ Get all sites
 ```python
 import time
 import os
-import gwm
-from gwm.models.site import Site
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.site import Site
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -352,14 +352,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.SitesAppSitesApi(api_client)
+    api_instance = gwm_client.SitesAppSitesApi(api_client)
     id = 56 # int |  (optional)
     name = 'name_example' # str |  (optional)
     type = 'type_example' # str |  (optional)
@@ -416,15 +416,15 @@ Partially update a site
 ```python
 import time
 import os
-import gwm
-from gwm.models.patched_site_request import PatchedSiteRequest
-from gwm.models.site import Site
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.patched_site_request import PatchedSiteRequest
+from gwm_client.models.site import Site
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -434,14 +434,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.SitesAppSitesApi(api_client)
+    api_instance = gwm_client.SitesAppSitesApi(api_client)
     id_or_name = None # object | 
     patched_site_request = {"id":"123912","name":"hirano","type":"warehouse","meta_data":{},"endpoint":"https://example.com"} # PatchedSiteRequest |  (optional)
 
@@ -496,14 +496,14 @@ Get a site
 ```python
 import time
 import os
-import gwm
-from gwm.models.site import Site
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.site import Site
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -513,14 +513,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.SitesAppSitesApi(api_client)
+    api_instance = gwm_client.SitesAppSitesApi(api_client)
     id_or_name = None # object | 
 
     try:
@@ -573,14 +573,14 @@ Get site status
 ```python
 import time
 import os
-import gwm
-from gwm.models.site_status import SiteStatus
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.site_status import SiteStatus
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -590,14 +590,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.SitesAppSitesApi(api_client)
+    api_instance = gwm_client.SitesAppSitesApi(api_client)
     id_or_name = None # object | 
 
     try:
@@ -650,15 +650,15 @@ Update a site
 ```python
 import time
 import os
-import gwm
-from gwm.models.site import Site
-from gwm.models.site_request import SiteRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.site import Site
+from gwm_client.models.site_request import SiteRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -668,14 +668,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.SitesAppSitesApi(api_client)
+    api_instance = gwm_client.SitesAppSitesApi(api_client)
     id_or_name = None # object | 
     site_request = {"id":"123912","name":"hirano","type":"warehouse","meta_data":{},"endpoint":"https://example.com"} # SiteRequest |  (optional)
 

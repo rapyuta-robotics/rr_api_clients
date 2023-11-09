@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.external_device_request import ExternalDeviceRequest
+from gwm_client.models.external_device_request import ExternalDeviceRequest
 
 # TODO update the JSON string below
 json = "{}"

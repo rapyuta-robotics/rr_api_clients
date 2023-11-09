@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.v3_work_fragment_bulk_update_request import V3WorkFragmentBulkUpdateRequest
+from gwm_client.models.v3_work_fragment_bulk_update_request import V3WorkFragmentBulkUpdateRequest
 
 # TODO update the JSON string below
 json = "{}"

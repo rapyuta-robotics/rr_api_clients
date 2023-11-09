@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.robot_request import RobotRequest
+from gwm_client.models.robot_request import RobotRequest
 
 # TODO update the JSON string below
 json = "{}"

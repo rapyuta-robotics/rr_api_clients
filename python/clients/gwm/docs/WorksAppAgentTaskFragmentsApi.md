@@ -1,4 +1,4 @@
-# gwm.WorksAppAgentTaskFragmentsApi
+# gwm_client.WorksAppAgentTaskFragmentsApi
 
 All URIs are relative to *http://localhost*
 
@@ -28,15 +28,15 @@ Get Agent Task Fragments
 ```python
 import time
 import os
-import gwm
-from gwm.models.agent_task_fragment import AgentTaskFragment
-from gwm.models.patched_agent_task_fragment_request import PatchedAgentTaskFragmentRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.agent_task_fragment import AgentTaskFragment
+from gwm_client.models.patched_agent_task_fragment_request import PatchedAgentTaskFragmentRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -46,15 +46,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppAgentTaskFragmentsApi(api_client)
-    patched_agent_task_fragment_request = gwm.PatchedAgentTaskFragmentRequest() # PatchedAgentTaskFragmentRequest |  (optional)
+    api_instance = gwm_client.WorksAppAgentTaskFragmentsApi(api_client)
+    patched_agent_task_fragment_request = gwm_client.PatchedAgentTaskFragmentRequest() # PatchedAgentTaskFragmentRequest |  (optional)
 
     try:
         api_response = api_instance.v2_agent_task_fragments_bulk_patch_update_partial_update(patched_agent_task_fragment_request=patched_agent_task_fragment_request)
@@ -105,15 +105,15 @@ Create Agent Task Fragment
 ```python
 import time
 import os
-import gwm
-from gwm.models.agent_task_fragment import AgentTaskFragment
-from gwm.models.agent_task_fragment_request import AgentTaskFragmentRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.agent_task_fragment import AgentTaskFragment
+from gwm_client.models.agent_task_fragment_request import AgentTaskFragmentRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -123,14 +123,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppAgentTaskFragmentsApi(api_client)
+    api_instance = gwm_client.WorksAppAgentTaskFragmentsApi(api_client)
     agent_task_fragment_request = {"id":1213213,"agent_task":1,"work_fragment":1,"status":"NOT_STARTED","type":"ITEM_MOVE","quantity_requested":100,"quantity_delivered":50,"payload_data":{"key":"value"},"detection_data":{"key":"value"},"pick_data":{"key":"value"},"drop_data":{"key":"value"},"from_location":{"key":"value"},"to_location":{"key":"value"}} # AgentTaskFragmentRequest | 
 
     try:
@@ -183,13 +183,13 @@ Delete Agent Task Fragment
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -199,14 +199,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppAgentTaskFragmentsApi(api_client)
+    api_instance = gwm_client.WorksAppAgentTaskFragmentsApi(api_client)
     id = 56 # int | A unique value identifying this agent task fragment.
 
     try:
@@ -257,14 +257,14 @@ List Agent Task Fragments
 ```python
 import time
 import os
-import gwm
-from gwm.models.paginated_agent_task_fragment_list import PaginatedAgentTaskFragmentList
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.paginated_agent_task_fragment_list import PaginatedAgentTaskFragmentList
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -274,14 +274,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppAgentTaskFragmentsApi(api_client)
+    api_instance = gwm_client.WorksAppAgentTaskFragmentsApi(api_client)
     agent = 3.4 # float | filter by agent id (optional)
     agent_task = 3.4 # float | filter by agent_task id (optional)
     detection_data = 'detection_data_example' # str | filter by detection_data query (optional)
@@ -374,15 +374,15 @@ Update Agent Task Fragment
 ```python
 import time
 import os
-import gwm
-from gwm.models.agent_task_fragment import AgentTaskFragment
-from gwm.models.patched_agent_task_fragment_request import PatchedAgentTaskFragmentRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.agent_task_fragment import AgentTaskFragment
+from gwm_client.models.patched_agent_task_fragment_request import PatchedAgentTaskFragmentRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -392,14 +392,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppAgentTaskFragmentsApi(api_client)
+    api_instance = gwm_client.WorksAppAgentTaskFragmentsApi(api_client)
     id = 56 # int | A unique value identifying this agent task fragment.
     patched_agent_task_fragment_request = {"agent_task":1,"work_fragment":1,"status":"NOT_STARTED","type":"ITEM_MOVE","quantity_requested":100,"quantity_delivered":50,"payload_data":{"key":"value"},"detection_data":{"key":"value"},"pick_data":{"key":"value"},"drop_data":{"key":"value"},"from_location":{"key":"value"},"to_location":{"key":"value"}} # PatchedAgentTaskFragmentRequest |  (optional)
 
@@ -454,15 +454,15 @@ Get Agent Task Fragments
 ```python
 import time
 import os
-import gwm
-from gwm.models.agent_task_fragment import AgentTaskFragment
-from gwm.models.patched_agent_task_fragment_request import PatchedAgentTaskFragmentRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.agent_task_fragment import AgentTaskFragment
+from gwm_client.models.patched_agent_task_fragment_request import PatchedAgentTaskFragmentRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -472,15 +472,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppAgentTaskFragmentsApi(api_client)
-    patched_agent_task_fragment_request = gwm.PatchedAgentTaskFragmentRequest() # PatchedAgentTaskFragmentRequest |  (optional)
+    api_instance = gwm_client.WorksAppAgentTaskFragmentsApi(api_client)
+    patched_agent_task_fragment_request = gwm_client.PatchedAgentTaskFragmentRequest() # PatchedAgentTaskFragmentRequest |  (optional)
 
     try:
         api_response = api_instance.v2_agent_task_fragments_patch_partial_update(patched_agent_task_fragment_request=patched_agent_task_fragment_request)
@@ -531,14 +531,14 @@ Get Agent Task Fragment Detail
 ```python
 import time
 import os
-import gwm
-from gwm.models.agent_task_fragment import AgentTaskFragment
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.agent_task_fragment import AgentTaskFragment
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -548,14 +548,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppAgentTaskFragmentsApi(api_client)
+    api_instance = gwm_client.WorksAppAgentTaskFragmentsApi(api_client)
     id = 56 # int | A unique value identifying this agent task fragment.
 
     try:
@@ -608,15 +608,15 @@ Get AGENT TASK Fragment Summary
 ```python
 import time
 import os
-import gwm
-from gwm.models.agent_task_fragment import AgentTaskFragment
-from gwm.models.v1_containers_create_descriptor_parameter_inner import V1ContainersCreateDescriptorParameterInner
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.agent_task_fragment import AgentTaskFragment
+from gwm_client.models.v1_containers_create_descriptor_parameter_inner import V1ContainersCreateDescriptorParameterInner
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -626,15 +626,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppAgentTaskFragmentsApi(api_client)
-    agent = [gwm.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
+    api_instance = gwm_client.WorksAppAgentTaskFragmentsApi(api_client)
+    agent = [gwm_client.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
     agent_task = 56 # int |  (optional)
     end_date = 'end_date_example' # str | filter by end date (optional)
     group_by = ['group_by_example'] # List[str] | group by (optional)
@@ -643,7 +643,7 @@ with gwm.ApiClient(configuration) as api_client:
     start_date = 'start_date_example' # str | filter by start date (optional)
     status = 'status_example' # str | Agent Task Fragment status (optional)
     type = 'type_example' # str | Agent Task Fragment type (optional)
-    work = [gwm.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
+    work = [gwm_client.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
     work_fragment = 56 # int |  (optional)
     work_status = ['work_status_example'] # List[str] | Current status of the Work, this is set by the system via internal API  * `ON_HOLD` - On Hold * `NEW` - New * `LIVE` - Live * `IN_PROGRESS` - In Progress * `REJECTED` - Rejected * `CANCELLED` - Cancelled * `COMPLETED` - Completed * `TERMINAL_WITH_EXCEPTION` - Terminal With Exception * `ABORTED` - Aborted * `PARTIALLY_COMPLETED` - Partially Completed (optional)
     workflow = 'workflow_example' # str |  (optional)
@@ -710,15 +710,15 @@ Update Agent Task Fragment
 ```python
 import time
 import os
-import gwm
-from gwm.models.agent_task_fragment import AgentTaskFragment
-from gwm.models.agent_task_fragment_request import AgentTaskFragmentRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.agent_task_fragment import AgentTaskFragment
+from gwm_client.models.agent_task_fragment_request import AgentTaskFragmentRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -728,14 +728,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.WorksAppAgentTaskFragmentsApi(api_client)
+    api_instance = gwm_client.WorksAppAgentTaskFragmentsApi(api_client)
     id = 56 # int | A unique value identifying this agent task fragment.
     agent_task_fragment_request = {"agent_task":1,"work_fragment":1,"status":"NOT_STARTED","type":"ITEM_MOVE","quantity_requested":100,"quantity_delivered":50,"payload_data":{"key":"value"},"detection_data":{"key":"value"},"pick_data":{"key":"value"},"drop_data":{"key":"value"},"from_location":{"key":"value"},"to_location":{"key":"value"}} # AgentTaskFragmentRequest | 
 

@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.agent_task_fragment import AgentTaskFragment
+from gwm_client.models.agent_task_fragment import AgentTaskFragment
 
 # TODO update the JSON string below
 json = "{}"

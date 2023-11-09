@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.edge import Edge
+from gwm_client.models.edge import Edge
 
 # TODO update the JSON string below
 json = "{}"

@@ -30,7 +30,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.patched_work_payload_fragment_request import PatchedWorkPayloadFragmentRequest
+from gwm_client.models.patched_work_payload_fragment_request import PatchedWorkPayloadFragmentRequest
 
 # TODO update the JSON string below
 json = "{}"

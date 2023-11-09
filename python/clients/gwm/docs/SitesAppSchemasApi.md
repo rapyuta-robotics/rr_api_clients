@@ -1,4 +1,4 @@
-# gwm.SitesAppSchemasApi
+# gwm_client.SitesAppSchemasApi
 
 All URIs are relative to *http://localhost*
 
@@ -25,15 +25,15 @@ Manage Site Schemas<br>                    Schemas are ways to validate metadata
 ```python
 import time
 import os
-import gwm
-from gwm.models.model_schema import ModelSchema
-from gwm.models.schema_request import SchemaRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.model_schema import ModelSchema
+from gwm_client.models.schema_request import SchemaRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -43,14 +43,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.SitesAppSchemasApi(api_client)
+    api_instance = gwm_client.SitesAppSchemasApi(api_client)
     schema_request = {"id":4,"resource":"node","type":"drop","schema":{"errorMessage":{"properties":{"spin_turn":"should be of type integer & should be one of 0,1,2"}},"properties":{"spin_turn":{"default":1,"enum":[0,1,2],"enumNames":["Disabled","Optimal","Always"],"title":"Spin Turn","type":"number"}}}} # SchemaRequest | 
 
     try:
@@ -102,13 +102,13 @@ Manage Site Schemas
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -118,14 +118,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.SitesAppSchemasApi(api_client)
+    api_instance = gwm_client.SitesAppSchemasApi(api_client)
     id_or_name = '1' # str | Schema ID or Name.
 
     try:
@@ -175,14 +175,14 @@ Manage Site Schemas
 ```python
 import time
 import os
-import gwm
-from gwm.models.model_schema import ModelSchema
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.model_schema import ModelSchema
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -192,14 +192,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.SitesAppSchemasApi(api_client)
+    api_instance = gwm_client.SitesAppSchemasApi(api_client)
     field_name = 'field_name_example' # str |  (optional)
     name = 'name_example' # str |  (optional)
     resource = 'resource_example' # str | Which resource applies this schema (node, edge)  * `site` - Site * `spotannotation` - Spot * `region` - Region * `node` - Node * `edge` - Edge * `map` - Map * `robot` - Robot * `robotdescriptor` - Robot Descriptor * `agent` - Agent * `externaldevice` - External Device * `errortype` - Error Type * `erroraction` - Error Action * `work` - Work * `workpayloadfragment` - Work Payload Fragment * `layer` - Layer * `agenttask` - Agent Task * `agenttaskfragment` - Agent Task Fragment * `container` - Container * `containerdescriptor` - Container Descriptor * `assetlocation` - Asset Location (optional)
@@ -257,15 +257,15 @@ Manage Site Schemas
 ```python
 import time
 import os
-import gwm
-from gwm.models.model_schema import ModelSchema
-from gwm.models.patched_schema_request import PatchedSchemaRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.model_schema import ModelSchema
+from gwm_client.models.patched_schema_request import PatchedSchemaRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -275,14 +275,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.SitesAppSchemasApi(api_client)
+    api_instance = gwm_client.SitesAppSchemasApi(api_client)
     id_or_name = '1' # str | Schema ID or Name.
     patched_schema_request = {"id":4,"resource":"node","type":"drop","schema":{"errorMessage":{"properties":{"spin_turn":"should be of type integer & should be one of 0,1,2"}},"properties":{"spin_turn":{"default":1,"enum":[0,1,2],"enumNames":["Disabled","Optimal","Always"],"title":"Spin Turn","type":"number"}}}} # PatchedSchemaRequest |  (optional)
 
@@ -336,14 +336,14 @@ Manage Site Schemas
 ```python
 import time
 import os
-import gwm
-from gwm.models.model_schema import ModelSchema
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.model_schema import ModelSchema
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -353,14 +353,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.SitesAppSchemasApi(api_client)
+    api_instance = gwm_client.SitesAppSchemasApi(api_client)
     id_or_name = '1' # str | Schema ID or Name.
 
     try:
@@ -412,15 +412,15 @@ Manage Site Schemas
 ```python
 import time
 import os
-import gwm
-from gwm.models.model_schema import ModelSchema
-from gwm.models.schema_request import SchemaRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.model_schema import ModelSchema
+from gwm_client.models.schema_request import SchemaRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -430,14 +430,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.SitesAppSchemasApi(api_client)
+    api_instance = gwm_client.SitesAppSchemasApi(api_client)
     id_or_name = '1' # str | Schema ID or Name.
     schema_request = {"id":4,"resource":"node","type":"drop","schema":{"errorMessage":{"properties":{"spin_turn":"should be of type integer & should be one of 0,1,2"}},"properties":{"spin_turn":{"default":1,"enum":[0,1,2],"enumNames":["Disabled","Optimal","Always"],"title":"Spin Turn","type":"number"}}}} # SchemaRequest | 
 

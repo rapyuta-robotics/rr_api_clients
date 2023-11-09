@@ -29,7 +29,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.v3_work_fragment_request import V3WorkFragmentRequest
+from gwm_client.models.v3_work_fragment_request import V3WorkFragmentRequest
 
 # TODO update the JSON string below
 json = "{}"

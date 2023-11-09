@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.robot_descriptor_footprint import RobotDescriptorFootprint
+from gwm_client.models.robot_descriptor_footprint import RobotDescriptorFootprint
 
 # TODO update the JSON string below
 json = "{}"

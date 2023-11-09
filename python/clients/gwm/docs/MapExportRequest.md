@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.map_export_request import MapExportRequest
+from gwm_client.models.map_export_request import MapExportRequest
 
 # TODO update the JSON string below
 json = "{}"

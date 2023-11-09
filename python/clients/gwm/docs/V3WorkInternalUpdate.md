@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.v3_work_internal_update import V3WorkInternalUpdate
+from gwm_client.models.v3_work_internal_update import V3WorkInternalUpdate
 
 # TODO update the JSON string below
 json = "{}"

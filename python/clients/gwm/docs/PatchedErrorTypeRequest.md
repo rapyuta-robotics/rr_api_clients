@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.patched_error_type_request import PatchedErrorTypeRequest
+from gwm_client.models.patched_error_type_request import PatchedErrorTypeRequest
 
 # TODO update the JSON string below
 json = "{}"

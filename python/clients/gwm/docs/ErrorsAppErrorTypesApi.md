@@ -1,4 +1,4 @@
-# gwm.ErrorsAppErrorTypesApi
+# gwm_client.ErrorsAppErrorTypesApi
 
 All URIs are relative to *http://localhost*
 
@@ -27,15 +27,15 @@ Create a new Error Type
 ```python
 import time
 import os
-import gwm
-from gwm.models.error_type import ErrorType
-from gwm.models.error_type_request import ErrorTypeRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.error_type import ErrorType
+from gwm_client.models.error_type_request import ErrorTypeRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -45,14 +45,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ErrorsAppErrorTypesApi(api_client)
+    api_instance = gwm_client.ErrorsAppErrorTypesApi(api_client)
     error_type_request = {"name":"Robot entered self destruct region","local_error_code":999,"reporting_component":"explosion manager","global_error_code":9999,"criticality":1,"clearing_options":["blow_up_robot"],"auto_recovery_actions":[{"action":"blow_up_robot","content":{"explosion_radius":50},"first_attempt_after":10,"retry_interval":5,"max_attempts":10}],"meta_data":{"key":"value"}} # ErrorTypeRequest | 
 
     try:
@@ -105,13 +105,13 @@ Delete Error Type
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -121,14 +121,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ErrorsAppErrorTypesApi(api_client)
+    api_instance = gwm_client.ErrorsAppErrorTypesApi(api_client)
     id_or_name = 56 # int | A unique integer value identifying this error type.
 
     try:
@@ -179,14 +179,14 @@ List Error Types
 ```python
 import time
 import os
-import gwm
-from gwm.models.error_type import ErrorType
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.error_type import ErrorType
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -196,14 +196,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ErrorsAppErrorTypesApi(api_client)
+    api_instance = gwm_client.ErrorsAppErrorTypesApi(api_client)
     criticality = [56] # List[int] | filter by criticality (optional)
     local_error_code = [56] # List[int] | filter errors by local error code (optional)
     reporting_component = ['reporting_component_example'] # List[str] | filter errors by reporting component (optional)
@@ -260,15 +260,15 @@ Patch Error Types
 ```python
 import time
 import os
-import gwm
-from gwm.models.error_type import ErrorType
-from gwm.models.patched_error_type_request import PatchedErrorTypeRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.error_type import ErrorType
+from gwm_client.models.patched_error_type_request import PatchedErrorTypeRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -278,14 +278,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ErrorsAppErrorTypesApi(api_client)
+    api_instance = gwm_client.ErrorsAppErrorTypesApi(api_client)
     id_or_name = 56 # int | A unique integer value identifying this error type.
     criticality = [56] # List[int] | filter by criticality (optional)
     local_error_code = [56] # List[int] | filter errors by local error code (optional)
@@ -346,15 +346,15 @@ Manage Error Types
 ```python
 import time
 import os
-import gwm
-from gwm.models.error_type import ErrorType
-from gwm.models.patched_error_type_request import PatchedErrorTypeRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.error_type import ErrorType
+from gwm_client.models.patched_error_type_request import PatchedErrorTypeRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -364,15 +364,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ErrorsAppErrorTypesApi(api_client)
-    patched_error_type_request = gwm.PatchedErrorTypeRequest() # PatchedErrorTypeRequest |  (optional)
+    api_instance = gwm_client.ErrorsAppErrorTypesApi(api_client)
+    patched_error_type_request = gwm_client.PatchedErrorTypeRequest() # PatchedErrorTypeRequest |  (optional)
 
     try:
         api_response = api_instance.v1_error_type_patch_partial_update(patched_error_type_request=patched_error_type_request)
@@ -423,15 +423,15 @@ Manage Error Types
 ```python
 import time
 import os
-import gwm
-from gwm.models.error_type import ErrorType
-from gwm.models.error_type_request import ErrorTypeRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.error_type import ErrorType
+from gwm_client.models.error_type_request import ErrorTypeRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -441,15 +441,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ErrorsAppErrorTypesApi(api_client)
-    error_type_request = gwm.ErrorTypeRequest() # ErrorTypeRequest | 
+    api_instance = gwm_client.ErrorsAppErrorTypesApi(api_client)
+    error_type_request = gwm_client.ErrorTypeRequest() # ErrorTypeRequest | 
 
     try:
         api_response = api_instance.v1_error_type_put_update(error_type_request)
@@ -500,14 +500,14 @@ Get Error Type
 ```python
 import time
 import os
-import gwm
-from gwm.models.error_type import ErrorType
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.error_type import ErrorType
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -517,14 +517,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ErrorsAppErrorTypesApi(api_client)
+    api_instance = gwm_client.ErrorsAppErrorTypesApi(api_client)
     id_or_name = 56 # int | A unique integer value identifying this error type.
     criticality = [56] # List[int] | filter by criticality (optional)
     local_error_code = [56] # List[int] | filter errors by local error code (optional)
@@ -583,15 +583,15 @@ Patch Error Types
 ```python
 import time
 import os
-import gwm
-from gwm.models.error_type import ErrorType
-from gwm.models.error_type_request import ErrorTypeRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.error_type import ErrorType
+from gwm_client.models.error_type_request import ErrorTypeRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -601,14 +601,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ErrorsAppErrorTypesApi(api_client)
+    api_instance = gwm_client.ErrorsAppErrorTypesApi(api_client)
     id_or_name = 56 # int | A unique integer value identifying this error type.
     error_type_request = {"name":"Robot entered self destruct region","local_error_code":999,"reporting_component":"explosion manager","global_error_code":9999,"criticality":1,"clearing_options":["blow_up_robot"],"auto_recovery_actions":[{"action":"blow_up_robot","content":{"explosion_radius":50},"first_attempt_after":10,"retry_interval":5,"max_attempts":10}],"meta_data":{"key":"value"}} # ErrorTypeRequest | 
     criticality = [56] # List[int] | filter by criticality (optional)

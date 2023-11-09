@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.schema_request import SchemaRequest
+from gwm_client.models.schema_request import SchemaRequest
 
 # TODO update the JSON string below
 json = "{}"

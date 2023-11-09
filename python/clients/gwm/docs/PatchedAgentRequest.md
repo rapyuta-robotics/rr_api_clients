@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.patched_agent_request import PatchedAgentRequest
+from gwm_client.models.patched_agent_request import PatchedAgentRequest
 
 # TODO update the JSON string below
 json = "{}"

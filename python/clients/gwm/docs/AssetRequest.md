@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.asset_request import AssetRequest
+from gwm_client.models.asset_request import AssetRequest
 
 # TODO update the JSON string below
 json = "{}"

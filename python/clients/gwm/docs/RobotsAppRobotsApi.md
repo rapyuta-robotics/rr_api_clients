@@ -1,4 +1,4 @@
-# gwm.RobotsAppRobotsApi
+# gwm_client.RobotsAppRobotsApi
 
 All URIs are relative to *http://localhost*
 
@@ -25,15 +25,15 @@ Manage Robots
 ```python
 import time
 import os
-import gwm
-from gwm.models.robot import Robot
-from gwm.models.robot_request import RobotRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.robot import Robot
+from gwm_client.models.robot_request import RobotRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -43,15 +43,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.RobotsAppRobotsApi(api_client)
-    robot_request = gwm.RobotRequest() # RobotRequest | 
+    api_instance = gwm_client.RobotsAppRobotsApi(api_client)
+    robot_request = gwm_client.RobotRequest() # RobotRequest | 
 
     try:
         api_response = api_instance.v1_robot_create(robot_request)
@@ -102,13 +102,13 @@ Manage Robots
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -118,14 +118,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.RobotsAppRobotsApi(api_client)
+    api_instance = gwm_client.RobotsAppRobotsApi(api_client)
     id = 56 # int | A unique integer value identifying this robot.
 
     try:
@@ -175,14 +175,14 @@ Manage Robots
 ```python
 import time
 import os
-import gwm
-from gwm.models.robot import Robot
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.robot import Robot
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -192,14 +192,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.RobotsAppRobotsApi(api_client)
+    api_instance = gwm_client.RobotsAppRobotsApi(api_client)
     robot_descriptor = 56 # int |  (optional)
 
     try:
@@ -251,15 +251,15 @@ Manage Robots
 ```python
 import time
 import os
-import gwm
-from gwm.models.patched_robot_request import PatchedRobotRequest
-from gwm.models.robot import Robot
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.patched_robot_request import PatchedRobotRequest
+from gwm_client.models.robot import Robot
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -269,16 +269,16 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.RobotsAppRobotsApi(api_client)
+    api_instance = gwm_client.RobotsAppRobotsApi(api_client)
     id = 56 # int | A unique integer value identifying this robot.
-    patched_robot_request = gwm.PatchedRobotRequest() # PatchedRobotRequest |  (optional)
+    patched_robot_request = gwm_client.PatchedRobotRequest() # PatchedRobotRequest |  (optional)
 
     try:
         api_response = api_instance.v1_robot_partial_update(id, patched_robot_request=patched_robot_request)
@@ -330,14 +330,14 @@ Manage Robots
 ```python
 import time
 import os
-import gwm
-from gwm.models.robot import Robot
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.robot import Robot
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -347,14 +347,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.RobotsAppRobotsApi(api_client)
+    api_instance = gwm_client.RobotsAppRobotsApi(api_client)
     id = 56 # int | A unique integer value identifying this robot.
 
     try:
@@ -406,15 +406,15 @@ Manage Robots
 ```python
 import time
 import os
-import gwm
-from gwm.models.robot import Robot
-from gwm.models.robot_request import RobotRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.robot import Robot
+from gwm_client.models.robot_request import RobotRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -424,16 +424,16 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.RobotsAppRobotsApi(api_client)
+    api_instance = gwm_client.RobotsAppRobotsApi(api_client)
     id = 56 # int | A unique integer value identifying this robot.
-    robot_request = gwm.RobotRequest() # RobotRequest | 
+    robot_request = gwm_client.RobotRequest() # RobotRequest | 
 
     try:
         api_response = api_instance.v1_robot_update(id, robot_request)

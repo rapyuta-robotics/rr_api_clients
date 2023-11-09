@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.layer_yaml import LayerYAML
+from gwm_client.models.layer_yaml import LayerYAML
 
 # TODO update the JSON string below
 json = "{}"

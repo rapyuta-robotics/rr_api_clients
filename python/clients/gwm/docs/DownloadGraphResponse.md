@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.download_graph_response import DownloadGraphResponse
+from gwm_client.models.download_graph_response import DownloadGraphResponse
 
 # TODO update the JSON string below
 json = "{}"

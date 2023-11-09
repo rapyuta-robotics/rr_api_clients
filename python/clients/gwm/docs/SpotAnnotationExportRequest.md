@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.spot_annotation_export_request import SpotAnnotationExportRequest
+from gwm_client.models.spot_annotation_export_request import SpotAnnotationExportRequest
 
 # TODO update the JSON string below
 json = "{}"

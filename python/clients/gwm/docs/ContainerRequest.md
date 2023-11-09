@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.container_request import ContainerRequest
+from gwm_client.models.container_request import ContainerRequest
 
 # TODO update the JSON string below
 json = "{}"

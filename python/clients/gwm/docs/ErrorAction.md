@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.error_action import ErrorAction
+from gwm_client.models.error_action import ErrorAction
 
 # TODO update the JSON string below
 json = "{}"

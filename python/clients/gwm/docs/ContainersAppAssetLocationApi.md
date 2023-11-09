@@ -1,4 +1,4 @@
-# gwm.ContainersAppAssetLocationApi
+# gwm_client.ContainersAppAssetLocationApi
 
 All URIs are relative to *http://localhost*
 
@@ -27,14 +27,14 @@ Patch asset locations
 ```python
 import time
 import os
-import gwm
-from gwm.models.patched_asset_location_patch_request import PatchedAssetLocationPatchRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.patched_asset_location_patch_request import PatchedAssetLocationPatchRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -44,15 +44,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppAssetLocationApi(api_client)
-    patched_asset_location_patch_request = [gwm.PatchedAssetLocationPatchRequest()] # List[PatchedAssetLocationPatchRequest] | 
+    api_instance = gwm_client.ContainersAppAssetLocationApi(api_client)
+    patched_asset_location_patch_request = [gwm_client.PatchedAssetLocationPatchRequest()] # List[PatchedAssetLocationPatchRequest] | 
 
     try:
         # Patch asset locations
@@ -98,15 +98,15 @@ Create asset locations
 ```python
 import time
 import os
-import gwm
-from gwm.models.asset_location_request import AssetLocationRequest
-from gwm.models.paginated_asset_location_list import PaginatedAssetLocationList
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.asset_location_request import AssetLocationRequest
+from gwm_client.models.paginated_asset_location_list import PaginatedAssetLocationList
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -116,15 +116,15 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppAssetLocationApi(api_client)
-    asset_location_request = [gwm.AssetLocationRequest()] # List[AssetLocationRequest] | 
+    api_instance = gwm_client.ContainersAppAssetLocationApi(api_client)
+    asset_location_request = [gwm_client.AssetLocationRequest()] # List[AssetLocationRequest] | 
     container = [56] # List[int] |  (optional)
     id = [56] # List[int] |  (optional)
     intersects_region = 'intersects_region_example' # str |  (optional)
@@ -194,13 +194,13 @@ Bulk Delete asset locations
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -210,14 +210,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppAssetLocationApi(api_client)
+    api_instance = gwm_client.ContainersAppAssetLocationApi(api_client)
     container = [56] # List[int] | List of 'Container IDs' (optional)
     id = [56] # List[int] | List of AssetLocation IDs (optional)
     intersects_region = 56 # int | 'Region ID' or 'Region name (optional)
@@ -280,13 +280,13 @@ Manage asset locations
 ```python
 import time
 import os
-import gwm
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -296,14 +296,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppAssetLocationApi(api_client)
+    api_instance = gwm_client.ContainersAppAssetLocationApi(api_client)
     id = 56 # int | A unique integer value identifying this asset location.
 
     try:
@@ -353,14 +353,14 @@ List asset locations
 ```python
 import time
 import os
-import gwm
-from gwm.models.paginated_asset_location_list import PaginatedAssetLocationList
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.paginated_asset_location_list import PaginatedAssetLocationList
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -370,14 +370,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppAssetLocationApi(api_client)
+    api_instance = gwm_client.ContainersAppAssetLocationApi(api_client)
     container = [56] # List[int] | List of 'Container IDs' (optional)
     id = [56] # List[int] | List of AssetLocation IDs (optional)
     intersects_region = 56 # int | 'Region ID' or 'Region name (optional)
@@ -446,15 +446,15 @@ Manage asset locations
 ```python
 import time
 import os
-import gwm
-from gwm.models.asset_location import AssetLocation
-from gwm.models.patched_asset_location_request import PatchedAssetLocationRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.asset_location import AssetLocation
+from gwm_client.models.patched_asset_location_request import PatchedAssetLocationRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -464,16 +464,16 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppAssetLocationApi(api_client)
+    api_instance = gwm_client.ContainersAppAssetLocationApi(api_client)
     id = 56 # int | A unique integer value identifying this asset location.
-    patched_asset_location_request = gwm.PatchedAssetLocationRequest() # PatchedAssetLocationRequest |  (optional)
+    patched_asset_location_request = gwm_client.PatchedAssetLocationRequest() # PatchedAssetLocationRequest |  (optional)
 
     try:
         api_response = api_instance.v1_asset_locations_partial_update(id, patched_asset_location_request=patched_asset_location_request)
@@ -525,14 +525,14 @@ Manage asset locations
 ```python
 import time
 import os
-import gwm
-from gwm.models.asset_location import AssetLocation
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.asset_location import AssetLocation
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -542,14 +542,14 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppAssetLocationApi(api_client)
+    api_instance = gwm_client.ContainersAppAssetLocationApi(api_client)
     id = 56 # int | A unique integer value identifying this asset location.
 
     try:
@@ -601,15 +601,15 @@ Manage asset locations
 ```python
 import time
 import os
-import gwm
-from gwm.models.asset_location import AssetLocation
-from gwm.models.asset_location_request import AssetLocationRequest
-from gwm.rest import ApiException
+import gwm_client
+from gwm_client.models.asset_location import AssetLocation
+from gwm_client.models.asset_location_request import AssetLocationRequest
+from gwm_client.rest import ApiException
 from pprint import pprint
 
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     host = "http://localhost"
 )
 
@@ -619,16 +619,16 @@ configuration = gwm.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization: tokenAuth
-configuration = gwm.Configuration(
+configuration = gwm_client.Configuration(
     access_token = os.environ["BEARER_TOKEN"]
 )
 
 # Enter a context with an instance of the API client
-with gwm.ApiClient(configuration) as api_client:
+with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = gwm.ContainersAppAssetLocationApi(api_client)
+    api_instance = gwm_client.ContainersAppAssetLocationApi(api_client)
     id = 56 # int | A unique integer value identifying this asset location.
-    asset_location_request = gwm.AssetLocationRequest() # AssetLocationRequest | 
+    asset_location_request = gwm_client.AssetLocationRequest() # AssetLocationRequest | 
 
     try:
         api_response = api_instance.v1_asset_locations_update(id, asset_location_request)

@@ -14,7 +14,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.patched_container_request import PatchedContainerRequest
+from gwm_client.models.patched_container_request import PatchedContainerRequest
 
 # TODO update the JSON string below
 json = "{}"

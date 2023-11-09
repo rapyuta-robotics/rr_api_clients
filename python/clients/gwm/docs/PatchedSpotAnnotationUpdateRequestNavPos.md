@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from gwm.models.patched_spot_annotation_update_request_nav_pos import PatchedSpotAnnotationUpdateRequestNavPos
+from gwm_client.models.patched_spot_annotation_update_request_nav_pos import PatchedSpotAnnotationUpdateRequestNavPos
 
 # TODO update the JSON string below
 json = "{}"
