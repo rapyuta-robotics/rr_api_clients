@@ -14,6 +14,9 @@ Name | Type | Description | Notes
 **external_device** | **int** | &#x60;id&#x60; of relevant related element eg: agent,map,site,spot,node,edge,external_device | [optional] 
 **meta_data** | **Dict[str, object]** | optional JSON encoded metadata for this object | [optional] 
 **name** | **str** | user defined &#x60;name&#x60; of this object. Must be unique in the site or map (for nodes and edges) | [optional] 
+**nav_pos** | [**PatchedSpotAnnotationUpdateRequestNavPos**](PatchedSpotAnnotationUpdateRequestNavPos.md) |  | [optional] 
+**nav_yaw** | **float** | Orientation of navigation position for interacting with the spot | [optional] 
+**preserve** | **bool** | If True, spot is excluded from deletion, unless deleted by force | [optional] 
 
 ## Example
 

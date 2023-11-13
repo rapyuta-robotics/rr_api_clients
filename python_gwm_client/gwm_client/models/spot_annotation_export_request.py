@@ -20,6 +20,7 @@ import json
 
 from typing import Any, Dict, Optional, Union
 from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, conint, constr
+from gwm_client.models.patched_spot_annotation_update_request_nav_pos import PatchedSpotAnnotationUpdateRequestNavPos
 from gwm_client.models.point_serializer3_d_request import PointSerializer3DRequest
 
 class SpotAnnotationExportRequest(BaseModel):
@@ -36,7 +37,10 @@ class SpotAnnotationExportRequest(BaseModel):
     external_device: Optional[StrictInt] = Field(None, description="`id` of relevant related element eg: agent,map,site,spot,node,edge,external_device")
     meta_data: Optional[Dict[str, Any]] = Field(None, description="optional JSON encoded metadata for this object")
     name: Optional[constr(strict=True, max_length=100)] = Field(None, description="user defined `name` of this object. Must be unique in the site or map (for nodes and edges)")
-    __properties = ["id", "pos", "yaw", "node", "allocatable", "priority", "type", "external_device", "meta_data", "name"]
+    nav_pos: Optional[PatchedSpotAnnotationUpdateRequestNavPos] = None
+    nav_yaw: Optional[Union[StrictFloat, StrictInt]] = Field(None, description="Orientation of navigation position for interacting with the spot")
+    preserve: Optional[StrictBool] = Field(None, description="If True, spot is excluded from deletion, unless deleted by force")
+    __properties = ["id", "pos", "yaw", "node", "allocatable", "priority", "type", "external_device", "meta_data", "name", "nav_pos", "nav_yaw", "preserve"]
 
     class Config:
         """Pydantic configuration"""
@@ -65,6 +69,9 @@ class SpotAnnotationExportRequest(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of pos
         if self.pos:
             _dict['pos'] = self.pos.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of nav_pos
+        if self.nav_pos:
+            _dict['nav_pos'] = self.nav_pos.to_dict()
         # set to None if node (nullable) is None
         # and __fields_set__ contains the field
         if self.node is None and "node" in self.__fields_set__:
@@ -79,6 +86,16 @@ class SpotAnnotationExportRequest(BaseModel):
         # and __fields_set__ contains the field
         if self.meta_data is None and "meta_data" in self.__fields_set__:
             _dict['meta_data'] = None
+
+        # set to None if nav_pos (nullable) is None
+        # and __fields_set__ contains the field
+        if self.nav_pos is None and "nav_pos" in self.__fields_set__:
+            _dict['nav_pos'] = None
+
+        # set to None if nav_yaw (nullable) is None
+        # and __fields_set__ contains the field
+        if self.nav_yaw is None and "nav_yaw" in self.__fields_set__:
+            _dict['nav_yaw'] = None
 
         return _dict
 
@@ -101,7 +118,10 @@ class SpotAnnotationExportRequest(BaseModel):
             "type": obj.get("type"),
             "external_device": obj.get("external_device"),
             "meta_data": obj.get("meta_data"),
-            "name": obj.get("name")
+            "name": obj.get("name"),
+            "nav_pos": PatchedSpotAnnotationUpdateRequestNavPos.from_dict(obj.get("nav_pos")) if obj.get("nav_pos") is not None else None,
+            "nav_yaw": obj.get("nav_yaw"),
+            "preserve": obj.get("preserve")
         })
         return _obj
 

@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v3_fragments_internal_update_partial_update**
-> V3WorkFragment v3_fragments_internal_update_partial_update(id, patched_v3_work_fragment_request=patched_v3_work_fragment_request)
+> V3WorkFragmentUpdate v3_fragments_internal_update_partial_update(id, patched_v3_work_fragment_update_request=patched_v3_work_fragment_update_request)
 
 Internal Update Fragment
 
@@ -278,8 +278,8 @@ Internal Update Fragment
 import time
 import os
 import gwm_client
-from gwm_client.models.patched_v3_work_fragment_request import PatchedV3WorkFragmentRequest
-from gwm_client.models.v3_work_fragment import V3WorkFragment
+from gwm_client.models.patched_v3_work_fragment_update_request import PatchedV3WorkFragmentUpdateRequest
+from gwm_client.models.v3_work_fragment_update import V3WorkFragmentUpdate
 from gwm_client.rest import ApiException
 from pprint import pprint
 
@@ -304,11 +304,11 @@ with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gwm_client.WorksAppWorkFragmentsV3Api(api_client)
     id = 56 # int | A unique integer value identifying this work payload fragment.
-    patched_v3_work_fragment_request = {"status":"REJECTED","quantity_delivered":5} # PatchedV3WorkFragmentRequest |  (optional)
+    patched_v3_work_fragment_update_request = {"status":"REJECTED","quantity_delivered":5} # PatchedV3WorkFragmentUpdateRequest |  (optional)
 
     try:
         # Internal Update Fragment
-        api_response = api_instance.v3_fragments_internal_update_partial_update(id, patched_v3_work_fragment_request=patched_v3_work_fragment_request)
+        api_response = api_instance.v3_fragments_internal_update_partial_update(id, patched_v3_work_fragment_update_request=patched_v3_work_fragment_update_request)
         print("The response of WorksAppWorkFragmentsV3Api->v3_fragments_internal_update_partial_update:\n")
         pprint(api_response)
     except Exception as e:
@@ -322,11 +322,11 @@ with gwm_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this work payload fragment. | 
- **patched_v3_work_fragment_request** | [**PatchedV3WorkFragmentRequest**](PatchedV3WorkFragmentRequest.md)|  | [optional] 
+ **patched_v3_work_fragment_update_request** | [**PatchedV3WorkFragmentUpdateRequest**](PatchedV3WorkFragmentUpdateRequest.md)|  | [optional] 
 
 ### Return type
 
-[**V3WorkFragment**](V3WorkFragment.md)
+[**V3WorkFragmentUpdate**](V3WorkFragmentUpdate.md)
 
 ### Authorization
 
