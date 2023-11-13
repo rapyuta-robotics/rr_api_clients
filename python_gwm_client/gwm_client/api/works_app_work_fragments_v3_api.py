@@ -26,10 +26,11 @@ from pydantic import Field, StrictBool, StrictFloat, StrictInt, StrictStr, conin
 from typing import List, Optional, Union
 
 from gwm_client.models.paginated_v3_work_fragment_list import PaginatedV3WorkFragmentList
-from gwm_client.models.patched_v3_work_fragment_request import PatchedV3WorkFragmentRequest
+from gwm_client.models.patched_v3_work_fragment_update_request import PatchedV3WorkFragmentUpdateRequest
 from gwm_client.models.v3_work_fragment import V3WorkFragment
 from gwm_client.models.v3_work_fragment_bulk_update_request import V3WorkFragmentBulkUpdateRequest
 from gwm_client.models.v3_work_fragment_request import V3WorkFragmentRequest
+from gwm_client.models.v3_work_fragment_update import V3WorkFragmentUpdate
 
 from gwm_client.api_client import ApiClient
 from gwm_client.api_response import ApiResponse
@@ -575,20 +576,20 @@ class WorksAppWorkFragmentsV3Api:
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def v3_fragments_internal_update_partial_update(self, id : Annotated[StrictInt, Field(..., description="A unique integer value identifying this work payload fragment.")], patched_v3_work_fragment_request : Optional[PatchedV3WorkFragmentRequest] = None, **kwargs) -> V3WorkFragment:  # noqa: E501
+    def v3_fragments_internal_update_partial_update(self, id : Annotated[StrictInt, Field(..., description="A unique integer value identifying this work payload fragment.")], patched_v3_work_fragment_update_request : Optional[PatchedV3WorkFragmentUpdateRequest] = None, **kwargs) -> V3WorkFragmentUpdate:  # noqa: E501
         """Internal Update Fragment  # noqa: E501
 
         Internal Update Fragment  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.v3_fragments_internal_update_partial_update(id, patched_v3_work_fragment_request, async_req=True)
+        >>> thread = api.v3_fragments_internal_update_partial_update(id, patched_v3_work_fragment_update_request, async_req=True)
         >>> result = thread.get()
 
         :param id: A unique integer value identifying this work payload fragment. (required)
         :type id: int
-        :param patched_v3_work_fragment_request:
-        :type patched_v3_work_fragment_request: PatchedV3WorkFragmentRequest
+        :param patched_v3_work_fragment_update_request:
+        :type patched_v3_work_fragment_update_request: PatchedV3WorkFragmentUpdateRequest
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _request_timeout: timeout setting for this request.
@@ -598,29 +599,29 @@ class WorksAppWorkFragmentsV3Api:
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: V3WorkFragment
+        :rtype: V3WorkFragmentUpdate
         """
         kwargs['_return_http_data_only'] = True
         if '_preload_content' in kwargs:
             message = "Error! Please call the v3_fragments_internal_update_partial_update_with_http_info method with `_preload_content` instead and obtain raw data from ApiResponse.raw_data"  # noqa: E501
             raise ValueError(message)
-        return self.v3_fragments_internal_update_partial_update_with_http_info(id, patched_v3_work_fragment_request, **kwargs)  # noqa: E501
+        return self.v3_fragments_internal_update_partial_update_with_http_info(id, patched_v3_work_fragment_update_request, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def v3_fragments_internal_update_partial_update_with_http_info(self, id : Annotated[StrictInt, Field(..., description="A unique integer value identifying this work payload fragment.")], patched_v3_work_fragment_request : Optional[PatchedV3WorkFragmentRequest] = None, **kwargs) -> ApiResponse:  # noqa: E501
+    def v3_fragments_internal_update_partial_update_with_http_info(self, id : Annotated[StrictInt, Field(..., description="A unique integer value identifying this work payload fragment.")], patched_v3_work_fragment_update_request : Optional[PatchedV3WorkFragmentUpdateRequest] = None, **kwargs) -> ApiResponse:  # noqa: E501
         """Internal Update Fragment  # noqa: E501
 
         Internal Update Fragment  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.v3_fragments_internal_update_partial_update_with_http_info(id, patched_v3_work_fragment_request, async_req=True)
+        >>> thread = api.v3_fragments_internal_update_partial_update_with_http_info(id, patched_v3_work_fragment_update_request, async_req=True)
         >>> result = thread.get()
 
         :param id: A unique integer value identifying this work payload fragment. (required)
         :type id: int
-        :param patched_v3_work_fragment_request:
-        :type patched_v3_work_fragment_request: PatchedV3WorkFragmentRequest
+        :param patched_v3_work_fragment_update_request:
+        :type patched_v3_work_fragment_update_request: PatchedV3WorkFragmentUpdateRequest
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the ApiResponse.data will
@@ -643,14 +644,14 @@ class WorksAppWorkFragmentsV3Api:
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(V3WorkFragment, status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(V3WorkFragmentUpdate, status_code(int), headers(HTTPHeaderDict))
         """
 
         _params = locals()
 
         _all_params = [
             'id',
-            'patched_v3_work_fragment_request'
+            'patched_v3_work_fragment_update_request'
         ]
         _all_params.extend(
             [
@@ -691,8 +692,8 @@ class WorksAppWorkFragmentsV3Api:
         _files = {}
         # process the body parameter
         _body_params = None
-        if _params['patched_v3_work_fragment_request'] is not None:
-            _body_params = _params['patched_v3_work_fragment_request']
+        if _params['patched_v3_work_fragment_update_request'] is not None:
+            _body_params = _params['patched_v3_work_fragment_update_request']
 
         # set the HTTP header `Accept`
         _header_params['Accept'] = self.api_client.select_header_accept(
@@ -709,7 +710,7 @@ class WorksAppWorkFragmentsV3Api:
         _auth_settings = ['tokenAuth']  # noqa: E501
 
         _response_types_map = {
-            '200': "V3WorkFragment",
+            '200': "V3WorkFragmentUpdate",
         }
 
         return self.api_client.call_api(

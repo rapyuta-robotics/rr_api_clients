@@ -106,7 +106,7 @@ docs/PatchedSiteRequest.md
 docs/PatchedSpotAnnotationUpdateRequest.md
 docs/PatchedSpotAnnotationUpdateRequestNavPos.md
 docs/PatchedV3WorkExternalUpdateRequest.md
-docs/PatchedV3WorkFragmentRequest.md
+docs/PatchedV3WorkFragmentUpdateRequest.md
 docs/PatchedV3WorkInternalUpdateRequest.md
 docs/PatchedWorkExternalUpdateRequest.md
 docs/PatchedWorkInternalUpdateRequest.md
@@ -153,6 +153,7 @@ docs/V3WorkExternalUpdate.md
 docs/V3WorkFragment.md
 docs/V3WorkFragmentBulkUpdateRequest.md
 docs/V3WorkFragmentRequest.md
+docs/V3WorkFragmentUpdate.md
 docs/V3WorkInternalUpdate.md
 docs/V3WorkInternalUpdateRequest.md
 docs/V3WorkRequest.md
@@ -289,7 +290,7 @@ gwm_client/models/patched_site_request.py
 gwm_client/models/patched_spot_annotation_update_request.py
 gwm_client/models/patched_spot_annotation_update_request_nav_pos.py
 gwm_client/models/patched_v3_work_external_update_request.py
-gwm_client/models/patched_v3_work_fragment_request.py
+gwm_client/models/patched_v3_work_fragment_update_request.py
 gwm_client/models/patched_v3_work_internal_update_request.py
 gwm_client/models/patched_work_external_update_request.py
 gwm_client/models/patched_work_internal_update_request.py
@@ -330,6 +331,7 @@ gwm_client/models/v3_work_external_update.py
 gwm_client/models/v3_work_fragment.py
 gwm_client/models/v3_work_fragment_bulk_update_request.py
 gwm_client/models/v3_work_fragment_request.py
+gwm_client/models/v3_work_fragment_update.py
 gwm_client/models/v3_work_internal_update.py
 gwm_client/models/v3_work_internal_update_request.py
 gwm_client/models/v3_work_request.py
