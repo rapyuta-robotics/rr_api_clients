@@ -18,8 +18,8 @@ on:
         required: true
       service-port:
         description: 'Backend service port number'
-        type: number
-        default: 8000
+        type: string
+        default: '8000'
       openapi-path:
         description: 'Backend service openapi schema path'
         type: string

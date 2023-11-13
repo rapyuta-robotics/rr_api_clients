@@ -19,7 +19,7 @@ jobs:
             "docker-image-name": "quay.io/rapyuta/io_amr_gwm",
             "client-name": "gwm",
             "version": "api-client-testing",
-            "service-port": 8000,
+            "service-port": "8000",
             "openapi-path": "api/schema/",
             "docker-command": "poetry run gunicorn"
           }'
