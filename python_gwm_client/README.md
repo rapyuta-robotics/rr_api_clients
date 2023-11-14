@@ -292,14 +292,6 @@ Class | Method | HTTP request | Description
 *WorksAppWorksV3Api* | [**v3_works_partial_update**](docs/WorksAppWorksV3Api.md#v3_works_partial_update) | **PATCH** /v3/works/{id} | Partially Update Work
 *WorksAppWorksV3Api* | [**v3_works_retrieve**](docs/WorksAppWorksV3Api.md#v3_works_retrieve) | **GET** /v3/works/{id} | Get A Work information
 *WorksAppWorksV3Api* | [**v3_works_summary_retrieve**](docs/WorksAppWorksV3Api.md#v3_works_summary_retrieve) | **GET** /v3/works/summary | Get Work Summary
-*ComputeApi* | [**compute_v1_workflows_executions_bulk_create**](docs/ComputeApi.md#compute_v1_workflows_executions_bulk_create) | **POST** /compute/v1/workflows/executions/bulk/ | 
-*ComputeApi* | [**compute_v1_workflows_executions_bulk_partial_update**](docs/ComputeApi.md#compute_v1_workflows_executions_bulk_partial_update) | **PATCH** /compute/v1/workflows/executions/bulk/ | 
-*ComputeApi* | [**compute_v1_workflows_executions_create**](docs/ComputeApi.md#compute_v1_workflows_executions_create) | **POST** /compute/v1/workflows/executions/ | 
-*ComputeApi* | [**compute_v1_workflows_executions_destroy**](docs/ComputeApi.md#compute_v1_workflows_executions_destroy) | **DELETE** /compute/v1/workflows/executions/{id}/ | 
-*ComputeApi* | [**compute_v1_workflows_executions_list**](docs/ComputeApi.md#compute_v1_workflows_executions_list) | **GET** /compute/v1/workflows/executions/ | 
-*ComputeApi* | [**compute_v1_workflows_executions_partial_update**](docs/ComputeApi.md#compute_v1_workflows_executions_partial_update) | **PATCH** /compute/v1/workflows/executions/{id}/ | 
-*ComputeApi* | [**compute_v1_workflows_executions_retrieve**](docs/ComputeApi.md#compute_v1_workflows_executions_retrieve) | **GET** /compute/v1/workflows/executions/{id}/ | 
-*ComputeApi* | [**compute_v1_workflows_executions_update**](docs/ComputeApi.md#compute_v1_workflows_executions_update) | **PUT** /compute/v1/workflows/executions/{id}/ | 
 
 
 ## Documentation For Models
@@ -396,7 +388,6 @@ Class | Method | HTTP request | Description
  - [PatchedWorkExternalUpdateRequest](docs/PatchedWorkExternalUpdateRequest.md)
  - [PatchedWorkInternalUpdateRequest](docs/PatchedWorkInternalUpdateRequest.md)
  - [PatchedWorkPayloadFragmentRequest](docs/PatchedWorkPayloadFragmentRequest.md)
- - [PatchedWorkflowExecutionUpdateSerializerV1Request](docs/PatchedWorkflowExecutionUpdateSerializerV1Request.md)
  - [Point](docs/Point.md)
  - [PointRequest](docs/PointRequest.md)
  - [PointSerializer3D](docs/PointSerializer3D.md)
@@ -442,12 +433,6 @@ Class | Method | HTTP request | Description
  - [WorkInternalUpdate](docs/WorkInternalUpdate.md)
  - [WorkPayloadFragment](docs/WorkPayloadFragment.md)
  - [WorkRequest](docs/WorkRequest.md)
- - [WorkflowExecutionBulkUpdateSerializerV1](docs/WorkflowExecutionBulkUpdateSerializerV1.md)
- - [WorkflowExecutionBulkUpdateSerializerV1Request](docs/WorkflowExecutionBulkUpdateSerializerV1Request.md)
- - [WorkflowExecutionSerializerV1](docs/WorkflowExecutionSerializerV1.md)
- - [WorkflowExecutionSerializerV1Request](docs/WorkflowExecutionSerializerV1Request.md)
- - [WorkflowExecutionUpdateSerializerV1](docs/WorkflowExecutionUpdateSerializerV1.md)
- - [WorkflowExecutionUpdateSerializerV1Request](docs/WorkflowExecutionUpdateSerializerV1Request.md)
 
 
 <a id="documentation-for-authorization"></a>

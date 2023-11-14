@@ -21,7 +21,6 @@ docs/AssetLocationRequest.md
 docs/AssetRequest.md
 docs/AutoRecoveryAction.md
 docs/AutoRecoveryActionRequest.md
-docs/ComputeApi.md
 docs/Container.md
 docs/ContainerDescriptor.md
 docs/ContainerDescriptorRequest.md
@@ -112,7 +111,6 @@ docs/PatchedV3WorkInternalUpdateRequest.md
 docs/PatchedWorkExternalUpdateRequest.md
 docs/PatchedWorkInternalUpdateRequest.md
 docs/PatchedWorkPayloadFragmentRequest.md
-docs/PatchedWorkflowExecutionUpdateSerializerV1Request.md
 docs/Point.md
 docs/PointRequest.md
 docs/PointSerializer3D.md
@@ -164,12 +162,6 @@ docs/WorkExternalUpdate.md
 docs/WorkInternalUpdate.md
 docs/WorkPayloadFragment.md
 docs/WorkRequest.md
-docs/WorkflowExecutionBulkUpdateSerializerV1.md
-docs/WorkflowExecutionBulkUpdateSerializerV1Request.md
-docs/WorkflowExecutionSerializerV1.md
-docs/WorkflowExecutionSerializerV1Request.md
-docs/WorkflowExecutionUpdateSerializerV1.md
-docs/WorkflowExecutionUpdateSerializerV1Request.md
 docs/WorksAppAgentTaskFragmentsApi.md
 docs/WorksAppAgentTasksApi.md
 docs/WorksAppWorkFragmentsV2Api.md
@@ -179,7 +171,6 @@ docs/WorksAppWorksV3Api.md
 git_push.sh
 gwm_client/__init__.py
 gwm_client/api/__init__.py
-gwm_client/api/compute_api.py
 gwm_client/api/containers_app_asset_location_api.py
 gwm_client/api/containers_app_container_descriptor_api.py
 gwm_client/api/containers_app_container_master_api.py
@@ -304,7 +295,6 @@ gwm_client/models/patched_v3_work_internal_update_request.py
 gwm_client/models/patched_work_external_update_request.py
 gwm_client/models/patched_work_internal_update_request.py
 gwm_client/models/patched_work_payload_fragment_request.py
-gwm_client/models/patched_workflow_execution_update_serializer_v1_request.py
 gwm_client/models/point.py
 gwm_client/models/point_request.py
 gwm_client/models/point_serializer3_d.py
@@ -350,12 +340,6 @@ gwm_client/models/work_external_update.py
 gwm_client/models/work_internal_update.py
 gwm_client/models/work_payload_fragment.py
 gwm_client/models/work_request.py
-gwm_client/models/workflow_execution_bulk_update_serializer_v1.py
-gwm_client/models/workflow_execution_bulk_update_serializer_v1_request.py
-gwm_client/models/workflow_execution_serializer_v1.py
-gwm_client/models/workflow_execution_serializer_v1_request.py
-gwm_client/models/workflow_execution_update_serializer_v1.py
-gwm_client/models/workflow_execution_update_serializer_v1_request.py
 gwm_client/py.typed
 gwm_client/rest.py
 pyproject.toml
