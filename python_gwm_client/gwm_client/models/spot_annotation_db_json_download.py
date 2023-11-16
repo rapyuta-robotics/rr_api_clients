@@ -18,12 +18,12 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, Dict, List, Optional, Union
-from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, conint, conlist, constr
+from typing import Any, Dict, Optional, Union
+from pydantic import BaseModel, Field, StrictBool, StrictFloat, StrictInt, conint, constr
 
-class SpotAnnotationDbJson(BaseModel):
+class SpotAnnotationDBJsonDownload(BaseModel):
     """
-    SpotAnnotationDbJson
+    SpotAnnotationDBJsonDownload
     """
     id: Optional[StrictInt] = None
     name: Optional[constr(strict=True, max_length=100)] = Field(None, description="user defined `name` of this object. Must be unique in the site or map (for nodes and edges)")
@@ -39,8 +39,7 @@ class SpotAnnotationDbJson(BaseModel):
     preserve: Optional[StrictBool] = Field(None, description="If True, spot is excluded from deletion, unless deleted by force")
     priority: Optional[conint(strict=True, le=32767, ge=-32768)] = Field(None, description="Associate a priority to the spot, e.g. for spot queries to allocatable spots")
     meta_data: Optional[Dict[str, Any]] = Field(None, description="optional JSON encoded metadata for this object")
-    region_ids: conlist(StrictInt) = Field(...)
-    __properties = ["id", "name", "pos", "yaw", "nav_pos", "nav_yaw", "node", "type", "external_device", "map", "allocatable", "preserve", "priority", "meta_data", "region_ids"]
+    __properties = ["id", "name", "pos", "yaw", "nav_pos", "nav_yaw", "node", "type", "external_device", "map", "allocatable", "preserve", "priority", "meta_data"]
 
     class Config:
         """Pydantic configuration"""
@@ -56,8 +55,8 @@ class SpotAnnotationDbJson(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> SpotAnnotationDbJson:
-        """Create an instance of SpotAnnotationDbJson from a JSON string"""
+    def from_json(cls, json_str: str) -> SpotAnnotationDBJsonDownload:
+        """Create an instance of SpotAnnotationDBJsonDownload from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self):
@@ -66,7 +65,6 @@ class SpotAnnotationDbJson(BaseModel):
                           exclude={
                             "pos",
                             "nav_pos",
-                            "region_ids",
                           },
                           exclude_none=True)
         # set to None if nav_yaw (nullable) is None
@@ -92,15 +90,15 @@ class SpotAnnotationDbJson(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: dict) -> SpotAnnotationDbJson:
-        """Create an instance of SpotAnnotationDbJson from a dict"""
+    def from_dict(cls, obj: dict) -> SpotAnnotationDBJsonDownload:
+        """Create an instance of SpotAnnotationDBJsonDownload from a dict"""
         if obj is None:
             return None
 
         if not isinstance(obj, dict):
-            return SpotAnnotationDbJson.parse_obj(obj)
+            return SpotAnnotationDBJsonDownload.parse_obj(obj)
 
-        _obj = SpotAnnotationDbJson.parse_obj({
+        _obj = SpotAnnotationDBJsonDownload.parse_obj({
             "id": obj.get("id"),
             "name": obj.get("name"),
             "pos": obj.get("pos"),
@@ -114,8 +112,7 @@ class SpotAnnotationDbJson(BaseModel):
             "allocatable": obj.get("allocatable"),
             "preserve": obj.get("preserve"),
             "priority": obj.get("priority"),
-            "meta_data": obj.get("meta_data"),
-            "region_ids": obj.get("region_ids")
+            "meta_data": obj.get("meta_data")
         })
         return _obj
 

@@ -28,4 +28,5 @@ from gwm_client.api.works_app_work_fragments_v2_api import WorksAppWorkFragments
 from gwm_client.api.works_app_work_fragments_v3_api import WorksAppWorkFragmentsV3Api
 from gwm_client.api.works_app_works_v2_api import WorksAppWorksV2Api
 from gwm_client.api.works_app_works_v3_api import WorksAppWorksV3Api
+from gwm_client.api.compute_api import ComputeApi
 

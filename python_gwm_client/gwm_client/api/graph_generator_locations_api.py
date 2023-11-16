@@ -24,7 +24,7 @@ from pydantic import Field, StrictBytes, StrictStr, constr
 from typing import List, Union
 
 from gwm_client.models.spot_annotation import SpotAnnotation
-from gwm_client.models.spot_annotation_db_json import SpotAnnotationDbJson
+from gwm_client.models.spot_annotation_db_json_download import SpotAnnotationDBJsonDownload
 
 from gwm_client.api_client import ApiClient
 from gwm_client.api_response import ApiResponse
@@ -47,7 +47,7 @@ class GraphGeneratorLocationsApi:
         self.api_client = api_client
 
     @validate_arguments
-    def v1_graph_generator_download_spots_list(self, map_name : Annotated[StrictStr, Field(..., description="Map to download the spots from")], **kwargs) -> List[SpotAnnotationDbJson]:  # noqa: E501
+    def v1_graph_generator_download_spots_list(self, map_name : Annotated[StrictStr, Field(..., description="Map to download the spots from")], **kwargs) -> List[SpotAnnotationDBJsonDownload]:  # noqa: E501
         """v1_graph_generator_download_spots_list  # noqa: E501
 
         Download the Spots of a Map  # noqa: E501
@@ -68,7 +68,7 @@ class GraphGeneratorLocationsApi:
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: List[SpotAnnotationDbJson]
+        :rtype: List[SpotAnnotationDBJsonDownload]
         """
         kwargs['_return_http_data_only'] = True
         if '_preload_content' in kwargs:
@@ -111,7 +111,7 @@ class GraphGeneratorLocationsApi:
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(List[SpotAnnotationDbJson], status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(List[SpotAnnotationDBJsonDownload], status_code(int), headers(HTTPHeaderDict))
         """
 
         _params = locals()
@@ -166,7 +166,7 @@ class GraphGeneratorLocationsApi:
         _auth_settings = ['tokenAuth']  # noqa: E501
 
         _response_types_map = {
-            '200': "List[SpotAnnotationDbJson]",
+            '200': "List[SpotAnnotationDBJsonDownload]",
         }
 
         return self.api_client.call_api(

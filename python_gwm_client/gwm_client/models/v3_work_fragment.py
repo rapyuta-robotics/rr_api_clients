@@ -18,8 +18,9 @@ import re  # noqa: F401
 import json
 
 
-from typing import Any, Dict, Optional, Union
-from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr, conint, constr, validator
+from typing import Any, Dict, List, Optional, Union
+from pydantic import BaseModel, Field, StrictFloat, StrictInt, StrictStr, conint, conlist, constr, validator
+from gwm_client.models.inline_agent_task_fragment import InlineAgentTaskFragment
 from gwm_client.models.internal_work_payload_fragment_to_pos import InternalWorkPayloadFragmentToPos
 
 class V3WorkFragment(BaseModel):
@@ -48,7 +49,8 @@ class V3WorkFragment(BaseModel):
     application_data: Optional[Dict[str, Any]] = Field(None, description="JSON encoded application data for this object")
     quantity_requested: Optional[conint(strict=True, ge=0)] = None
     quantity_delivered: Optional[conint(strict=True, ge=0)] = None
-    __properties = ["meta_data", "type", "id", "status", "rejection_reason", "from_spot", "to_spot", "from_region", "to_region", "from_pos", "to_pos", "from_yaw", "to_yaw", "from_map", "to_map", "parent", "from_spot_query", "to_spot_query", "name", "application_data", "quantity_requested", "quantity_delivered"]
+    task_fragments: conlist(InlineAgentTaskFragment) = Field(...)
+    __properties = ["meta_data", "type", "id", "status", "rejection_reason", "from_spot", "to_spot", "from_region", "to_region", "from_pos", "to_pos", "from_yaw", "to_yaw", "from_map", "to_map", "parent", "from_spot_query", "to_spot_query", "name", "application_data", "quantity_requested", "quantity_delivered", "task_fragments"]
 
     @validator('type')
     def type_validate_enum(cls, value):
@@ -90,6 +92,7 @@ class V3WorkFragment(BaseModel):
         _dict = self.dict(by_alias=True,
                           exclude={
                             "id",
+                            "task_fragments",
                           },
                           exclude_none=True)
         # override the default output from pydantic by calling `to_dict()` of from_pos
@@ -98,6 +101,13 @@ class V3WorkFragment(BaseModel):
         # override the default output from pydantic by calling `to_dict()` of to_pos
         if self.to_pos:
             _dict['to_pos'] = self.to_pos.to_dict()
+        # override the default output from pydantic by calling `to_dict()` of each item in task_fragments (list)
+        _items = []
+        if self.task_fragments:
+            for _item in self.task_fragments:
+                if _item:
+                    _items.append(_item.to_dict())
+            _dict['task_fragments'] = _items
         # set to None if meta_data (nullable) is None
         # and __fields_set__ contains the field
         if self.meta_data is None and "meta_data" in self.__fields_set__:
@@ -196,7 +206,8 @@ class V3WorkFragment(BaseModel):
             "name": obj.get("name"),
             "application_data": obj.get("application_data"),
             "quantity_requested": obj.get("quantity_requested"),
-            "quantity_delivered": obj.get("quantity_delivered")
+            "quantity_delivered": obj.get("quantity_delivered"),
+            "task_fragments": [InlineAgentTaskFragment.from_dict(_item) for _item in obj.get("task_fragments")] if obj.get("task_fragments") is not None else None
         })
         return _obj
 
