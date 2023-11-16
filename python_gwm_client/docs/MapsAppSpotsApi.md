@@ -331,7 +331,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_spot_list**
-> List[SpotAnnotation] v1_spot_list(allocatable=allocatable, external_device=external_device, id=id, intersects_region=intersects_region, map=map, meta_data=meta_data, name=name, node=node, position=position, type=type, with_region_ids=with_region_ids)
+> List[SpotAnnotationDbJson] v1_spot_list(allocatable=allocatable, external_device=external_device, id=id, intersects_region=intersects_region, map=map, meta_data=meta_data, name=name, node=node, position=position, type=type, with_region_ids=with_region_ids)
 
 
 
@@ -344,7 +344,7 @@ List Spots
 import time
 import os
 import gwm_client
-from gwm_client.models.spot_annotation import SpotAnnotation
+from gwm_client.models.spot_annotation_db_json import SpotAnnotationDbJson
 from gwm_client.rest import ApiException
 from pprint import pprint
 
@@ -408,7 +408,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[SpotAnnotation]**](SpotAnnotation.md)
+[**List[SpotAnnotationDbJson]**](SpotAnnotationDbJson.md)
 
 ### Authorization
 

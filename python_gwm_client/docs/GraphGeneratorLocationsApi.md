@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **v1_graph_generator_download_spots_list**
-> List[SpotAnnotationDbJson] v1_graph_generator_download_spots_list(map_name)
+> List[SpotAnnotationDBJsonDownload] v1_graph_generator_download_spots_list(map_name)
 
 
 
@@ -23,7 +23,7 @@ Download the Spots of a Map
 import time
 import os
 import gwm_client
-from gwm_client.models.spot_annotation_db_json import SpotAnnotationDbJson
+from gwm_client.models.spot_annotation_db_json_download import SpotAnnotationDBJsonDownload
 from gwm_client.rest import ApiException
 from pprint import pprint
 
@@ -67,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[SpotAnnotationDbJson]**](SpotAnnotationDbJson.md)
+[**List[SpotAnnotationDBJsonDownload]**](SpotAnnotationDBJsonDownload.md)
 
 ### Authorization
 

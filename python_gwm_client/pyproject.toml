@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "gwm_client"
-version = "api-client-testing"
+version = "devel"
 description = "IO-AMR GWM API"
 authors = ["OpenAPI Generator Community <team@openapitools.org>"]
 license = "NoLicense"

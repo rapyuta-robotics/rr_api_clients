@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **application_data** | **Dict[str, object]** | JSON encoded application data for this object | [optional] 
 **quantity_requested** | **int** |  | [optional] 
 **quantity_delivered** | **int** |  | [optional] 
+**task_fragments** | [**List[InlineAgentTaskFragment]**](InlineAgentTaskFragment.md) |  | [readonly] 
 
 ## Example
 

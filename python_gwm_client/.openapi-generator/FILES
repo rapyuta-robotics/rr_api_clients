@@ -142,6 +142,7 @@ docs/SitesAppExternalDevicesApi.md
 docs/SitesAppSchemasApi.md
 docs/SitesAppSitesApi.md
 docs/SpotAnnotation.md
+docs/SpotAnnotationDBJsonDownload.md
 docs/SpotAnnotationDbJson.md
 docs/SpotAnnotationExportRequest.md
 docs/SpotAnnotationNavPos.md
@@ -329,6 +330,7 @@ gwm_client/models/site_request.py
 gwm_client/models/site_status.py
 gwm_client/models/spot_annotation.py
 gwm_client/models/spot_annotation_db_json.py
+gwm_client/models/spot_annotation_db_json_download.py
 gwm_client/models/spot_annotation_export_request.py
 gwm_client/models/spot_annotation_nav_pos.py
 gwm_client/models/spot_annotation_request.py

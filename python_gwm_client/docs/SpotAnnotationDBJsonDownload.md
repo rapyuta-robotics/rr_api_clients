@@ -1,4 +1,4 @@
-# SpotAnnotationDbJson
+# SpotAnnotationDBJsonDownload
 
 
 ## Properties
@@ -18,24 +18,23 @@ Name | Type | Description | Notes
 **preserve** | **bool** | If True, spot is excluded from deletion, unless deleted by force | [optional] 
 **priority** | **int** | Associate a priority to the spot, e.g. for spot queries to allocatable spots | [optional] 
 **meta_data** | **Dict[str, object]** | optional JSON encoded metadata for this object | [optional] 
-**region_ids** | **List[int]** |  | [readonly] 
 
 ## Example
 
 ```python
-from gwm_client.models.spot_annotation_db_json import SpotAnnotationDbJson
+from gwm_client.models.spot_annotation_db_json_download import SpotAnnotationDBJsonDownload
 
 # TODO update the JSON string below
 json = "{}"
-# create an instance of SpotAnnotationDbJson from a JSON string
-spot_annotation_db_json_instance = SpotAnnotationDbJson.from_json(json)
+# create an instance of SpotAnnotationDBJsonDownload from a JSON string
+spot_annotation_db_json_download_instance = SpotAnnotationDBJsonDownload.from_json(json)
 # print the JSON string representation of the object
-print SpotAnnotationDbJson.to_json()
+print SpotAnnotationDBJsonDownload.to_json()
 
 # convert the object into a dict
-spot_annotation_db_json_dict = spot_annotation_db_json_instance.to_dict()
-# create an instance of SpotAnnotationDbJson from a dict
-spot_annotation_db_json_form_dict = spot_annotation_db_json.from_dict(spot_annotation_db_json_dict)
+spot_annotation_db_json_download_dict = spot_annotation_db_json_download_instance.to_dict()
+# create an instance of SpotAnnotationDBJsonDownload from a dict
+spot_annotation_db_json_download_form_dict = spot_annotation_db_json_download.from_dict(spot_annotation_db_json_download_dict)
 ```
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
