@@ -471,16 +471,18 @@ class RobotsAppAgentsApi:
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def v1_agent_list(self, map : Annotated[Optional[conlist(Union[StrictFloat, StrictInt])], Field(description="filter agents by maps ids or names")] = None, robot_descriptor_id : Annotated[Optional[StrictInt], Field(description="filter agents by robot description ids")] = None, robot_id : Annotated[Optional[StrictInt], Field(description="filter agents by robot id")] = None, **kwargs) -> List[Agent]:  # noqa: E501
+    def v1_agent_list(self, id : Optional[conlist(StrictInt)] = None, map : Annotated[Optional[conlist(Union[StrictFloat, StrictInt])], Field(description="filter agents by maps ids or names")] = None, robot_descriptor_id : Annotated[Optional[StrictInt], Field(description="filter agents by robot description ids")] = None, robot_id : Annotated[Optional[StrictInt], Field(description="filter agents by robot id")] = None, **kwargs) -> List[Agent]:  # noqa: E501
         """v1_agent_list  # noqa: E501
 
         List agents  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.v1_agent_list(map, robot_descriptor_id, robot_id, async_req=True)
+        >>> thread = api.v1_agent_list(id, map, robot_descriptor_id, robot_id, async_req=True)
         >>> result = thread.get()
 
+        :param id:
+        :type id: List[int]
         :param map: filter agents by maps ids or names
         :type map: List[float]
         :param robot_descriptor_id: filter agents by robot description ids
@@ -502,19 +504,21 @@ class RobotsAppAgentsApi:
         if '_preload_content' in kwargs:
             message = "Error! Please call the v1_agent_list_with_http_info method with `_preload_content` instead and obtain raw data from ApiResponse.raw_data"  # noqa: E501
             raise ValueError(message)
-        return self.v1_agent_list_with_http_info(map, robot_descriptor_id, robot_id, **kwargs)  # noqa: E501
+        return self.v1_agent_list_with_http_info(id, map, robot_descriptor_id, robot_id, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def v1_agent_list_with_http_info(self, map : Annotated[Optional[conlist(Union[StrictFloat, StrictInt])], Field(description="filter agents by maps ids or names")] = None, robot_descriptor_id : Annotated[Optional[StrictInt], Field(description="filter agents by robot description ids")] = None, robot_id : Annotated[Optional[StrictInt], Field(description="filter agents by robot id")] = None, **kwargs) -> ApiResponse:  # noqa: E501
+    def v1_agent_list_with_http_info(self, id : Optional[conlist(StrictInt)] = None, map : Annotated[Optional[conlist(Union[StrictFloat, StrictInt])], Field(description="filter agents by maps ids or names")] = None, robot_descriptor_id : Annotated[Optional[StrictInt], Field(description="filter agents by robot description ids")] = None, robot_id : Annotated[Optional[StrictInt], Field(description="filter agents by robot id")] = None, **kwargs) -> ApiResponse:  # noqa: E501
         """v1_agent_list  # noqa: E501
 
         List agents  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.v1_agent_list_with_http_info(map, robot_descriptor_id, robot_id, async_req=True)
+        >>> thread = api.v1_agent_list_with_http_info(id, map, robot_descriptor_id, robot_id, async_req=True)
         >>> result = thread.get()
 
+        :param id:
+        :type id: List[int]
         :param map: filter agents by maps ids or names
         :type map: List[float]
         :param robot_descriptor_id: filter agents by robot description ids
@@ -549,6 +553,7 @@ class RobotsAppAgentsApi:
         _params = locals()
 
         _all_params = [
+            'id',
             'map',
             'robot_descriptor_id',
             'robot_id'
@@ -582,6 +587,10 @@ class RobotsAppAgentsApi:
 
         # process the query parameters
         _query_params = []
+        if _params.get('id') is not None:  # noqa: E501
+            _query_params.append(('id', _params['id']))
+            _collection_formats['id'] = 'multi'
+
         if _params.get('map') is not None:  # noqa: E501
             _query_params.append(('map', _params['map']))
             _collection_formats['map'] = 'multi'

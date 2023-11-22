@@ -282,7 +282,7 @@ configuration = gwm_client.Configuration(
 with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gwm_client.WorksAppAgentTaskFragmentsApi(api_client)
-    agent = 3.4 # float | filter by agent id (optional)
+    agent = [3.4] # List[float] | filter by agent id (optional)
     agent_task = 3.4 # float | filter by agent_task id (optional)
     detection_data = 'detection_data_example' # str | filter by detection_data query (optional)
     drop_data = 'drop_data_example' # str | filter by drop_data query (optional)
@@ -319,7 +319,7 @@ with gwm_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **agent** | **float**| filter by agent id | [optional] 
+ **agent** | [**List[float]**](float.md)| filter by agent id | [optional] 
  **agent_task** | **float**| filter by agent_task id | [optional] 
  **detection_data** | **str**| filter by detection_data query | [optional] 
  **drop_data** | **str**| filter by drop_data query | [optional] 
