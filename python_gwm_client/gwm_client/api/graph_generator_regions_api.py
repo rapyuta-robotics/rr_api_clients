@@ -187,13 +187,13 @@ class GraphGeneratorRegionsApi:
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def v1_graph_generator_generate_aisle_regions_create(self, map_name : constr(strict=True, min_length=1), map_layer_name : constr(strict=True, min_length=1), origin_x : Union[StrictFloat, StrictInt], origin_y : Union[StrictFloat, StrictInt], resolution : Optional[Union[StrictFloat, StrictInt]] = None, min_aisle_width : Optional[Union[StrictFloat, StrictInt]] = None, min_shelf_area : Optional[Union[StrictFloat, StrictInt]] = None, min_shelf_ratio : Optional[Union[StrictFloat, StrictInt]] = None, shelf_approx : Optional[Union[StrictFloat, StrictInt]] = None, **kwargs) -> Region:  # noqa: E501
+    def v1_graph_generator_generate_aisle_regions_create(self, map_name : constr(strict=True, min_length=1), map_layer_name : constr(strict=True, min_length=1), origin_x : Union[StrictFloat, StrictInt], origin_y : Union[StrictFloat, StrictInt], resolution : Optional[Union[StrictFloat, StrictInt]] = None, min_aisle_width : Optional[Union[StrictFloat, StrictInt]] = None, min_shelf_area : Optional[Union[StrictFloat, StrictInt]] = None, min_shelf_ratio : Optional[Union[StrictFloat, StrictInt]] = None, shelf_approx : Optional[Union[StrictFloat, StrictInt]] = None, expand_regions : Optional[Union[StrictFloat, StrictInt]] = None, **kwargs) -> Region:  # noqa: E501
         """v1_graph_generator_generate_aisle_regions_create  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.v1_graph_generator_generate_aisle_regions_create(map_name, map_layer_name, origin_x, origin_y, resolution, min_aisle_width, min_shelf_area, min_shelf_ratio, shelf_approx, async_req=True)
+        >>> thread = api.v1_graph_generator_generate_aisle_regions_create(map_name, map_layer_name, origin_x, origin_y, resolution, min_aisle_width, min_shelf_area, min_shelf_ratio, shelf_approx, expand_regions, async_req=True)
         >>> result = thread.get()
 
         :param map_name: (required)
@@ -214,6 +214,8 @@ class GraphGeneratorRegionsApi:
         :type min_shelf_ratio: float
         :param shelf_approx:
         :type shelf_approx: float
+        :param expand_regions:
+        :type expand_regions: float
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _request_timeout: timeout setting for this request.
@@ -229,16 +231,16 @@ class GraphGeneratorRegionsApi:
         if '_preload_content' in kwargs:
             message = "Error! Please call the v1_graph_generator_generate_aisle_regions_create_with_http_info method with `_preload_content` instead and obtain raw data from ApiResponse.raw_data"  # noqa: E501
             raise ValueError(message)
-        return self.v1_graph_generator_generate_aisle_regions_create_with_http_info(map_name, map_layer_name, origin_x, origin_y, resolution, min_aisle_width, min_shelf_area, min_shelf_ratio, shelf_approx, **kwargs)  # noqa: E501
+        return self.v1_graph_generator_generate_aisle_regions_create_with_http_info(map_name, map_layer_name, origin_x, origin_y, resolution, min_aisle_width, min_shelf_area, min_shelf_ratio, shelf_approx, expand_regions, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def v1_graph_generator_generate_aisle_regions_create_with_http_info(self, map_name : constr(strict=True, min_length=1), map_layer_name : constr(strict=True, min_length=1), origin_x : Union[StrictFloat, StrictInt], origin_y : Union[StrictFloat, StrictInt], resolution : Optional[Union[StrictFloat, StrictInt]] = None, min_aisle_width : Optional[Union[StrictFloat, StrictInt]] = None, min_shelf_area : Optional[Union[StrictFloat, StrictInt]] = None, min_shelf_ratio : Optional[Union[StrictFloat, StrictInt]] = None, shelf_approx : Optional[Union[StrictFloat, StrictInt]] = None, **kwargs) -> ApiResponse:  # noqa: E501
+    def v1_graph_generator_generate_aisle_regions_create_with_http_info(self, map_name : constr(strict=True, min_length=1), map_layer_name : constr(strict=True, min_length=1), origin_x : Union[StrictFloat, StrictInt], origin_y : Union[StrictFloat, StrictInt], resolution : Optional[Union[StrictFloat, StrictInt]] = None, min_aisle_width : Optional[Union[StrictFloat, StrictInt]] = None, min_shelf_area : Optional[Union[StrictFloat, StrictInt]] = None, min_shelf_ratio : Optional[Union[StrictFloat, StrictInt]] = None, shelf_approx : Optional[Union[StrictFloat, StrictInt]] = None, expand_regions : Optional[Union[StrictFloat, StrictInt]] = None, **kwargs) -> ApiResponse:  # noqa: E501
         """v1_graph_generator_generate_aisle_regions_create  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.v1_graph_generator_generate_aisle_regions_create_with_http_info(map_name, map_layer_name, origin_x, origin_y, resolution, min_aisle_width, min_shelf_area, min_shelf_ratio, shelf_approx, async_req=True)
+        >>> thread = api.v1_graph_generator_generate_aisle_regions_create_with_http_info(map_name, map_layer_name, origin_x, origin_y, resolution, min_aisle_width, min_shelf_area, min_shelf_ratio, shelf_approx, expand_regions, async_req=True)
         >>> result = thread.get()
 
         :param map_name: (required)
@@ -259,6 +261,8 @@ class GraphGeneratorRegionsApi:
         :type min_shelf_ratio: float
         :param shelf_approx:
         :type shelf_approx: float
+        :param expand_regions:
+        :type expand_regions: float
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the ApiResponse.data will
@@ -295,7 +299,8 @@ class GraphGeneratorRegionsApi:
             'min_aisle_width',
             'min_shelf_area',
             'min_shelf_ratio',
-            'shelf_approx'
+            'shelf_approx',
+            'expand_regions'
         ]
         _all_params.extend(
             [
@@ -357,6 +362,9 @@ class GraphGeneratorRegionsApi:
 
         if _params['shelf_approx']:
             _form_params.append(('shelf_approx', _params['shelf_approx']))
+
+        if _params['expand_regions']:
+            _form_params.append(('expand_regions', _params['expand_regions']))
 
         # process the body parameter
         _body_params = None
