@@ -315,7 +315,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_agent_tasks_list**
-> PaginatedAgentTaskList v2_agent_tasks_list(agent=agent, id=id, ordering=ordering, page=page, page_size=page_size, status=status, type=type, work=work, work_status=work_status)
+> PaginatedAgentTaskList v2_agent_tasks_list(agent=agent, id=id, ordering=ordering, page=page, page_size=page_size, required_agent=required_agent, status=status, type=type, work=work, work_status=work_status)
 
 List Agent Tasks
 
@@ -329,6 +329,7 @@ import time
 import os
 import gwm_client
 from gwm_client.models.paginated_agent_task_list import PaginatedAgentTaskList
+from gwm_client.models.v1_containers_create_descriptor_parameter_inner import V1ContainersCreateDescriptorParameterInner
 from gwm_client.rest import ApiException
 from pprint import pprint
 
@@ -352,11 +353,12 @@ configuration = gwm_client.Configuration(
 with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gwm_client.WorksAppAgentTasksApi(api_client)
-    agent = 3.4 # float | filter by agent id (optional)
+    agent = [gwm_client.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
     id = [56] # List[int] |  (optional)
     ordering = 'ordering_example' # str | Which field to use when ordering the results. (optional)
     page = 56 # int | A page number within the paginated result set. (optional)
     page_size = 56 # int | Number of results to return per page. (optional)
+    required_agent = [gwm_client.V1ContainersCreateDescriptorParameterInner()] # List[V1ContainersCreateDescriptorParameterInner] |  (optional)
     status = 'status_example' # str | filter by status (optional)
     type = 'type_example' # str | filter by type (optional)
     work = ['work_example'] # List[str] | filter by work id (optional)
@@ -364,7 +366,7 @@ with gwm_client.ApiClient(configuration) as api_client:
 
     try:
         # List Agent Tasks
-        api_response = api_instance.v2_agent_tasks_list(agent=agent, id=id, ordering=ordering, page=page, page_size=page_size, status=status, type=type, work=work, work_status=work_status)
+        api_response = api_instance.v2_agent_tasks_list(agent=agent, id=id, ordering=ordering, page=page, page_size=page_size, required_agent=required_agent, status=status, type=type, work=work, work_status=work_status)
         print("The response of WorksAppAgentTasksApi->v2_agent_tasks_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -377,11 +379,12 @@ with gwm_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **agent** | **float**| filter by agent id | [optional] 
+ **agent** | [**List[V1ContainersCreateDescriptorParameterInner]**](V1ContainersCreateDescriptorParameterInner.md)|  | [optional] 
  **id** | [**List[int]**](int.md)|  | [optional] 
  **ordering** | **str**| Which field to use when ordering the results. | [optional] 
  **page** | **int**| A page number within the paginated result set. | [optional] 
  **page_size** | **int**| Number of results to return per page. | [optional] 
+ **required_agent** | [**List[V1ContainersCreateDescriptorParameterInner]**](V1ContainersCreateDescriptorParameterInner.md)|  | [optional] 
  **status** | **str**| filter by status | [optional] 
  **type** | **str**| filter by type | [optional] 
  **work** | [**List[str]**](str.md)| filter by work id | [optional] 
