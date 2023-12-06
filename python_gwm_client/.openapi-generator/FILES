@@ -82,6 +82,8 @@ docs/PaginatedProductList.md
 docs/PaginatedV3WorkFragmentList.md
 docs/PaginatedV3WorkList.md
 docs/PaginatedWorkPayloadFragmentList.md
+docs/PaginatedWorkflowExecutionBulkUpdateSerializerV1List.md
+docs/PaginatedWorkflowExecutionSerializerV1List.md
 docs/PatchedAgentRequest.md
 docs/PatchedAgentTaskFragmentRequest.md
 docs/PatchedAgentTaskRequest.md
@@ -275,6 +277,8 @@ gwm_client/models/paginated_product_list.py
 gwm_client/models/paginated_v3_work_fragment_list.py
 gwm_client/models/paginated_v3_work_list.py
 gwm_client/models/paginated_work_payload_fragment_list.py
+gwm_client/models/paginated_workflow_execution_bulk_update_serializer_v1_list.py
+gwm_client/models/paginated_workflow_execution_serializer_v1_list.py
 gwm_client/models/patched_agent_request.py
 gwm_client/models/patched_agent_task_fragment_request.py
 gwm_client/models/patched_agent_task_request.py

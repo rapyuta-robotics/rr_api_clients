@@ -366,6 +366,8 @@ Class | Method | HTTP request | Description
  - [PaginatedV3WorkFragmentList](docs/PaginatedV3WorkFragmentList.md)
  - [PaginatedV3WorkList](docs/PaginatedV3WorkList.md)
  - [PaginatedWorkPayloadFragmentList](docs/PaginatedWorkPayloadFragmentList.md)
+ - [PaginatedWorkflowExecutionBulkUpdateSerializerV1List](docs/PaginatedWorkflowExecutionBulkUpdateSerializerV1List.md)
+ - [PaginatedWorkflowExecutionSerializerV1List](docs/PaginatedWorkflowExecutionSerializerV1List.md)
  - [PatchedAgentRequest](docs/PatchedAgentRequest.md)
  - [PatchedAgentTaskFragmentRequest](docs/PatchedAgentTaskFragmentRequest.md)
  - [PatchedAgentTaskRequest](docs/PatchedAgentTaskRequest.md)
