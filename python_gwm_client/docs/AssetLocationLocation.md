@@ -5,7 +5,7 @@ TODO: support thing other than spot, merge with libs.location
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **str** | * &#x60;spot&#x60; - Spot * &#x60;spot_query&#x60; - Spot Query | 
+**type** | **str** | * &#x60;spot&#x60; - Spot * &#x60;spot_query&#x60; - Spot Query * &#x60;region&#x60; - Region * &#x60;pos&#x60; - Pos | 
 **id** | **int** |  | 
 
 ## Example

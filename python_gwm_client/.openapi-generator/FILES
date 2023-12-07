@@ -121,6 +121,10 @@ docs/PointSerializer3D.md
 docs/PointSerializer3DRequest.md
 docs/Polygon.md
 docs/PolygonRequest.md
+docs/Pos.md
+docs/PosPoint.md
+docs/PosPointRequest.md
+docs/PosRequest.md
 docs/Product.md
 docs/ProductRequest.md
 docs/Region.md
@@ -316,6 +320,10 @@ gwm_client/models/point_serializer3_d.py
 gwm_client/models/point_serializer3_d_request.py
 gwm_client/models/polygon.py
 gwm_client/models/polygon_request.py
+gwm_client/models/pos.py
+gwm_client/models/pos_point.py
+gwm_client/models/pos_point_request.py
+gwm_client/models/pos_request.py
 gwm_client/models/product.py
 gwm_client/models/product_request.py
 gwm_client/models/region.py

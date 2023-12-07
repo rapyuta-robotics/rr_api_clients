@@ -18,23 +18,18 @@ import re  # noqa: F401
 import json
 
 
+from typing import Any, Dict, Optional, Union
+from pydantic import BaseModel, StrictFloat, StrictInt
+from gwm_client.models.pos_point_request import PosPointRequest
 
-from pydantic import BaseModel, Field, StrictInt, StrictStr, validator
-
-class AssetLocationLocationRequest(BaseModel):
+class PosRequest(BaseModel):
     """
-    TODO: support thing other than spot, merge with libs.location  # noqa: E501
+    PosRequest
     """
-    type: StrictStr = Field(..., description="* `spot` - Spot * `spot_query` - Spot Query * `region` - Region * `pos` - Pos")
-    id: StrictInt = Field(...)
-    __properties = ["type", "id"]
-
-    @validator('type')
-    def type_validate_enum(cls, value):
-        """Validates the enum"""
-        if value not in ('spot', 'spot_query', 'region', 'pos'):
-            raise ValueError("must be one of enum values ('spot', 'spot_query', 'region', 'pos')")
-        return value
+    pos: Optional[PosPointRequest] = None
+    yaw: Optional[Union[StrictFloat, StrictInt]] = None
+    map: Optional[Dict[str, Any]] = None
+    __properties = ["pos", "yaw", "map"]
 
     class Config:
         """Pydantic configuration"""
@@ -50,8 +45,8 @@ class AssetLocationLocationRequest(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> AssetLocationLocationRequest:
-        """Create an instance of AssetLocationLocationRequest from a JSON string"""
+    def from_json(cls, json_str: str) -> PosRequest:
+        """Create an instance of PosRequest from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self):
@@ -60,20 +55,24 @@ class AssetLocationLocationRequest(BaseModel):
                           exclude={
                           },
                           exclude_none=True)
+        # override the default output from pydantic by calling `to_dict()` of pos
+        if self.pos:
+            _dict['pos'] = self.pos.to_dict()
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: dict) -> AssetLocationLocationRequest:
-        """Create an instance of AssetLocationLocationRequest from a dict"""
+    def from_dict(cls, obj: dict) -> PosRequest:
+        """Create an instance of PosRequest from a dict"""
         if obj is None:
             return None
 
         if not isinstance(obj, dict):
-            return AssetLocationLocationRequest.parse_obj(obj)
+            return PosRequest.parse_obj(obj)
 
-        _obj = AssetLocationLocationRequest.parse_obj({
-            "type": obj.get("type"),
-            "id": obj.get("id")
+        _obj = PosRequest.parse_obj({
+            "pos": PosPointRequest.from_dict(obj.get("pos")) if obj.get("pos") is not None else None,
+            "yaw": obj.get("yaw"),
+            "map": obj.get("map")
         })
         return _obj
 

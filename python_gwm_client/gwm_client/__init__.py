@@ -159,6 +159,10 @@ from gwm_client.models.point_serializer3_d import PointSerializer3D
 from gwm_client.models.point_serializer3_d_request import PointSerializer3DRequest
 from gwm_client.models.polygon import Polygon
 from gwm_client.models.polygon_request import PolygonRequest
+from gwm_client.models.pos import Pos
+from gwm_client.models.pos_point import PosPoint
+from gwm_client.models.pos_point_request import PosPointRequest
+from gwm_client.models.pos_request import PosRequest
 from gwm_client.models.product import Product
 from gwm_client.models.product_request import ProductRequest
 from gwm_client.models.region import Region

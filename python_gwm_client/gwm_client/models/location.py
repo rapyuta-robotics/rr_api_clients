@@ -20,14 +20,18 @@ import json
 
 from typing import Any, Dict, Optional
 from pydantic import BaseModel, Field, StrictStr, validator
+from gwm_client.models.pos import Pos
 
 class Location(BaseModel):
     """
     Location
     """
-    type: Optional[StrictStr] = Field('spot_query', description="* `spot` - Spot * `spot_query` - Spot Query")
+    type: Optional[StrictStr] = Field('spot_query', description="* `spot` - Spot * `spot_query` - Spot Query * `region` - Region * `pos` - Pos")
     spot_query: Optional[Dict[str, Any]] = None
-    __properties = ["type", "spot_query"]
+    spot: Optional[Dict[str, Any]] = None
+    region: Optional[Dict[str, Any]] = None
+    pos: Optional[Pos] = None
+    __properties = ["type", "spot_query", "spot", "region", "pos"]
 
     @validator('type')
     def type_validate_enum(cls, value):
@@ -35,8 +39,8 @@ class Location(BaseModel):
         if value is None:
             return value
 
-        if value not in ('spot', 'spot_query'):
-            raise ValueError("must be one of enum values ('spot', 'spot_query')")
+        if value not in ('spot', 'spot_query', 'region', 'pos'):
+            raise ValueError("must be one of enum values ('spot', 'spot_query', 'region', 'pos')")
         return value
 
     class Config:
@@ -63,6 +67,9 @@ class Location(BaseModel):
                           exclude={
                           },
                           exclude_none=True)
+        # override the default output from pydantic by calling `to_dict()` of pos
+        if self.pos:
+            _dict['pos'] = self.pos.to_dict()
         return _dict
 
     @classmethod
@@ -76,7 +83,10 @@ class Location(BaseModel):
 
         _obj = Location.parse_obj({
             "type": obj.get("type") if obj.get("type") is not None else 'spot_query',
-            "spot_query": obj.get("spot_query")
+            "spot_query": obj.get("spot_query"),
+            "spot": obj.get("spot"),
+            "region": obj.get("region"),
+            "pos": Pos.from_dict(obj.get("pos")) if obj.get("pos") is not None else None
         })
         return _obj
 

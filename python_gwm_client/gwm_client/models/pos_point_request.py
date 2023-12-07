@@ -18,22 +18,25 @@ import re  # noqa: F401
 import json
 
 
+from typing import List, Optional, Union
+from pydantic import BaseModel, Field, StrictFloat, StrictInt, conlist, constr, validator
 
-from pydantic import BaseModel, Field, StrictInt, StrictStr, validator
-
-class AssetLocationLocationRequest(BaseModel):
+class PosPointRequest(BaseModel):
     """
-    TODO: support thing other than spot, merge with libs.location  # noqa: E501
+    PosPointRequest
     """
-    type: StrictStr = Field(..., description="* `spot` - Spot * `spot_query` - Spot Query * `region` - Region * `pos` - Pos")
-    id: StrictInt = Field(...)
-    __properties = ["type", "id"]
+    type: Optional[constr(strict=True, min_length=1)] = 'Point'
+    coordinates: conlist(Union[StrictFloat, StrictInt], max_items=2, min_items=2) = Field(...)
+    __properties = ["type", "coordinates"]
 
     @validator('type')
-    def type_validate_enum(cls, value):
-        """Validates the enum"""
-        if value not in ('spot', 'spot_query', 'region', 'pos'):
-            raise ValueError("must be one of enum values ('spot', 'spot_query', 'region', 'pos')")
+    def type_validate_regular_expression(cls, value):
+        """Validates the regular expression"""
+        if value is None:
+            return value
+
+        if not re.match(r"Point", value):
+            raise ValueError(r"must validate the regular expression /Point/")
         return value
 
     class Config:
@@ -50,8 +53,8 @@ class AssetLocationLocationRequest(BaseModel):
         return json.dumps(self.to_dict())
 
     @classmethod
-    def from_json(cls, json_str: str) -> AssetLocationLocationRequest:
-        """Create an instance of AssetLocationLocationRequest from a JSON string"""
+    def from_json(cls, json_str: str) -> PosPointRequest:
+        """Create an instance of PosPointRequest from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self):
@@ -63,17 +66,17 @@ class AssetLocationLocationRequest(BaseModel):
         return _dict
 
     @classmethod
-    def from_dict(cls, obj: dict) -> AssetLocationLocationRequest:
-        """Create an instance of AssetLocationLocationRequest from a dict"""
+    def from_dict(cls, obj: dict) -> PosPointRequest:
+        """Create an instance of PosPointRequest from a dict"""
         if obj is None:
             return None
 
         if not isinstance(obj, dict):
-            return AssetLocationLocationRequest.parse_obj(obj)
+            return PosPointRequest.parse_obj(obj)
 
-        _obj = AssetLocationLocationRequest.parse_obj({
-            "type": obj.get("type"),
-            "id": obj.get("id")
+        _obj = PosPointRequest.parse_obj({
+            "type": obj.get("type") if obj.get("type") is not None else 'Point',
+            "coordinates": obj.get("coordinates")
         })
         return _obj
 
