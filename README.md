@@ -4,8 +4,8 @@ This repo can be used to automatically generate client libraries for backend ser
 
 ## Supported Languages for Client Libraries
 
-[x] Python
-[ ] Javascript (Typescript, redux) - planned
+- [x] Python
+- [ ] Javascript (Typescript, redux) - planned
 
 ## How to trigger workflow
 
