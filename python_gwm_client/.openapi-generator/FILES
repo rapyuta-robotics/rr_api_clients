@@ -82,6 +82,8 @@ docs/PaginatedProductList.md
 docs/PaginatedV3WorkFragmentList.md
 docs/PaginatedV3WorkList.md
 docs/PaginatedWorkPayloadFragmentList.md
+docs/PaginatedWorkflowExecutionBulkUpdateSerializerV1List.md
+docs/PaginatedWorkflowExecutionSerializerV1List.md
 docs/PatchedAgentRequest.md
 docs/PatchedAgentTaskFragmentRequest.md
 docs/PatchedAgentTaskRequest.md
@@ -119,6 +121,10 @@ docs/PointSerializer3D.md
 docs/PointSerializer3DRequest.md
 docs/Polygon.md
 docs/PolygonRequest.md
+docs/Pos.md
+docs/PosPoint.md
+docs/PosPointRequest.md
+docs/PosRequest.md
 docs/Product.md
 docs/ProductRequest.md
 docs/Region.md
@@ -275,6 +281,8 @@ gwm_client/models/paginated_product_list.py
 gwm_client/models/paginated_v3_work_fragment_list.py
 gwm_client/models/paginated_v3_work_list.py
 gwm_client/models/paginated_work_payload_fragment_list.py
+gwm_client/models/paginated_workflow_execution_bulk_update_serializer_v1_list.py
+gwm_client/models/paginated_workflow_execution_serializer_v1_list.py
 gwm_client/models/patched_agent_request.py
 gwm_client/models/patched_agent_task_fragment_request.py
 gwm_client/models/patched_agent_task_request.py
@@ -312,6 +320,10 @@ gwm_client/models/point_serializer3_d.py
 gwm_client/models/point_serializer3_d_request.py
 gwm_client/models/polygon.py
 gwm_client/models/polygon_request.py
+gwm_client/models/pos.py
+gwm_client/models/pos_point.py
+gwm_client/models/pos_point_request.py
+gwm_client/models/pos_request.py
 gwm_client/models/product.py
 gwm_client/models/product_request.py
 gwm_client/models/region.py

@@ -86,7 +86,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_graph_generator_generate_aisle_regions_create**
-> Region v1_graph_generator_generate_aisle_regions_create(map_name, map_layer_name, origin_x, origin_y, resolution=resolution, min_aisle_width=min_aisle_width, min_shelf_area=min_shelf_area, min_shelf_ratio=min_shelf_ratio, shelf_approx=shelf_approx)
+> Region v1_graph_generator_generate_aisle_regions_create(map_name, map_layer_name, origin_x, origin_y, resolution=resolution, min_aisle_width=min_aisle_width, min_shelf_area=min_shelf_area, min_shelf_ratio=min_shelf_ratio, shelf_approx=shelf_approx, expand_regions=expand_regions)
 
 
 
@@ -130,9 +130,10 @@ with gwm_client.ApiClient(configuration) as api_client:
     min_shelf_area = 1.0 # float |  (optional) (default to 1.0)
     min_shelf_ratio = 1.5 # float |  (optional) (default to 1.5)
     shelf_approx = 1.0 # float |  (optional) (default to 1.0)
+    expand_regions = 0.1 # float |  (optional) (default to 0.1)
 
     try:
-        api_response = api_instance.v1_graph_generator_generate_aisle_regions_create(map_name, map_layer_name, origin_x, origin_y, resolution=resolution, min_aisle_width=min_aisle_width, min_shelf_area=min_shelf_area, min_shelf_ratio=min_shelf_ratio, shelf_approx=shelf_approx)
+        api_response = api_instance.v1_graph_generator_generate_aisle_regions_create(map_name, map_layer_name, origin_x, origin_y, resolution=resolution, min_aisle_width=min_aisle_width, min_shelf_area=min_shelf_area, min_shelf_ratio=min_shelf_ratio, shelf_approx=shelf_approx, expand_regions=expand_regions)
         print("The response of GraphGeneratorRegionsApi->v1_graph_generator_generate_aisle_regions_create:\n")
         pprint(api_response)
     except Exception as e:
@@ -154,6 +155,7 @@ Name | Type | Description  | Notes
  **min_shelf_area** | **float**|  | [optional] [default to 1.0]
  **min_shelf_ratio** | **float**|  | [optional] [default to 1.5]
  **shelf_approx** | **float**|  | [optional] [default to 1.0]
+ **expand_regions** | **float**|  | [optional] [default to 0.1]
 
 ### Return type
 

@@ -21,12 +21,13 @@ from pydantic import validate_arguments, ValidationError
 from typing_extensions import Annotated
 from datetime import datetime
 
-from pydantic import Field, StrictStr, conlist
+from pydantic import Field, StrictInt, StrictStr, conlist
 
-from typing import List, Optional
+from typing import Optional
 
+from gwm_client.models.paginated_workflow_execution_bulk_update_serializer_v1_list import PaginatedWorkflowExecutionBulkUpdateSerializerV1List
+from gwm_client.models.paginated_workflow_execution_serializer_v1_list import PaginatedWorkflowExecutionSerializerV1List
 from gwm_client.models.patched_workflow_execution_update_serializer_v1_request import PatchedWorkflowExecutionUpdateSerializerV1Request
-from gwm_client.models.workflow_execution_bulk_update_serializer_v1 import WorkflowExecutionBulkUpdateSerializerV1
 from gwm_client.models.workflow_execution_bulk_update_serializer_v1_request import WorkflowExecutionBulkUpdateSerializerV1Request
 from gwm_client.models.workflow_execution_serializer_v1 import WorkflowExecutionSerializerV1
 from gwm_client.models.workflow_execution_serializer_v1_request import WorkflowExecutionSerializerV1Request
@@ -54,18 +55,22 @@ class ComputeApi:
         self.api_client = api_client
 
     @validate_arguments
-    def compute_v1_workflows_executions_bulk_create(self, workflow_execution_serializer_v1_request : conlist(WorkflowExecutionSerializerV1Request), **kwargs) -> List[WorkflowExecutionSerializerV1]:  # noqa: E501
+    def compute_v1_workflows_executions_bulk_create(self, workflow_execution_serializer_v1_request : conlist(WorkflowExecutionSerializerV1Request), page : Annotated[Optional[StrictInt], Field(description="A page number within the paginated result set.")] = None, page_size : Annotated[Optional[StrictInt], Field(description="Number of results to return per page.")] = None, **kwargs) -> PaginatedWorkflowExecutionSerializerV1List:  # noqa: E501
         """compute_v1_workflows_executions_bulk_create  # noqa: E501
 
         A view set for listing, retrieving and performing workflow executions  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.compute_v1_workflows_executions_bulk_create(workflow_execution_serializer_v1_request, async_req=True)
+        >>> thread = api.compute_v1_workflows_executions_bulk_create(workflow_execution_serializer_v1_request, page, page_size, async_req=True)
         >>> result = thread.get()
 
         :param workflow_execution_serializer_v1_request: (required)
         :type workflow_execution_serializer_v1_request: List[WorkflowExecutionSerializerV1Request]
+        :param page: A page number within the paginated result set.
+        :type page: int
+        :param page_size: Number of results to return per page.
+        :type page_size: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _request_timeout: timeout setting for this request.
@@ -75,27 +80,31 @@ class ComputeApi:
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: List[WorkflowExecutionSerializerV1]
+        :rtype: PaginatedWorkflowExecutionSerializerV1List
         """
         kwargs['_return_http_data_only'] = True
         if '_preload_content' in kwargs:
             message = "Error! Please call the compute_v1_workflows_executions_bulk_create_with_http_info method with `_preload_content` instead and obtain raw data from ApiResponse.raw_data"  # noqa: E501
             raise ValueError(message)
-        return self.compute_v1_workflows_executions_bulk_create_with_http_info(workflow_execution_serializer_v1_request, **kwargs)  # noqa: E501
+        return self.compute_v1_workflows_executions_bulk_create_with_http_info(workflow_execution_serializer_v1_request, page, page_size, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def compute_v1_workflows_executions_bulk_create_with_http_info(self, workflow_execution_serializer_v1_request : conlist(WorkflowExecutionSerializerV1Request), **kwargs) -> ApiResponse:  # noqa: E501
+    def compute_v1_workflows_executions_bulk_create_with_http_info(self, workflow_execution_serializer_v1_request : conlist(WorkflowExecutionSerializerV1Request), page : Annotated[Optional[StrictInt], Field(description="A page number within the paginated result set.")] = None, page_size : Annotated[Optional[StrictInt], Field(description="Number of results to return per page.")] = None, **kwargs) -> ApiResponse:  # noqa: E501
         """compute_v1_workflows_executions_bulk_create  # noqa: E501
 
         A view set for listing, retrieving and performing workflow executions  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.compute_v1_workflows_executions_bulk_create_with_http_info(workflow_execution_serializer_v1_request, async_req=True)
+        >>> thread = api.compute_v1_workflows_executions_bulk_create_with_http_info(workflow_execution_serializer_v1_request, page, page_size, async_req=True)
         >>> result = thread.get()
 
         :param workflow_execution_serializer_v1_request: (required)
         :type workflow_execution_serializer_v1_request: List[WorkflowExecutionSerializerV1Request]
+        :param page: A page number within the paginated result set.
+        :type page: int
+        :param page_size: Number of results to return per page.
+        :type page_size: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the ApiResponse.data will
@@ -118,13 +127,15 @@ class ComputeApi:
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(List[WorkflowExecutionSerializerV1], status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(PaginatedWorkflowExecutionSerializerV1List, status_code(int), headers(HTTPHeaderDict))
         """
 
         _params = locals()
 
         _all_params = [
-            'workflow_execution_serializer_v1_request'
+            'workflow_execution_serializer_v1_request',
+            'page',
+            'page_size'
         ]
         _all_params.extend(
             [
@@ -155,6 +166,12 @@ class ComputeApi:
 
         # process the query parameters
         _query_params = []
+        if _params.get('page') is not None:  # noqa: E501
+            _query_params.append(('page', _params['page']))
+
+        if _params.get('page_size') is not None:  # noqa: E501
+            _query_params.append(('page_size', _params['page_size']))
+
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
         # process the form parameters
@@ -180,7 +197,7 @@ class ComputeApi:
         _auth_settings = ['tokenAuth']  # noqa: E501
 
         _response_types_map = {
-            '201': "List[WorkflowExecutionSerializerV1]",
+            '201': "PaginatedWorkflowExecutionSerializerV1List",
         }
 
         return self.api_client.call_api(
@@ -201,18 +218,22 @@ class ComputeApi:
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def compute_v1_workflows_executions_bulk_partial_update(self, workflow_execution_bulk_update_serializer_v1_request : conlist(WorkflowExecutionBulkUpdateSerializerV1Request), **kwargs) -> List[WorkflowExecutionBulkUpdateSerializerV1]:  # noqa: E501
+    def compute_v1_workflows_executions_bulk_partial_update(self, workflow_execution_bulk_update_serializer_v1_request : conlist(WorkflowExecutionBulkUpdateSerializerV1Request), page : Annotated[Optional[StrictInt], Field(description="A page number within the paginated result set.")] = None, page_size : Annotated[Optional[StrictInt], Field(description="Number of results to return per page.")] = None, **kwargs) -> PaginatedWorkflowExecutionBulkUpdateSerializerV1List:  # noqa: E501
         """compute_v1_workflows_executions_bulk_partial_update  # noqa: E501
 
         A view set for listing, retrieving and performing workflow executions  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.compute_v1_workflows_executions_bulk_partial_update(workflow_execution_bulk_update_serializer_v1_request, async_req=True)
+        >>> thread = api.compute_v1_workflows_executions_bulk_partial_update(workflow_execution_bulk_update_serializer_v1_request, page, page_size, async_req=True)
         >>> result = thread.get()
 
         :param workflow_execution_bulk_update_serializer_v1_request: (required)
         :type workflow_execution_bulk_update_serializer_v1_request: List[WorkflowExecutionBulkUpdateSerializerV1Request]
+        :param page: A page number within the paginated result set.
+        :type page: int
+        :param page_size: Number of results to return per page.
+        :type page_size: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _request_timeout: timeout setting for this request.
@@ -222,27 +243,31 @@ class ComputeApi:
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: List[WorkflowExecutionBulkUpdateSerializerV1]
+        :rtype: PaginatedWorkflowExecutionBulkUpdateSerializerV1List
         """
         kwargs['_return_http_data_only'] = True
         if '_preload_content' in kwargs:
             message = "Error! Please call the compute_v1_workflows_executions_bulk_partial_update_with_http_info method with `_preload_content` instead and obtain raw data from ApiResponse.raw_data"  # noqa: E501
             raise ValueError(message)
-        return self.compute_v1_workflows_executions_bulk_partial_update_with_http_info(workflow_execution_bulk_update_serializer_v1_request, **kwargs)  # noqa: E501
+        return self.compute_v1_workflows_executions_bulk_partial_update_with_http_info(workflow_execution_bulk_update_serializer_v1_request, page, page_size, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def compute_v1_workflows_executions_bulk_partial_update_with_http_info(self, workflow_execution_bulk_update_serializer_v1_request : conlist(WorkflowExecutionBulkUpdateSerializerV1Request), **kwargs) -> ApiResponse:  # noqa: E501
+    def compute_v1_workflows_executions_bulk_partial_update_with_http_info(self, workflow_execution_bulk_update_serializer_v1_request : conlist(WorkflowExecutionBulkUpdateSerializerV1Request), page : Annotated[Optional[StrictInt], Field(description="A page number within the paginated result set.")] = None, page_size : Annotated[Optional[StrictInt], Field(description="Number of results to return per page.")] = None, **kwargs) -> ApiResponse:  # noqa: E501
         """compute_v1_workflows_executions_bulk_partial_update  # noqa: E501
 
         A view set for listing, retrieving and performing workflow executions  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.compute_v1_workflows_executions_bulk_partial_update_with_http_info(workflow_execution_bulk_update_serializer_v1_request, async_req=True)
+        >>> thread = api.compute_v1_workflows_executions_bulk_partial_update_with_http_info(workflow_execution_bulk_update_serializer_v1_request, page, page_size, async_req=True)
         >>> result = thread.get()
 
         :param workflow_execution_bulk_update_serializer_v1_request: (required)
         :type workflow_execution_bulk_update_serializer_v1_request: List[WorkflowExecutionBulkUpdateSerializerV1Request]
+        :param page: A page number within the paginated result set.
+        :type page: int
+        :param page_size: Number of results to return per page.
+        :type page_size: int
         :param async_req: Whether to execute the request asynchronously.
         :type async_req: bool, optional
         :param _preload_content: if False, the ApiResponse.data will
@@ -265,13 +290,15 @@ class ComputeApi:
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(List[WorkflowExecutionBulkUpdateSerializerV1], status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(PaginatedWorkflowExecutionBulkUpdateSerializerV1List, status_code(int), headers(HTTPHeaderDict))
         """
 
         _params = locals()
 
         _all_params = [
-            'workflow_execution_bulk_update_serializer_v1_request'
+            'workflow_execution_bulk_update_serializer_v1_request',
+            'page',
+            'page_size'
         ]
         _all_params.extend(
             [
@@ -302,6 +329,12 @@ class ComputeApi:
 
         # process the query parameters
         _query_params = []
+        if _params.get('page') is not None:  # noqa: E501
+            _query_params.append(('page', _params['page']))
+
+        if _params.get('page_size') is not None:  # noqa: E501
+            _query_params.append(('page_size', _params['page_size']))
+
         # process the header parameters
         _header_params = dict(_params.get('_headers', {}))
         # process the form parameters
@@ -327,7 +360,7 @@ class ComputeApi:
         _auth_settings = ['tokenAuth']  # noqa: E501
 
         _response_types_map = {
-            '200': "List[WorkflowExecutionBulkUpdateSerializerV1]",
+            '200': "PaginatedWorkflowExecutionBulkUpdateSerializerV1List",
         }
 
         return self.api_client.call_api(
@@ -629,14 +662,14 @@ class ComputeApi:
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def compute_v1_workflows_executions_list(self, context : Annotated[Optional[StrictStr], Field(description="filter by context query")] = None, end_time_after : Optional[datetime] = None, end_time_before : Optional[datetime] = None, id : Optional[StrictStr] = None, insert_time_after : Optional[datetime] = None, insert_time_before : Optional[datetime] = None, start_time_after : Optional[datetime] = None, start_time_before : Optional[datetime] = None, status : Annotated[Optional[StrictStr], Field(description="Status of the workflow execution.  * `PENDING` - Pending * `RUNNING` - Running * `COMPLETED` - Completed * `FAILED` - Failed * `CANCELED` - Canceled * `TERMINATED` - Terminated * `CONTINUED_AS_NEW` - Continued as new * `TIMED_OUT` - Timed out")] = None, type : Annotated[Optional[StrictStr], Field(description="The workflow type.")] = None, update_time_after : Optional[datetime] = None, update_time_before : Optional[datetime] = None, **kwargs) -> List[WorkflowExecutionSerializerV1]:  # noqa: E501
+    def compute_v1_workflows_executions_list(self, context : Annotated[Optional[StrictStr], Field(description="filter by context query")] = None, end_time_after : Optional[datetime] = None, end_time_before : Optional[datetime] = None, id : Optional[StrictStr] = None, insert_time_after : Optional[datetime] = None, insert_time_before : Optional[datetime] = None, page : Annotated[Optional[StrictInt], Field(description="A page number within the paginated result set.")] = None, page_size : Annotated[Optional[StrictInt], Field(description="Number of results to return per page.")] = None, start_time_after : Optional[datetime] = None, start_time_before : Optional[datetime] = None, status : Annotated[Optional[StrictStr], Field(description="Status of the workflow execution.  * `PENDING` - Pending * `RUNNING` - Running * `COMPLETED` - Completed * `FAILED` - Failed * `CANCELED` - Canceled * `TERMINATED` - Terminated * `CONTINUED_AS_NEW` - Continued as new * `TIMED_OUT` - Timed out")] = None, type : Annotated[Optional[StrictStr], Field(description="The workflow type.")] = None, update_time_after : Optional[datetime] = None, update_time_before : Optional[datetime] = None, **kwargs) -> PaginatedWorkflowExecutionSerializerV1List:  # noqa: E501
         """compute_v1_workflows_executions_list  # noqa: E501
 
         A view set for listing, retrieving and performing workflow executions  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.compute_v1_workflows_executions_list(context, end_time_after, end_time_before, id, insert_time_after, insert_time_before, start_time_after, start_time_before, status, type, update_time_after, update_time_before, async_req=True)
+        >>> thread = api.compute_v1_workflows_executions_list(context, end_time_after, end_time_before, id, insert_time_after, insert_time_before, page, page_size, start_time_after, start_time_before, status, type, update_time_after, update_time_before, async_req=True)
         >>> result = thread.get()
 
         :param context: filter by context query
@@ -651,6 +684,10 @@ class ComputeApi:
         :type insert_time_after: datetime
         :param insert_time_before:
         :type insert_time_before: datetime
+        :param page: A page number within the paginated result set.
+        :type page: int
+        :param page_size: Number of results to return per page.
+        :type page_size: int
         :param start_time_after:
         :type start_time_after: datetime
         :param start_time_before:
@@ -672,23 +709,23 @@ class ComputeApi:
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: List[WorkflowExecutionSerializerV1]
+        :rtype: PaginatedWorkflowExecutionSerializerV1List
         """
         kwargs['_return_http_data_only'] = True
         if '_preload_content' in kwargs:
             message = "Error! Please call the compute_v1_workflows_executions_list_with_http_info method with `_preload_content` instead and obtain raw data from ApiResponse.raw_data"  # noqa: E501
             raise ValueError(message)
-        return self.compute_v1_workflows_executions_list_with_http_info(context, end_time_after, end_time_before, id, insert_time_after, insert_time_before, start_time_after, start_time_before, status, type, update_time_after, update_time_before, **kwargs)  # noqa: E501
+        return self.compute_v1_workflows_executions_list_with_http_info(context, end_time_after, end_time_before, id, insert_time_after, insert_time_before, page, page_size, start_time_after, start_time_before, status, type, update_time_after, update_time_before, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def compute_v1_workflows_executions_list_with_http_info(self, context : Annotated[Optional[StrictStr], Field(description="filter by context query")] = None, end_time_after : Optional[datetime] = None, end_time_before : Optional[datetime] = None, id : Optional[StrictStr] = None, insert_time_after : Optional[datetime] = None, insert_time_before : Optional[datetime] = None, start_time_after : Optional[datetime] = None, start_time_before : Optional[datetime] = None, status : Annotated[Optional[StrictStr], Field(description="Status of the workflow execution.  * `PENDING` - Pending * `RUNNING` - Running * `COMPLETED` - Completed * `FAILED` - Failed * `CANCELED` - Canceled * `TERMINATED` - Terminated * `CONTINUED_AS_NEW` - Continued as new * `TIMED_OUT` - Timed out")] = None, type : Annotated[Optional[StrictStr], Field(description="The workflow type.")] = None, update_time_after : Optional[datetime] = None, update_time_before : Optional[datetime] = None, **kwargs) -> ApiResponse:  # noqa: E501
+    def compute_v1_workflows_executions_list_with_http_info(self, context : Annotated[Optional[StrictStr], Field(description="filter by context query")] = None, end_time_after : Optional[datetime] = None, end_time_before : Optional[datetime] = None, id : Optional[StrictStr] = None, insert_time_after : Optional[datetime] = None, insert_time_before : Optional[datetime] = None, page : Annotated[Optional[StrictInt], Field(description="A page number within the paginated result set.")] = None, page_size : Annotated[Optional[StrictInt], Field(description="Number of results to return per page.")] = None, start_time_after : Optional[datetime] = None, start_time_before : Optional[datetime] = None, status : Annotated[Optional[StrictStr], Field(description="Status of the workflow execution.  * `PENDING` - Pending * `RUNNING` - Running * `COMPLETED` - Completed * `FAILED` - Failed * `CANCELED` - Canceled * `TERMINATED` - Terminated * `CONTINUED_AS_NEW` - Continued as new * `TIMED_OUT` - Timed out")] = None, type : Annotated[Optional[StrictStr], Field(description="The workflow type.")] = None, update_time_after : Optional[datetime] = None, update_time_before : Optional[datetime] = None, **kwargs) -> ApiResponse:  # noqa: E501
         """compute_v1_workflows_executions_list  # noqa: E501
 
         A view set for listing, retrieving and performing workflow executions  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.compute_v1_workflows_executions_list_with_http_info(context, end_time_after, end_time_before, id, insert_time_after, insert_time_before, start_time_after, start_time_before, status, type, update_time_after, update_time_before, async_req=True)
+        >>> thread = api.compute_v1_workflows_executions_list_with_http_info(context, end_time_after, end_time_before, id, insert_time_after, insert_time_before, page, page_size, start_time_after, start_time_before, status, type, update_time_after, update_time_before, async_req=True)
         >>> result = thread.get()
 
         :param context: filter by context query
@@ -703,6 +740,10 @@ class ComputeApi:
         :type insert_time_after: datetime
         :param insert_time_before:
         :type insert_time_before: datetime
+        :param page: A page number within the paginated result set.
+        :type page: int
+        :param page_size: Number of results to return per page.
+        :type page_size: int
         :param start_time_after:
         :type start_time_after: datetime
         :param start_time_before:
@@ -737,7 +778,7 @@ class ComputeApi:
         :return: Returns the result object.
                  If the method is called asynchronously,
                  returns the request thread.
-        :rtype: tuple(List[WorkflowExecutionSerializerV1], status_code(int), headers(HTTPHeaderDict))
+        :rtype: tuple(PaginatedWorkflowExecutionSerializerV1List, status_code(int), headers(HTTPHeaderDict))
         """
 
         _params = locals()
@@ -749,6 +790,8 @@ class ComputeApi:
             'id',
             'insert_time_after',
             'insert_time_before',
+            'page',
+            'page_size',
             'start_time_after',
             'start_time_before',
             'status',
@@ -815,6 +858,12 @@ class ComputeApi:
             else:
                 _query_params.append(('insert_time_before', _params['insert_time_before']))
 
+        if _params.get('page') is not None:  # noqa: E501
+            _query_params.append(('page', _params['page']))
+
+        if _params.get('page_size') is not None:  # noqa: E501
+            _query_params.append(('page_size', _params['page_size']))
+
         if _params.get('start_time_after') is not None:  # noqa: E501
             if isinstance(_params['start_time_after'], datetime):
                 _query_params.append(('start_time_after', _params['start_time_after'].strftime(self.api_client.configuration.datetime_format)))
@@ -860,7 +909,7 @@ class ComputeApi:
         _auth_settings = ['tokenAuth']  # noqa: E501
 
         _response_types_map = {
-            '200': "List[WorkflowExecutionSerializerV1]",
+            '200': "PaginatedWorkflowExecutionSerializerV1List",
         }
 
         return self.api_client.call_api(

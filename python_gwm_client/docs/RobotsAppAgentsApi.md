@@ -239,7 +239,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v1_agent_list**
-> List[Agent] v1_agent_list(map=map, robot_descriptor_id=robot_descriptor_id, robot_id=robot_id)
+> List[Agent] v1_agent_list(id=id, map=map, robot_descriptor_id=robot_descriptor_id, robot_id=robot_id)
 
 
 
@@ -276,12 +276,13 @@ configuration = gwm_client.Configuration(
 with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gwm_client.RobotsAppAgentsApi(api_client)
+    id = [56] # List[int] |  (optional)
     map = [3.4] # List[float] | filter agents by maps ids or names (optional)
     robot_descriptor_id = 56 # int | filter agents by robot description ids (optional)
     robot_id = 56 # int | filter agents by robot id (optional)
 
     try:
-        api_response = api_instance.v1_agent_list(map=map, robot_descriptor_id=robot_descriptor_id, robot_id=robot_id)
+        api_response = api_instance.v1_agent_list(id=id, map=map, robot_descriptor_id=robot_descriptor_id, robot_id=robot_id)
         print("The response of RobotsAppAgentsApi->v1_agent_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -294,6 +295,7 @@ with gwm_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **id** | [**List[int]**](int.md)|  | [optional] 
  **map** | [**List[float]**](float.md)| filter agents by maps ids or names | [optional] 
  **robot_descriptor_id** | **int**| filter agents by robot description ids | [optional] 
  **robot_id** | **int**| filter agents by robot id | [optional] 

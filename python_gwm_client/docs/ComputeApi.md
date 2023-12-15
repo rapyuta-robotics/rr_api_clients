@@ -15,7 +15,7 @@ Method | HTTP request | Description
 
 
 # **compute_v1_workflows_executions_bulk_create**
-> List[WorkflowExecutionSerializerV1] compute_v1_workflows_executions_bulk_create(workflow_execution_serializer_v1_request)
+> PaginatedWorkflowExecutionSerializerV1List compute_v1_workflows_executions_bulk_create(workflow_execution_serializer_v1_request, page=page, page_size=page_size)
 
 
 
@@ -28,7 +28,7 @@ A view set for listing, retrieving and performing workflow executions
 import time
 import os
 import gwm_client
-from gwm_client.models.workflow_execution_serializer_v1 import WorkflowExecutionSerializerV1
+from gwm_client.models.paginated_workflow_execution_serializer_v1_list import PaginatedWorkflowExecutionSerializerV1List
 from gwm_client.models.workflow_execution_serializer_v1_request import WorkflowExecutionSerializerV1Request
 from gwm_client.rest import ApiException
 from pprint import pprint
@@ -54,9 +54,11 @@ with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gwm_client.ComputeApi(api_client)
     workflow_execution_serializer_v1_request = [gwm_client.WorkflowExecutionSerializerV1Request()] # List[WorkflowExecutionSerializerV1Request] | 
+    page = 56 # int | A page number within the paginated result set. (optional)
+    page_size = 56 # int | Number of results to return per page. (optional)
 
     try:
-        api_response = api_instance.compute_v1_workflows_executions_bulk_create(workflow_execution_serializer_v1_request)
+        api_response = api_instance.compute_v1_workflows_executions_bulk_create(workflow_execution_serializer_v1_request, page=page, page_size=page_size)
         print("The response of ComputeApi->compute_v1_workflows_executions_bulk_create:\n")
         pprint(api_response)
     except Exception as e:
@@ -70,10 +72,12 @@ with gwm_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **workflow_execution_serializer_v1_request** | [**List[WorkflowExecutionSerializerV1Request]**](WorkflowExecutionSerializerV1Request.md)|  | 
+ **page** | **int**| A page number within the paginated result set. | [optional] 
+ **page_size** | **int**| Number of results to return per page. | [optional] 
 
 ### Return type
 
-[**List[WorkflowExecutionSerializerV1]**](WorkflowExecutionSerializerV1.md)
+[**PaginatedWorkflowExecutionSerializerV1List**](PaginatedWorkflowExecutionSerializerV1List.md)
 
 ### Authorization
 
@@ -92,7 +96,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **compute_v1_workflows_executions_bulk_partial_update**
-> List[WorkflowExecutionBulkUpdateSerializerV1] compute_v1_workflows_executions_bulk_partial_update(workflow_execution_bulk_update_serializer_v1_request)
+> PaginatedWorkflowExecutionBulkUpdateSerializerV1List compute_v1_workflows_executions_bulk_partial_update(workflow_execution_bulk_update_serializer_v1_request, page=page, page_size=page_size)
 
 
 
@@ -105,7 +109,7 @@ A view set for listing, retrieving and performing workflow executions
 import time
 import os
 import gwm_client
-from gwm_client.models.workflow_execution_bulk_update_serializer_v1 import WorkflowExecutionBulkUpdateSerializerV1
+from gwm_client.models.paginated_workflow_execution_bulk_update_serializer_v1_list import PaginatedWorkflowExecutionBulkUpdateSerializerV1List
 from gwm_client.models.workflow_execution_bulk_update_serializer_v1_request import WorkflowExecutionBulkUpdateSerializerV1Request
 from gwm_client.rest import ApiException
 from pprint import pprint
@@ -131,9 +135,11 @@ with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gwm_client.ComputeApi(api_client)
     workflow_execution_bulk_update_serializer_v1_request = [gwm_client.WorkflowExecutionBulkUpdateSerializerV1Request()] # List[WorkflowExecutionBulkUpdateSerializerV1Request] | 
+    page = 56 # int | A page number within the paginated result set. (optional)
+    page_size = 56 # int | Number of results to return per page. (optional)
 
     try:
-        api_response = api_instance.compute_v1_workflows_executions_bulk_partial_update(workflow_execution_bulk_update_serializer_v1_request)
+        api_response = api_instance.compute_v1_workflows_executions_bulk_partial_update(workflow_execution_bulk_update_serializer_v1_request, page=page, page_size=page_size)
         print("The response of ComputeApi->compute_v1_workflows_executions_bulk_partial_update:\n")
         pprint(api_response)
     except Exception as e:
@@ -147,10 +153,12 @@ with gwm_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **workflow_execution_bulk_update_serializer_v1_request** | [**List[WorkflowExecutionBulkUpdateSerializerV1Request]**](WorkflowExecutionBulkUpdateSerializerV1Request.md)|  | 
+ **page** | **int**| A page number within the paginated result set. | [optional] 
+ **page_size** | **int**| Number of results to return per page. | [optional] 
 
 ### Return type
 
-[**List[WorkflowExecutionBulkUpdateSerializerV1]**](WorkflowExecutionBulkUpdateSerializerV1.md)
+[**PaginatedWorkflowExecutionBulkUpdateSerializerV1List**](PaginatedWorkflowExecutionBulkUpdateSerializerV1List.md)
 
 ### Authorization
 
@@ -319,7 +327,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **compute_v1_workflows_executions_list**
-> List[WorkflowExecutionSerializerV1] compute_v1_workflows_executions_list(context=context, end_time_after=end_time_after, end_time_before=end_time_before, id=id, insert_time_after=insert_time_after, insert_time_before=insert_time_before, start_time_after=start_time_after, start_time_before=start_time_before, status=status, type=type, update_time_after=update_time_after, update_time_before=update_time_before)
+> PaginatedWorkflowExecutionSerializerV1List compute_v1_workflows_executions_list(context=context, end_time_after=end_time_after, end_time_before=end_time_before, id=id, insert_time_after=insert_time_after, insert_time_before=insert_time_before, page=page, page_size=page_size, start_time_after=start_time_after, start_time_before=start_time_before, status=status, type=type, update_time_after=update_time_after, update_time_before=update_time_before)
 
 
 
@@ -332,7 +340,7 @@ A view set for listing, retrieving and performing workflow executions
 import time
 import os
 import gwm_client
-from gwm_client.models.workflow_execution_serializer_v1 import WorkflowExecutionSerializerV1
+from gwm_client.models.paginated_workflow_execution_serializer_v1_list import PaginatedWorkflowExecutionSerializerV1List
 from gwm_client.rest import ApiException
 from pprint import pprint
 
@@ -362,6 +370,8 @@ with gwm_client.ApiClient(configuration) as api_client:
     id = 'id_example' # str |  (optional)
     insert_time_after = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
     insert_time_before = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
+    page = 56 # int | A page number within the paginated result set. (optional)
+    page_size = 56 # int | Number of results to return per page. (optional)
     start_time_after = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
     start_time_before = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
     status = 'status_example' # str | Status of the workflow execution.  * `PENDING` - Pending * `RUNNING` - Running * `COMPLETED` - Completed * `FAILED` - Failed * `CANCELED` - Canceled * `TERMINATED` - Terminated * `CONTINUED_AS_NEW` - Continued as new * `TIMED_OUT` - Timed out (optional)
@@ -370,7 +380,7 @@ with gwm_client.ApiClient(configuration) as api_client:
     update_time_before = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 
     try:
-        api_response = api_instance.compute_v1_workflows_executions_list(context=context, end_time_after=end_time_after, end_time_before=end_time_before, id=id, insert_time_after=insert_time_after, insert_time_before=insert_time_before, start_time_after=start_time_after, start_time_before=start_time_before, status=status, type=type, update_time_after=update_time_after, update_time_before=update_time_before)
+        api_response = api_instance.compute_v1_workflows_executions_list(context=context, end_time_after=end_time_after, end_time_before=end_time_before, id=id, insert_time_after=insert_time_after, insert_time_before=insert_time_before, page=page, page_size=page_size, start_time_after=start_time_after, start_time_before=start_time_before, status=status, type=type, update_time_after=update_time_after, update_time_before=update_time_before)
         print("The response of ComputeApi->compute_v1_workflows_executions_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -389,6 +399,8 @@ Name | Type | Description  | Notes
  **id** | **str**|  | [optional] 
  **insert_time_after** | **datetime**|  | [optional] 
  **insert_time_before** | **datetime**|  | [optional] 
+ **page** | **int**| A page number within the paginated result set. | [optional] 
+ **page_size** | **int**| Number of results to return per page. | [optional] 
  **start_time_after** | **datetime**|  | [optional] 
  **start_time_before** | **datetime**|  | [optional] 
  **status** | **str**| Status of the workflow execution.  * &#x60;PENDING&#x60; - Pending * &#x60;RUNNING&#x60; - Running * &#x60;COMPLETED&#x60; - Completed * &#x60;FAILED&#x60; - Failed * &#x60;CANCELED&#x60; - Canceled * &#x60;TERMINATED&#x60; - Terminated * &#x60;CONTINUED_AS_NEW&#x60; - Continued as new * &#x60;TIMED_OUT&#x60; - Timed out | [optional] 
@@ -398,7 +410,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**List[WorkflowExecutionSerializerV1]**](WorkflowExecutionSerializerV1.md)
+[**PaginatedWorkflowExecutionSerializerV1List**](PaginatedWorkflowExecutionSerializerV1List.md)
 
 ### Authorization
 

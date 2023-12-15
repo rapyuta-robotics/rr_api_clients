@@ -480,18 +480,22 @@ class WorksAppAgentTaskFragmentsApi:
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def v2_agent_task_fragments_list(self, agent : Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="filter by agent id")] = None, agent_task : Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="filter by agent_task id")] = None, detection_data : Annotated[Optional[StrictStr], Field(description="filter by detection_data query")] = None, drop_data : Annotated[Optional[StrictStr], Field(description="filter by drop_data query")] = None, end_date : Optional[datetime] = None, from_location : Annotated[Optional[StrictStr], Field(description="filter by from_location query")] = None, id : Optional[conlist(StrictInt)] = None, name : Optional[conlist(StrictStr)] = None, ordering : Annotated[Optional[StrictStr], Field(description="order the result, default is ID")] = None, page : Annotated[Optional[StrictInt], Field(description="A page number within the paginated result set.")] = None, page_size : Annotated[Optional[StrictInt], Field(description="Number of results to return per page.")] = None, payload_data : Annotated[Optional[StrictStr], Field(description="filter by payload_data query")] = None, pick_data : Annotated[Optional[StrictStr], Field(description="filter by pick_data query")] = None, start_date : Optional[datetime] = None, status : Annotated[Optional[StrictStr], Field(description="filter by status")] = None, to_location : Annotated[Optional[StrictStr], Field(description="filter by to_location query")] = None, type : Annotated[Optional[StrictStr], Field(description="filter by type")] = None, work : Annotated[Optional[conlist(StrictStr)], Field(description="filter by work id")] = None, work_fragment : Annotated[Optional[StrictStr], Field(description="filter by work_fragment id")] = None, work_status : Annotated[Optional[conlist(StrictStr)], Field(description="Current status of the Work, this is set by the system via internal API  * `ON_HOLD` - On Hold * `NEW` - New * `LIVE` - Live * `IN_PROGRESS` - In Progress * `REJECTED` - Rejected * `CANCELLED` - Cancelled * `COMPLETED` - Completed * `TERMINAL_WITH_EXCEPTION` - Terminal With Exception * `ABORTED` - Aborted * `PARTIALLY_COMPLETED` - Partially Completed")] = None, workflow : Optional[StrictStr] = None, **kwargs) -> PaginatedAgentTaskFragmentList:  # noqa: E501
+    def v2_agent_task_fragments_list(self, action_data : Annotated[Optional[StrictStr], Field(description="filter by action_data query")] = None, action_location : Annotated[Optional[StrictStr], Field(description="filter by action_location query")] = None, agent : Annotated[Optional[conlist(Union[StrictFloat, StrictInt])], Field(description="filter by agent id")] = None, agent_task : Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="filter by agent_task id")] = None, detection_data : Annotated[Optional[StrictStr], Field(description="filter by detection_data query")] = None, drop_data : Annotated[Optional[StrictStr], Field(description="filter by drop_data query")] = None, end_date : Optional[datetime] = None, from_location : Annotated[Optional[StrictStr], Field(description="filter by from_location query")] = None, id : Optional[conlist(StrictInt)] = None, name : Optional[conlist(StrictStr)] = None, ordering : Annotated[Optional[StrictStr], Field(description="order the result, default is ID")] = None, page : Annotated[Optional[StrictInt], Field(description="A page number within the paginated result set.")] = None, page_size : Annotated[Optional[StrictInt], Field(description="Number of results to return per page.")] = None, payload_data : Annotated[Optional[StrictStr], Field(description="filter by payload_data query")] = None, pick_data : Annotated[Optional[StrictStr], Field(description="filter by pick_data query")] = None, start_date : Optional[datetime] = None, status : Annotated[Optional[StrictStr], Field(description="filter by status")] = None, to_location : Annotated[Optional[StrictStr], Field(description="filter by to_location query")] = None, type : Annotated[Optional[StrictStr], Field(description="filter by type")] = None, work : Annotated[Optional[conlist(StrictStr)], Field(description="filter by work id")] = None, work_fragment : Annotated[Optional[StrictStr], Field(description="filter by work_fragment id")] = None, work_status : Annotated[Optional[conlist(StrictStr)], Field(description="Current status of the Work, this is set by the system via internal API  * `ON_HOLD` - On Hold * `NEW` - New * `LIVE` - Live * `IN_PROGRESS` - In Progress * `REJECTED` - Rejected * `CANCELLED` - Cancelled * `COMPLETED` - Completed * `TERMINAL_WITH_EXCEPTION` - Terminal With Exception * `ABORTED` - Aborted * `PARTIALLY_COMPLETED` - Partially Completed")] = None, workflow : Optional[StrictStr] = None, **kwargs) -> PaginatedAgentTaskFragmentList:  # noqa: E501
         """List Agent Task Fragments  # noqa: E501
 
         List Agent Task Fragments  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.v2_agent_task_fragments_list(agent, agent_task, detection_data, drop_data, end_date, from_location, id, name, ordering, page, page_size, payload_data, pick_data, start_date, status, to_location, type, work, work_fragment, work_status, workflow, async_req=True)
+        >>> thread = api.v2_agent_task_fragments_list(action_data, action_location, agent, agent_task, detection_data, drop_data, end_date, from_location, id, name, ordering, page, page_size, payload_data, pick_data, start_date, status, to_location, type, work, work_fragment, work_status, workflow, async_req=True)
         >>> result = thread.get()
 
+        :param action_data: filter by action_data query
+        :type action_data: str
+        :param action_location: filter by action_location query
+        :type action_location: str
         :param agent: filter by agent id
-        :type agent: float
+        :type agent: List[float]
         :param agent_task: filter by agent_task id
         :type agent_task: float
         :param detection_data: filter by detection_data query
@@ -547,21 +551,25 @@ class WorksAppAgentTaskFragmentsApi:
         if '_preload_content' in kwargs:
             message = "Error! Please call the v2_agent_task_fragments_list_with_http_info method with `_preload_content` instead and obtain raw data from ApiResponse.raw_data"  # noqa: E501
             raise ValueError(message)
-        return self.v2_agent_task_fragments_list_with_http_info(agent, agent_task, detection_data, drop_data, end_date, from_location, id, name, ordering, page, page_size, payload_data, pick_data, start_date, status, to_location, type, work, work_fragment, work_status, workflow, **kwargs)  # noqa: E501
+        return self.v2_agent_task_fragments_list_with_http_info(action_data, action_location, agent, agent_task, detection_data, drop_data, end_date, from_location, id, name, ordering, page, page_size, payload_data, pick_data, start_date, status, to_location, type, work, work_fragment, work_status, workflow, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def v2_agent_task_fragments_list_with_http_info(self, agent : Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="filter by agent id")] = None, agent_task : Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="filter by agent_task id")] = None, detection_data : Annotated[Optional[StrictStr], Field(description="filter by detection_data query")] = None, drop_data : Annotated[Optional[StrictStr], Field(description="filter by drop_data query")] = None, end_date : Optional[datetime] = None, from_location : Annotated[Optional[StrictStr], Field(description="filter by from_location query")] = None, id : Optional[conlist(StrictInt)] = None, name : Optional[conlist(StrictStr)] = None, ordering : Annotated[Optional[StrictStr], Field(description="order the result, default is ID")] = None, page : Annotated[Optional[StrictInt], Field(description="A page number within the paginated result set.")] = None, page_size : Annotated[Optional[StrictInt], Field(description="Number of results to return per page.")] = None, payload_data : Annotated[Optional[StrictStr], Field(description="filter by payload_data query")] = None, pick_data : Annotated[Optional[StrictStr], Field(description="filter by pick_data query")] = None, start_date : Optional[datetime] = None, status : Annotated[Optional[StrictStr], Field(description="filter by status")] = None, to_location : Annotated[Optional[StrictStr], Field(description="filter by to_location query")] = None, type : Annotated[Optional[StrictStr], Field(description="filter by type")] = None, work : Annotated[Optional[conlist(StrictStr)], Field(description="filter by work id")] = None, work_fragment : Annotated[Optional[StrictStr], Field(description="filter by work_fragment id")] = None, work_status : Annotated[Optional[conlist(StrictStr)], Field(description="Current status of the Work, this is set by the system via internal API  * `ON_HOLD` - On Hold * `NEW` - New * `LIVE` - Live * `IN_PROGRESS` - In Progress * `REJECTED` - Rejected * `CANCELLED` - Cancelled * `COMPLETED` - Completed * `TERMINAL_WITH_EXCEPTION` - Terminal With Exception * `ABORTED` - Aborted * `PARTIALLY_COMPLETED` - Partially Completed")] = None, workflow : Optional[StrictStr] = None, **kwargs) -> ApiResponse:  # noqa: E501
+    def v2_agent_task_fragments_list_with_http_info(self, action_data : Annotated[Optional[StrictStr], Field(description="filter by action_data query")] = None, action_location : Annotated[Optional[StrictStr], Field(description="filter by action_location query")] = None, agent : Annotated[Optional[conlist(Union[StrictFloat, StrictInt])], Field(description="filter by agent id")] = None, agent_task : Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="filter by agent_task id")] = None, detection_data : Annotated[Optional[StrictStr], Field(description="filter by detection_data query")] = None, drop_data : Annotated[Optional[StrictStr], Field(description="filter by drop_data query")] = None, end_date : Optional[datetime] = None, from_location : Annotated[Optional[StrictStr], Field(description="filter by from_location query")] = None, id : Optional[conlist(StrictInt)] = None, name : Optional[conlist(StrictStr)] = None, ordering : Annotated[Optional[StrictStr], Field(description="order the result, default is ID")] = None, page : Annotated[Optional[StrictInt], Field(description="A page number within the paginated result set.")] = None, page_size : Annotated[Optional[StrictInt], Field(description="Number of results to return per page.")] = None, payload_data : Annotated[Optional[StrictStr], Field(description="filter by payload_data query")] = None, pick_data : Annotated[Optional[StrictStr], Field(description="filter by pick_data query")] = None, start_date : Optional[datetime] = None, status : Annotated[Optional[StrictStr], Field(description="filter by status")] = None, to_location : Annotated[Optional[StrictStr], Field(description="filter by to_location query")] = None, type : Annotated[Optional[StrictStr], Field(description="filter by type")] = None, work : Annotated[Optional[conlist(StrictStr)], Field(description="filter by work id")] = None, work_fragment : Annotated[Optional[StrictStr], Field(description="filter by work_fragment id")] = None, work_status : Annotated[Optional[conlist(StrictStr)], Field(description="Current status of the Work, this is set by the system via internal API  * `ON_HOLD` - On Hold * `NEW` - New * `LIVE` - Live * `IN_PROGRESS` - In Progress * `REJECTED` - Rejected * `CANCELLED` - Cancelled * `COMPLETED` - Completed * `TERMINAL_WITH_EXCEPTION` - Terminal With Exception * `ABORTED` - Aborted * `PARTIALLY_COMPLETED` - Partially Completed")] = None, workflow : Optional[StrictStr] = None, **kwargs) -> ApiResponse:  # noqa: E501
         """List Agent Task Fragments  # noqa: E501
 
         List Agent Task Fragments  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.v2_agent_task_fragments_list_with_http_info(agent, agent_task, detection_data, drop_data, end_date, from_location, id, name, ordering, page, page_size, payload_data, pick_data, start_date, status, to_location, type, work, work_fragment, work_status, workflow, async_req=True)
+        >>> thread = api.v2_agent_task_fragments_list_with_http_info(action_data, action_location, agent, agent_task, detection_data, drop_data, end_date, from_location, id, name, ordering, page, page_size, payload_data, pick_data, start_date, status, to_location, type, work, work_fragment, work_status, workflow, async_req=True)
         >>> result = thread.get()
 
+        :param action_data: filter by action_data query
+        :type action_data: str
+        :param action_location: filter by action_location query
+        :type action_location: str
         :param agent: filter by agent id
-        :type agent: float
+        :type agent: List[float]
         :param agent_task: filter by agent_task id
         :type agent_task: float
         :param detection_data: filter by detection_data query
@@ -630,6 +638,8 @@ class WorksAppAgentTaskFragmentsApi:
         _params = locals()
 
         _all_params = [
+            'action_data',
+            'action_location',
             'agent',
             'agent_task',
             'detection_data',
@@ -681,8 +691,15 @@ class WorksAppAgentTaskFragmentsApi:
 
         # process the query parameters
         _query_params = []
+        if _params.get('action_data') is not None:  # noqa: E501
+            _query_params.append(('action_data', _params['action_data']))
+
+        if _params.get('action_location') is not None:  # noqa: E501
+            _query_params.append(('action_location', _params['action_location']))
+
         if _params.get('agent') is not None:  # noqa: E501
             _query_params.append(('agent', _params['agent']))
+            _collection_formats['agent'] = 'multi'
 
         if _params.get('agent_task') is not None:  # noqa: E501
             _query_params.append(('agent_task', _params['agent_task']))

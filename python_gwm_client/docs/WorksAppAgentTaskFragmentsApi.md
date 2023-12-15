@@ -131,7 +131,7 @@ configuration = gwm_client.Configuration(
 with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gwm_client.WorksAppAgentTaskFragmentsApi(api_client)
-    agent_task_fragment_request = {"id":1213213,"agent_task":1,"work_fragment":1,"status":"NOT_STARTED","type":"ITEM_MOVE","quantity_requested":100,"quantity_delivered":50,"payload_data":{"key":"value"},"detection_data":{"key":"value"},"pick_data":{"key":"value"},"drop_data":{"key":"value"},"from_location":{"key":"value"},"to_location":{"key":"value"}} # AgentTaskFragmentRequest | 
+    agent_task_fragment_request = {"id":1213213,"agent_task":1,"work_fragment":1,"status":"NOT_STARTED","type":"ITEM_MOVE","quantity_requested":100,"quantity_delivered":50,"payload_data":{"key":"value"},"detection_data":{"key":"value"},"action_data":{"key":"value"},"pick_data":{"key":"value"},"drop_data":{"key":"value"},"from_location":{"key":"value"},"to_location":{"key":"value"}} # AgentTaskFragmentRequest | 
 
     try:
         # Create Agent Task Fragment
@@ -245,7 +245,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **v2_agent_task_fragments_list**
-> PaginatedAgentTaskFragmentList v2_agent_task_fragments_list(agent=agent, agent_task=agent_task, detection_data=detection_data, drop_data=drop_data, end_date=end_date, from_location=from_location, id=id, name=name, ordering=ordering, page=page, page_size=page_size, payload_data=payload_data, pick_data=pick_data, start_date=start_date, status=status, to_location=to_location, type=type, work=work, work_fragment=work_fragment, work_status=work_status, workflow=workflow)
+> PaginatedAgentTaskFragmentList v2_agent_task_fragments_list(action_data=action_data, action_location=action_location, agent=agent, agent_task=agent_task, detection_data=detection_data, drop_data=drop_data, end_date=end_date, from_location=from_location, id=id, name=name, ordering=ordering, page=page, page_size=page_size, payload_data=payload_data, pick_data=pick_data, start_date=start_date, status=status, to_location=to_location, type=type, work=work, work_fragment=work_fragment, work_status=work_status, workflow=workflow)
 
 List Agent Task Fragments
 
@@ -282,7 +282,9 @@ configuration = gwm_client.Configuration(
 with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gwm_client.WorksAppAgentTaskFragmentsApi(api_client)
-    agent = 3.4 # float | filter by agent id (optional)
+    action_data = 'action_data_example' # str | filter by action_data query (optional)
+    action_location = 'action_location_example' # str | filter by action_location query (optional)
+    agent = [3.4] # List[float] | filter by agent id (optional)
     agent_task = 3.4 # float | filter by agent_task id (optional)
     detection_data = 'detection_data_example' # str | filter by detection_data query (optional)
     drop_data = 'drop_data_example' # str | filter by drop_data query (optional)
@@ -306,7 +308,7 @@ with gwm_client.ApiClient(configuration) as api_client:
 
     try:
         # List Agent Task Fragments
-        api_response = api_instance.v2_agent_task_fragments_list(agent=agent, agent_task=agent_task, detection_data=detection_data, drop_data=drop_data, end_date=end_date, from_location=from_location, id=id, name=name, ordering=ordering, page=page, page_size=page_size, payload_data=payload_data, pick_data=pick_data, start_date=start_date, status=status, to_location=to_location, type=type, work=work, work_fragment=work_fragment, work_status=work_status, workflow=workflow)
+        api_response = api_instance.v2_agent_task_fragments_list(action_data=action_data, action_location=action_location, agent=agent, agent_task=agent_task, detection_data=detection_data, drop_data=drop_data, end_date=end_date, from_location=from_location, id=id, name=name, ordering=ordering, page=page, page_size=page_size, payload_data=payload_data, pick_data=pick_data, start_date=start_date, status=status, to_location=to_location, type=type, work=work, work_fragment=work_fragment, work_status=work_status, workflow=workflow)
         print("The response of WorksAppAgentTaskFragmentsApi->v2_agent_task_fragments_list:\n")
         pprint(api_response)
     except Exception as e:
@@ -319,7 +321,9 @@ with gwm_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **agent** | **float**| filter by agent id | [optional] 
+ **action_data** | **str**| filter by action_data query | [optional] 
+ **action_location** | **str**| filter by action_location query | [optional] 
+ **agent** | [**List[float]**](float.md)| filter by agent id | [optional] 
  **agent_task** | **float**| filter by agent_task id | [optional] 
  **detection_data** | **str**| filter by detection_data query | [optional] 
  **drop_data** | **str**| filter by drop_data query | [optional] 
@@ -401,7 +405,7 @@ with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gwm_client.WorksAppAgentTaskFragmentsApi(api_client)
     id = 56 # int | A unique value identifying this agent task fragment.
-    patched_agent_task_fragment_request = {"agent_task":1,"work_fragment":1,"status":"NOT_STARTED","type":"ITEM_MOVE","quantity_requested":100,"quantity_delivered":50,"payload_data":{"key":"value"},"detection_data":{"key":"value"},"pick_data":{"key":"value"},"drop_data":{"key":"value"},"from_location":{"key":"value"},"to_location":{"key":"value"}} # PatchedAgentTaskFragmentRequest |  (optional)
+    patched_agent_task_fragment_request = {"agent_task":1,"work_fragment":1,"status":"NOT_STARTED","type":"ITEM_MOVE","quantity_requested":100,"quantity_delivered":50,"payload_data":{"key":"value"},"detection_data":{"key":"value"},"action_data":{"key":"value"},"pick_data":{"key":"value"},"drop_data":{"key":"value"},"from_location":{"key":"value"},"to_location":{"key":"value"}} # PatchedAgentTaskFragmentRequest |  (optional)
 
     try:
         # Update Agent Task Fragment
@@ -737,7 +741,7 @@ with gwm_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = gwm_client.WorksAppAgentTaskFragmentsApi(api_client)
     id = 56 # int | A unique value identifying this agent task fragment.
-    agent_task_fragment_request = {"agent_task":1,"work_fragment":1,"status":"NOT_STARTED","type":"ITEM_MOVE","quantity_requested":100,"quantity_delivered":50,"payload_data":{"key":"value"},"detection_data":{"key":"value"},"pick_data":{"key":"value"},"drop_data":{"key":"value"},"from_location":{"key":"value"},"to_location":{"key":"value"}} # AgentTaskFragmentRequest | 
+    agent_task_fragment_request = {"agent_task":1,"work_fragment":1,"status":"NOT_STARTED","type":"ITEM_MOVE","quantity_requested":100,"quantity_delivered":50,"payload_data":{"key":"value"},"detection_data":{"key":"value"},"action_data":{"key":"value"},"pick_data":{"key":"value"},"drop_data":{"key":"value"},"from_location":{"key":"value"},"to_location":{"key":"value"}} # AgentTaskFragmentRequest | 
 
     try:
         # Update Agent Task Fragment

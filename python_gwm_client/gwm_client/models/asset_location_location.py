@@ -25,15 +25,15 @@ class AssetLocationLocation(BaseModel):
     """
     TODO: support thing other than spot, merge with libs.location  # noqa: E501
     """
-    type: StrictStr = Field(..., description="* `spot` - Spot * `spot_query` - Spot Query")
+    type: StrictStr = Field(..., description="* `spot` - Spot * `spot_query` - Spot Query * `region` - Region * `pos` - Pos")
     id: StrictInt = Field(...)
     __properties = ["type", "id"]
 
     @validator('type')
     def type_validate_enum(cls, value):
         """Validates the enum"""
-        if value not in ('spot', 'spot_query'):
-            raise ValueError("must be one of enum values ('spot', 'spot_query')")
+        if value not in ('spot', 'spot_query', 'region', 'pos'):
+            raise ValueError("must be one of enum values ('spot', 'spot_query', 'region', 'pos')")
         return value
 
     class Config:

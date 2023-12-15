@@ -120,6 +120,8 @@ from gwm_client.models.paginated_product_list import PaginatedProductList
 from gwm_client.models.paginated_v3_work_fragment_list import PaginatedV3WorkFragmentList
 from gwm_client.models.paginated_v3_work_list import PaginatedV3WorkList
 from gwm_client.models.paginated_work_payload_fragment_list import PaginatedWorkPayloadFragmentList
+from gwm_client.models.paginated_workflow_execution_bulk_update_serializer_v1_list import PaginatedWorkflowExecutionBulkUpdateSerializerV1List
+from gwm_client.models.paginated_workflow_execution_serializer_v1_list import PaginatedWorkflowExecutionSerializerV1List
 from gwm_client.models.patched_agent_request import PatchedAgentRequest
 from gwm_client.models.patched_agent_task_fragment_request import PatchedAgentTaskFragmentRequest
 from gwm_client.models.patched_agent_task_request import PatchedAgentTaskRequest
@@ -157,6 +159,10 @@ from gwm_client.models.point_serializer3_d import PointSerializer3D
 from gwm_client.models.point_serializer3_d_request import PointSerializer3DRequest
 from gwm_client.models.polygon import Polygon
 from gwm_client.models.polygon_request import PolygonRequest
+from gwm_client.models.pos import Pos
+from gwm_client.models.pos_point import PosPoint
+from gwm_client.models.pos_point_request import PosPointRequest
+from gwm_client.models.pos_request import PosRequest
 from gwm_client.models.product import Product
 from gwm_client.models.product_request import ProductRequest
 from gwm_client.models.region import Region

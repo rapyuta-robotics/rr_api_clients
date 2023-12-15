@@ -19,14 +19,15 @@ import warnings
 from pydantic import validate_arguments, ValidationError
 
 from typing_extensions import Annotated
-from pydantic import Field, StrictFloat, StrictInt, StrictStr, conint, conlist, validator
+from pydantic import Field, StrictInt, StrictStr, conint, conlist, validator
 
-from typing import Optional, Union
+from typing import Optional
 
 from gwm_client.models.agent_task import AgentTask
 from gwm_client.models.agent_task_request import AgentTaskRequest
 from gwm_client.models.paginated_agent_task_list import PaginatedAgentTaskList
 from gwm_client.models.patched_agent_task_request import PatchedAgentTaskRequest
+from gwm_client.models.v1_containers_create_descriptor_parameter_inner import V1ContainersCreateDescriptorParameterInner
 
 from gwm_client.api_client import ApiClient
 from gwm_client.api_response import ApiResponse
@@ -603,18 +604,18 @@ class WorksAppAgentTasksApi:
             _request_auth=_params.get('_request_auth'))
 
     @validate_arguments
-    def v2_agent_tasks_list(self, agent : Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="filter by agent id")] = None, id : Optional[conlist(StrictInt)] = None, ordering : Annotated[Optional[StrictStr], Field(description="Which field to use when ordering the results.")] = None, page : Annotated[Optional[StrictInt], Field(description="A page number within the paginated result set.")] = None, page_size : Annotated[Optional[StrictInt], Field(description="Number of results to return per page.")] = None, status : Annotated[Optional[StrictStr], Field(description="filter by status")] = None, type : Annotated[Optional[StrictStr], Field(description="filter by type")] = None, work : Annotated[Optional[conlist(StrictStr)], Field(description="filter by work id")] = None, work_status : Annotated[Optional[conlist(StrictStr)], Field(description="Current status of the Work, this is set by the system via internal API  * `ON_HOLD` - On Hold * `NEW` - New * `LIVE` - Live * `IN_PROGRESS` - In Progress * `REJECTED` - Rejected * `CANCELLED` - Cancelled * `COMPLETED` - Completed * `TERMINAL_WITH_EXCEPTION` - Terminal With Exception * `ABORTED` - Aborted * `PARTIALLY_COMPLETED` - Partially Completed")] = None, **kwargs) -> PaginatedAgentTaskList:  # noqa: E501
+    def v2_agent_tasks_list(self, agent : Optional[conlist(V1ContainersCreateDescriptorParameterInner)] = None, id : Optional[conlist(StrictInt)] = None, ordering : Annotated[Optional[StrictStr], Field(description="Which field to use when ordering the results.")] = None, page : Annotated[Optional[StrictInt], Field(description="A page number within the paginated result set.")] = None, page_size : Annotated[Optional[StrictInt], Field(description="Number of results to return per page.")] = None, required_agent : Optional[conlist(V1ContainersCreateDescriptorParameterInner)] = None, status : Annotated[Optional[StrictStr], Field(description="filter by status")] = None, type : Annotated[Optional[StrictStr], Field(description="filter by type")] = None, work : Annotated[Optional[conlist(StrictStr)], Field(description="filter by work id")] = None, work_status : Annotated[Optional[conlist(StrictStr)], Field(description="Current status of the Work, this is set by the system via internal API  * `ON_HOLD` - On Hold * `NEW` - New * `LIVE` - Live * `IN_PROGRESS` - In Progress * `REJECTED` - Rejected * `CANCELLED` - Cancelled * `COMPLETED` - Completed * `TERMINAL_WITH_EXCEPTION` - Terminal With Exception * `ABORTED` - Aborted * `PARTIALLY_COMPLETED` - Partially Completed")] = None, **kwargs) -> PaginatedAgentTaskList:  # noqa: E501
         """List Agent Tasks  # noqa: E501
 
         List Agent Tasks  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.v2_agent_tasks_list(agent, id, ordering, page, page_size, status, type, work, work_status, async_req=True)
+        >>> thread = api.v2_agent_tasks_list(agent, id, ordering, page, page_size, required_agent, status, type, work, work_status, async_req=True)
         >>> result = thread.get()
 
-        :param agent: filter by agent id
-        :type agent: float
+        :param agent:
+        :type agent: List[V1ContainersCreateDescriptorParameterInner]
         :param id:
         :type id: List[int]
         :param ordering: Which field to use when ordering the results.
@@ -623,6 +624,8 @@ class WorksAppAgentTasksApi:
         :type page: int
         :param page_size: Number of results to return per page.
         :type page_size: int
+        :param required_agent:
+        :type required_agent: List[V1ContainersCreateDescriptorParameterInner]
         :param status: filter by status
         :type status: str
         :param type: filter by type
@@ -646,21 +649,21 @@ class WorksAppAgentTasksApi:
         if '_preload_content' in kwargs:
             message = "Error! Please call the v2_agent_tasks_list_with_http_info method with `_preload_content` instead and obtain raw data from ApiResponse.raw_data"  # noqa: E501
             raise ValueError(message)
-        return self.v2_agent_tasks_list_with_http_info(agent, id, ordering, page, page_size, status, type, work, work_status, **kwargs)  # noqa: E501
+        return self.v2_agent_tasks_list_with_http_info(agent, id, ordering, page, page_size, required_agent, status, type, work, work_status, **kwargs)  # noqa: E501
 
     @validate_arguments
-    def v2_agent_tasks_list_with_http_info(self, agent : Annotated[Optional[Union[StrictFloat, StrictInt]], Field(description="filter by agent id")] = None, id : Optional[conlist(StrictInt)] = None, ordering : Annotated[Optional[StrictStr], Field(description="Which field to use when ordering the results.")] = None, page : Annotated[Optional[StrictInt], Field(description="A page number within the paginated result set.")] = None, page_size : Annotated[Optional[StrictInt], Field(description="Number of results to return per page.")] = None, status : Annotated[Optional[StrictStr], Field(description="filter by status")] = None, type : Annotated[Optional[StrictStr], Field(description="filter by type")] = None, work : Annotated[Optional[conlist(StrictStr)], Field(description="filter by work id")] = None, work_status : Annotated[Optional[conlist(StrictStr)], Field(description="Current status of the Work, this is set by the system via internal API  * `ON_HOLD` - On Hold * `NEW` - New * `LIVE` - Live * `IN_PROGRESS` - In Progress * `REJECTED` - Rejected * `CANCELLED` - Cancelled * `COMPLETED` - Completed * `TERMINAL_WITH_EXCEPTION` - Terminal With Exception * `ABORTED` - Aborted * `PARTIALLY_COMPLETED` - Partially Completed")] = None, **kwargs) -> ApiResponse:  # noqa: E501
+    def v2_agent_tasks_list_with_http_info(self, agent : Optional[conlist(V1ContainersCreateDescriptorParameterInner)] = None, id : Optional[conlist(StrictInt)] = None, ordering : Annotated[Optional[StrictStr], Field(description="Which field to use when ordering the results.")] = None, page : Annotated[Optional[StrictInt], Field(description="A page number within the paginated result set.")] = None, page_size : Annotated[Optional[StrictInt], Field(description="Number of results to return per page.")] = None, required_agent : Optional[conlist(V1ContainersCreateDescriptorParameterInner)] = None, status : Annotated[Optional[StrictStr], Field(description="filter by status")] = None, type : Annotated[Optional[StrictStr], Field(description="filter by type")] = None, work : Annotated[Optional[conlist(StrictStr)], Field(description="filter by work id")] = None, work_status : Annotated[Optional[conlist(StrictStr)], Field(description="Current status of the Work, this is set by the system via internal API  * `ON_HOLD` - On Hold * `NEW` - New * `LIVE` - Live * `IN_PROGRESS` - In Progress * `REJECTED` - Rejected * `CANCELLED` - Cancelled * `COMPLETED` - Completed * `TERMINAL_WITH_EXCEPTION` - Terminal With Exception * `ABORTED` - Aborted * `PARTIALLY_COMPLETED` - Partially Completed")] = None, **kwargs) -> ApiResponse:  # noqa: E501
         """List Agent Tasks  # noqa: E501
 
         List Agent Tasks  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.v2_agent_tasks_list_with_http_info(agent, id, ordering, page, page_size, status, type, work, work_status, async_req=True)
+        >>> thread = api.v2_agent_tasks_list_with_http_info(agent, id, ordering, page, page_size, required_agent, status, type, work, work_status, async_req=True)
         >>> result = thread.get()
 
-        :param agent: filter by agent id
-        :type agent: float
+        :param agent:
+        :type agent: List[V1ContainersCreateDescriptorParameterInner]
         :param id:
         :type id: List[int]
         :param ordering: Which field to use when ordering the results.
@@ -669,6 +672,8 @@ class WorksAppAgentTasksApi:
         :type page: int
         :param page_size: Number of results to return per page.
         :type page_size: int
+        :param required_agent:
+        :type required_agent: List[V1ContainersCreateDescriptorParameterInner]
         :param status: filter by status
         :type status: str
         :param type: filter by type
@@ -710,6 +715,7 @@ class WorksAppAgentTasksApi:
             'ordering',
             'page',
             'page_size',
+            'required_agent',
             'status',
             'type',
             'work',
@@ -746,6 +752,7 @@ class WorksAppAgentTasksApi:
         _query_params = []
         if _params.get('agent') is not None:  # noqa: E501
             _query_params.append(('agent', _params['agent']))
+            _collection_formats['agent'] = 'multi'
 
         if _params.get('id') is not None:  # noqa: E501
             _query_params.append(('id', _params['id']))
@@ -759,6 +766,10 @@ class WorksAppAgentTasksApi:
 
         if _params.get('page_size') is not None:  # noqa: E501
             _query_params.append(('page_size', _params['page_size']))
+
+        if _params.get('required_agent') is not None:  # noqa: E501
+            _query_params.append(('required_agent', _params['required_agent']))
+            _collection_formats['required_agent'] = 'multi'
 
         if _params.get('status') is not None:  # noqa: E501
             _query_params.append(('status', _params['status']))

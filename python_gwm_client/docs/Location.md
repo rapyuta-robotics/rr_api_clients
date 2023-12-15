@@ -4,8 +4,11 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **str** | * &#x60;spot&#x60; - Spot * &#x60;spot_query&#x60; - Spot Query | [optional] [default to 'spot_query']
+**type** | **str** | * &#x60;spot&#x60; - Spot * &#x60;spot_query&#x60; - Spot Query * &#x60;region&#x60; - Region * &#x60;pos&#x60; - Pos | [optional] [default to 'spot_query']
 **spot_query** | **Dict[str, object]** |  | [optional] 
+**spot** | **Dict[str, object]** |  | [optional] 
+**region** | **Dict[str, object]** |  | [optional] 
+**pos** | [**Pos**](Pos.md) |  | [optional] 
 
 ## Example
 
