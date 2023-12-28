@@ -43,3 +43,11 @@ curl -L \
 - `input.service-port` - The port on which the backend service is running. In this example, it's set to `8000`.
 - `input.openapi-path` - The path to the OpenAPI specification file within the repository. In this example, it's set to `api/schema/`.
 - `input.docker-command` - **(optional)** The Docker command to make . In this example, it's set to `poetry run gunicorn`.
+
+### Python (Using the library)
+
+To install the python libraries using pip
+
+`pip install git+https://github.com/rapyuta-robotics/rr_api_clients.git@auth-2.5.3#subdirectory=python_auth_client`
+
+`git+https://github.com/rapyuta-robotics/rr_api_clients.git@$TAG#subdirectory=$PROJECT_SUB_DIRECTORY`
